@@ -1,8 +1,8 @@
-// storage.js - Manejo de almacenamiento local para PsyCase
+// storage.js - Manejo de almacenamiento local para BrainCase
 
-class PsyCaseStorage {
+class BrainCaseStorage {
   constructor() {
-    this.dbName = 'PsyCaseDB';
+    this.dbName = 'BrainCaseDB';
     this.version = 1;
     this.storeName = 'data';
     this.db = null;
@@ -83,7 +83,7 @@ class PsyCaseStorage {
   async debug() {
     if (!this.db) await this.init();
     
-    console.log('🔍 === PSYCASE STORAGE ===');
+    console.log('🔍 === BRAINCASE STORAGE ===');
     const transaction = this.db.transaction([this.storeName], 'readonly');
     const store = transaction.objectStore(this.storeName);
     const request = store.getAll();
@@ -95,5 +95,5 @@ class PsyCaseStorage {
 }
 
 // Crear instancia global
-window.psyCaseStorage = new PsyCaseStorage();
-console.log('✅ PsyCase Storage JS cargado');
+window.brainCaseStorage = new BrainCaseStorage();
+console.log('✅ BrainCase Storage JS cargado');
