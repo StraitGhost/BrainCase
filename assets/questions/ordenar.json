@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "CIB_OR_001",
+    "instruccion": "Ordena los pasos al recibir un correo sospechoso del banco.",
+    "elementos": [
+      "No pulsar enlaces ni abrir adjuntos",
+      "Reportar y eliminar el correo",
+      "Revisar remitente y dominio",
+      "Contactar al banco por un canal oficial"
+    ],
+    "orden_correcto": [
+      "No pulsar enlaces ni abrir adjuntos",
+      "Revisar remitente y dominio",
+      "Contactar al banco por un canal oficial",
+      "Reportar y eliminar el correo"
+    ],
+    "justificacion": "Primero evitas el riesgo, luego verificas y finalmente reportas.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_002",
+    "instruccion": "Ordena qué hacer si ingresaste tus datos en un sitio falso.",
+    "elementos": [
+      "Cambiar la contraseña de inmediato",
+      "Vigilar movimientos sospechosos",
+      "Activar la autenticación en dos pasos",
+      "Avisar al servicio afectado"
+    ],
+    "orden_correcto": [
+      "Cambiar la contraseña de inmediato",
+      "Activar la autenticación en dos pasos",
+      "Avisar al servicio afectado",
+      "Vigilar movimientos sospechosos"
+    ],
+    "justificacion": "Se corta primero el acceso del atacante y luego se refuerza y vigila.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_003",
+    "instruccion": "Ordena cómo analizar un enlace sospechoso.",
+    "elementos": [
+      "Decidir no abrirlo si no coincide",
+      "Pasar el cursor sobre el enlace",
+      "Comparar el dominio con el sitio oficial",
+      "No hacer clic"
+    ],
+    "orden_correcto": [
+      "No hacer clic",
+      "Pasar el cursor sobre el enlace",
+      "Comparar el dominio con el sitio oficial",
+      "Decidir no abrirlo si no coincide"
+    ],
+    "justificacion": "Verificar el destino real evita caer en enlaces engañosos.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_004",
+    "instruccion": "Ordena las etapas típicas de un ataque de phishing.",
+    "elementos": [
+      "La víctima entrega sus datos",
+      "El atacante usa los datos robados",
+      "Envía el mensaje a las víctimas",
+      "El atacante diseña un mensaje falso"
+    ],
+    "orden_correcto": [
+      "El atacante diseña un mensaje falso",
+      "Envía el mensaje a las víctimas",
+      "La víctima entrega sus datos",
+      "El atacante usa los datos robados"
+    ],
+    "justificacion": "Es el ciclo habitual del ataque.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_005",
+    "instruccion": "Ordena qué hacer ante una llamada que dice ser de tu banco y pide datos.",
+    "elementos": [
+      "Confirmar si hubo realmente contacto",
+      "No dar ningún dato",
+      "Colgar la llamada",
+      "Llamar al número oficial del banco"
+    ],
+    "orden_correcto": [
+      "No dar ningún dato",
+      "Colgar la llamada",
+      "Llamar al número oficial del banco",
+      "Confirmar si hubo realmente contacto"
+    ],
+    "justificacion": "Tú inicias el contacto por un canal seguro.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_006",
+    "instruccion": "Ordena cómo reportar un correo de phishing en tu empresa.",
+    "elementos": [
+      "Tomar nota del remitente y asunto",
+      "Eliminar el correo",
+      "No responder ni abrir adjuntos",
+      "Reenviarlo al equipo de seguridad"
+    ],
+    "orden_correcto": [
+      "No responder ni abrir adjuntos",
+      "Tomar nota del remitente y asunto",
+      "Reenviarlo al equipo de seguridad",
+      "Eliminar el correo"
+    ],
+    "justificacion": "Se preserva la evidencia antes de eliminarlo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_007",
+    "instruccion": "Ordena cómo verificar un SMS con un enlace de paquetería.",
+    "elementos": [
+      "No pulsar el enlace",
+      "Consultar allí tu envío",
+      "Revisar si esperabas un paquete",
+      "Entrar al sitio oficial escribiendo la dirección"
+    ],
+    "orden_correcto": [
+      "No pulsar el enlace",
+      "Revisar si esperabas un paquete",
+      "Entrar al sitio oficial escribiendo la dirección",
+      "Consultar allí tu envío"
+    ],
+    "justificacion": "Se accede por canal propio, no por el enlace recibido.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_008",
+    "instruccion": "Ordena la respuesta a un correo del 'jefe' que pide tarjetas de regalo.",
+    "elementos": [
+      "Reportar el intento",
+      "Revisar la dirección del remitente",
+      "Verificar con tu jefe por otro canal",
+      "Desconfiar de la urgencia"
+    ],
+    "orden_correcto": [
+      "Desconfiar de la urgencia",
+      "Revisar la dirección del remitente",
+      "Verificar con tu jefe por otro canal",
+      "Reportar el intento"
+    ],
+    "justificacion": "El fraude del CEO se desactiva verificando por otro medio.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_009",
+    "instruccion": "Ordena los pasos para revisar un sitio antes de ingresar datos.",
+    "elementos": [
+      "Buscar errores de dominio o escritura",
+      "Ingresar los datos solo si es legítimo",
+      "Revisar la dirección completa",
+      "Confirmar que sea el sitio oficial"
+    ],
+    "orden_correcto": [
+      "Revisar la dirección completa",
+      "Buscar errores de dominio o escritura",
+      "Confirmar que sea el sitio oficial",
+      "Ingresar los datos solo si es legítimo"
+    ],
+    "justificacion": "Primero se verifica y luego se confía.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_010",
+    "instruccion": "Ordena qué hacer al escanear un QR sospechoso.",
+    "elementos": [
+      "Comprobar la fuente del QR",
+      "Descartarlo si hay dudas",
+      "No abrir el enlace que aparece",
+      "Revisar la URL previa"
+    ],
+    "orden_correcto": [
+      "No abrir el enlace que aparece",
+      "Revisar la URL previa",
+      "Comprobar la fuente del QR",
+      "Descartarlo si hay dudas"
+    ],
+    "justificacion": "El quishing se evita desconfiando de los QR no verificados.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_011",
+    "instruccion": "Ordena los pasos para proteger tus cuentas tras un phishing exitoso.",
+    "elementos": [
+      "Cambiar contraseñas afectadas",
+      "Revisar actividad reciente",
+      "Activar 2FA",
+      "Cerrar sesiones activas"
+    ],
+    "orden_correcto": [
+      "Cambiar contraseñas afectadas",
+      "Cerrar sesiones activas",
+      "Activar 2FA",
+      "Revisar actividad reciente"
+    ],
+    "justificacion": "Se corta el acceso y se verifica el daño.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_012",
+    "instruccion": "Ordena cómo detectar un correo de phishing.",
+    "elementos": [
+      "Revisar los enlaces sin pulsarlos",
+      "Decidir si es fraudulento",
+      "Leer el remitente real",
+      "Buscar errores de redacción"
+    ],
+    "orden_correcto": [
+      "Leer el remitente real",
+      "Buscar errores de redacción",
+      "Revisar los enlaces sin pulsarlos",
+      "Decidir si es fraudulento"
+    ],
+    "justificacion": "Se analizan los indicios antes de concluir.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_013",
+    "instruccion": "Ordena cómo actuar ante una oferta de premio inesperada.",
+    "elementos": [
+      "Desconfiar del premio",
+      "Buscar información oficial",
+      "No dar datos personales",
+      "Reportar el mensaje"
+    ],
+    "orden_correcto": [
+      "Desconfiar del premio",
+      "No dar datos personales",
+      "Buscar información oficial",
+      "Reportar el mensaje"
+    ],
+    "justificacion": "Las ofertas inesperadas suelen ser fraude.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_014",
+    "instruccion": "Ordena la respuesta a un adjunto inesperado 'Factura.pdf.exe'.",
+    "elementos": [
+      "Eliminarlo y reportarlo",
+      "Notar la doble extensión",
+      "Escanearlo con el antivirus",
+      "No abrirlo"
+    ],
+    "orden_correcto": [
+      "No abrirlo",
+      "Notar la doble extensión",
+      "Escanearlo con el antivirus",
+      "Eliminarlo y reportarlo"
+    ],
+    "justificacion": "La doble extensión delata un ejecutable disfrazado.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_015",
+    "instruccion": "Ordena los pasos al sospechar que tu correo fue suplantado.",
+    "elementos": [
+      "Activar la verificación en dos pasos",
+      "Avisar a tus contactos",
+      "Revisar reglas de reenvío",
+      "Cambiar la contraseña"
+    ],
+    "orden_correcto": [
+      "Cambiar la contraseña",
+      "Activar la verificación en dos pasos",
+      "Avisar a tus contactos",
+      "Revisar reglas de reenvío"
+    ],
+    "justificacion": "Se asegura la cuenta y luego se alerta a otros.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_016",
+    "instruccion": "Ordena cómo comprobar una solicitud de cambio de datos bancarios en una empresa.",
+    "elementos": [
+      "Procesar el cambio solo si lo confirma",
+      "Recibir la solicitud",
+      "Llamar al proveedor a un número conocido",
+      "Desconfiar del cambio repentino"
+    ],
+    "orden_correcto": [
+      "Recibir la solicitud",
+      "Desconfiar del cambio repentino",
+      "Llamar al proveedor a un número conocido",
+      "Procesar el cambio solo si lo confirma"
+    ],
+    "justificacion": "La verificación por otro canal evita fraudes.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_017",
+    "instruccion": "Ordena el análisis de un mensaje de WhatsApp con un enlace de promoción.",
+    "elementos": [
+      "Verificar la promoción en el sitio oficial",
+      "No pulsar el enlace",
+      "Bloquear y reportar si es falso",
+      "Revisar quién lo envía"
+    ],
+    "orden_correcto": [
+      "No pulsar el enlace",
+      "Revisar quién lo envía",
+      "Verificar la promoción en el sitio oficial",
+      "Bloquear y reportar si es falso"
+    ],
+    "justificacion": "Se verifica por un canal independiente.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_018",
+    "instruccion": "Ordena el proceso de enseñar a otros a detectar phishing.",
+    "elementos": [
+      "Reforzar con recordatorios",
+      "Practicar con simulacros",
+      "Mostrar ejemplos reales",
+      "Explicar qué es el phishing"
+    ],
+    "orden_correcto": [
+      "Explicar qué es el phishing",
+      "Mostrar ejemplos reales",
+      "Practicar con simulacros",
+      "Reforzar con recordatorios"
+    ],
+    "justificacion": "El aprendizaje progresa de lo teórico a lo práctico.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_019",
+    "instruccion": "Ordena cómo responder a una amenaza de cierre de cuenta por correo.",
+    "elementos": [
+      "Revisar si hay avisos reales",
+      "No pulsar enlaces del correo",
+      "Entrar al sitio oficial por tu cuenta",
+      "Mantener la calma"
+    ],
+    "orden_correcto": [
+      "Mantener la calma",
+      "No pulsar enlaces del correo",
+      "Entrar al sitio oficial por tu cuenta",
+      "Revisar si hay avisos reales"
+    ],
+    "justificacion": "La calma evita actuar bajo presión.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_020",
+    "instruccion": "Ordena cómo evitar el typosquatting al entrar a un sitio.",
+    "elementos": [
+      "Guardar el sitio en marcadores",
+      "Revisar la ortografía del dominio",
+      "Escribir la dirección con cuidado",
+      "Usar siempre el marcador"
+    ],
+    "orden_correcto": [
+      "Escribir la dirección con cuidado",
+      "Revisar la ortografía del dominio",
+      "Guardar el sitio en marcadores",
+      "Usar siempre el marcador"
+    ],
+    "justificacion": "Usar marcadores evita errores al escribir.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_OR_021",
+    "instruccion": "Ordena los pasos para crear una contraseña fuerte.",
+    "elementos": [
+      "Guardarla en un gestor",
+      "Evitar datos personales",
+      "Elegir una longitud de 12 o más caracteres",
+      "Combinar letras, números y símbolos"
+    ],
+    "orden_correcto": [
+      "Elegir una longitud de 12 o más caracteres",
+      "Combinar letras, números y símbolos",
+      "Evitar datos personales",
+      "Guardarla en un gestor"
+    ],
+    "justificacion": "Longitud, variedad y no usar datos personales.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_022",
+    "instruccion": "Ordena qué hacer si tu contraseña aparece en una filtración.",
+    "elementos": [
+      "Cambiarla donde la reutilizaste",
+      "Revisar actividad sospechosa",
+      "Cambiarla en el sitio afectado",
+      "Activar 2FA"
+    ],
+    "orden_correcto": [
+      "Cambiarla en el sitio afectado",
+      "Cambiarla donde la reutilizaste",
+      "Activar 2FA",
+      "Revisar actividad sospechosa"
+    ],
+    "justificacion": "Se reemplaza en todas partes y se refuerza.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_023",
+    "instruccion": "Ordena el uso de un gestor de contraseñas.",
+    "elementos": [
+      "Generar claves únicas",
+      "Usar el autocompletado seguro",
+      "Crear una clave maestra fuerte",
+      "Guardar tus cuentas en el gestor"
+    ],
+    "orden_correcto": [
+      "Crear una clave maestra fuerte",
+      "Guardar tus cuentas en el gestor",
+      "Generar claves únicas",
+      "Usar el autocompletado seguro"
+    ],
+    "justificacion": "La clave maestra protege todo el contenido.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_024",
+    "instruccion": "Ordena de más débil a más fuerte.",
+    "elementos": [
+      "Tn!9vLq#4rXw$7Bz",
+      "123456",
+      "password",
+      "Ana1990"
+    ],
+    "orden_correcto": [
+      "123456",
+      "password",
+      "Ana1990",
+      "Tn!9vLq#4rXw$7Bz"
+    ],
+    "justificacion": "Aumenta la longitud y la aleatoriedad.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_025",
+    "instruccion": "Ordena cómo asegurar un router nuevo.",
+    "elementos": [
+      "Activar el cifrado WPA3 o WPA2",
+      "Cambiar la contraseña de administrador",
+      "Entrar al panel de administración",
+      "Cambiar el nombre y clave del WiFi"
+    ],
+    "orden_correcto": [
+      "Entrar al panel de administración",
+      "Cambiar la contraseña de administrador",
+      "Cambiar el nombre y clave del WiFi",
+      "Activar el cifrado WPA3 o WPA2"
+    ],
+    "justificacion": "Se eliminan credenciales por defecto y se activa cifrado.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_026",
+    "instruccion": "Ordena los pasos para recuperar una cuenta comprometida.",
+    "elementos": [
+      "Restablecer la contraseña",
+      "Activar la autenticación en dos pasos",
+      "Cerrar sesiones abiertas",
+      "Revisar actividad reciente"
+    ],
+    "orden_correcto": [
+      "Restablecer la contraseña",
+      "Cerrar sesiones abiertas",
+      "Activar la autenticación en dos pasos",
+      "Revisar actividad reciente"
+    ],
+    "justificacion": "Se retoma el control y se refuerza.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_027",
+    "instruccion": "Ordena cómo crear una frase de contraseña.",
+    "elementos": [
+      "Unirlas con separadores",
+      "Memorizarla o guardarla en el gestor",
+      "Elegir 4 o más palabras al azar",
+      "Añadir números o símbolos"
+    ],
+    "orden_correcto": [
+      "Elegir 4 o más palabras al azar",
+      "Unirlas con separadores",
+      "Añadir números o símbolos",
+      "Memorizarla o guardarla en el gestor"
+    ],
+    "justificacion": "Una passphrase larga es fuerte y recordable.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_028",
+    "instruccion": "Ordena cómo cambiar claves reutilizadas.",
+    "elementos": [
+      "Priorizar correo y banca",
+      "Identificar cuentas con la misma clave",
+      "Crear claves únicas para cada una",
+      "Guardarlas en el gestor"
+    ],
+    "orden_correcto": [
+      "Identificar cuentas con la misma clave",
+      "Priorizar correo y banca",
+      "Crear claves únicas para cada una",
+      "Guardarlas en el gestor"
+    ],
+    "justificacion": "Se empieza por las cuentas más críticas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_029",
+    "instruccion": "Ordena cómo usar un equipo público con seguridad.",
+    "elementos": [
+      "No guardar contraseñas",
+      "Cerrar sesión al terminar",
+      "Evitar iniciar sesión en cuentas sensibles",
+      "Borrar el historial"
+    ],
+    "orden_correcto": [
+      "Evitar iniciar sesión en cuentas sensibles",
+      "No guardar contraseñas",
+      "Cerrar sesión al terminar",
+      "Borrar el historial"
+    ],
+    "justificacion": "Se minimiza el rastro y se cierra sesión.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_030",
+    "instruccion": "Ordena el flujo de un ataque de fuerza bruta.",
+    "elementos": [
+      "Un programa prueba combinaciones",
+      "El atacante accede a la cuenta",
+      "Se acierta la contraseña",
+      "El atacante elige un objetivo"
+    ],
+    "orden_correcto": [
+      "El atacante elige un objetivo",
+      "Un programa prueba combinaciones",
+      "Se acierta la contraseña",
+      "El atacante accede a la cuenta"
+    ],
+    "justificacion": "Muestra cómo una clave débil cae.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_031",
+    "instruccion": "Ordena cómo el servidor guarda una contraseña de forma segura.",
+    "elementos": [
+      "El usuario escribe su contraseña",
+      "Al ingresar, se compara el hash",
+      "El sistema aplica un hash",
+      "Se guarda solo el hash"
+    ],
+    "orden_correcto": [
+      "El usuario escribe su contraseña",
+      "El sistema aplica un hash",
+      "Se guarda solo el hash",
+      "Al ingresar, se compara el hash"
+    ],
+    "justificacion": "Nunca se guarda la contraseña en texto plano.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_032",
+    "instruccion": "Ordena cómo comprobar si tu correo fue filtrado.",
+    "elementos": [
+      "Revisar los resultados",
+      "Entrar a un servicio de verificación fiable",
+      "Escribir tu correo",
+      "Cambiar las claves afectadas"
+    ],
+    "orden_correcto": [
+      "Entrar a un servicio de verificación fiable",
+      "Escribir tu correo",
+      "Revisar los resultados",
+      "Cambiar las claves afectadas"
+    ],
+    "justificacion": "Se detecta la exposición y se actúa.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_033",
+    "instruccion": "Ordena cómo elegir respuestas de seguridad.",
+    "elementos": [
+      "Evitar datos públicos",
+      "Elegir una respuesta no deducible",
+      "No compartirla",
+      "Guardarla en el gestor"
+    ],
+    "orden_correcto": [
+      "Evitar datos públicos",
+      "Elegir una respuesta no deducible",
+      "Guardarla en el gestor",
+      "No compartirla"
+    ],
+    "justificacion": "Las respuestas fáciles de adivinar debilitan la cuenta.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_034",
+    "instruccion": "Ordena la gestión de claves en una empresa.",
+    "elementos": [
+      "Capacitar al personal",
+      "Auditar periódicamente",
+      "Definir una política de contraseñas",
+      "Exigir 2FA"
+    ],
+    "orden_correcto": [
+      "Definir una política de contraseñas",
+      "Capacitar al personal",
+      "Exigir 2FA",
+      "Auditar periódicamente"
+    ],
+    "justificacion": "Primero se define, luego se capacita y se controla.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_035",
+    "instruccion": "Ordena cómo reaccionar si compartiste tu clave por error.",
+    "elementos": [
+      "Cerrar sesiones activas",
+      "Avisar al administrador",
+      "Revisar movimientos",
+      "Cambiarla de inmediato"
+    ],
+    "orden_correcto": [
+      "Cambiarla de inmediato",
+      "Cerrar sesiones activas",
+      "Avisar al administrador",
+      "Revisar movimientos"
+    ],
+    "justificacion": "Reducir el daño es lo primero.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_036",
+    "instruccion": "Ordena cómo migrar a un gestor de contraseñas.",
+    "elementos": [
+      "Instalar un gestor de confianza",
+      "Importar tus cuentas",
+      "Crear la clave maestra",
+      "Reemplazar claves débiles"
+    ],
+    "orden_correcto": [
+      "Instalar un gestor de confianza",
+      "Crear la clave maestra",
+      "Importar tus cuentas",
+      "Reemplazar claves débiles"
+    ],
+    "justificacion": "Se instala, se protege y se mejora.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_037",
+    "instruccion": "Ordena cómo configurar una cuenta nueva con seguridad.",
+    "elementos": [
+      "Crear una contraseña única y larga",
+      "Activar la verificación en dos pasos",
+      "Guardarla en el gestor",
+      "Guardar los códigos de respaldo"
+    ],
+    "orden_correcto": [
+      "Crear una contraseña única y larga",
+      "Guardarla en el gestor",
+      "Activar la verificación en dos pasos",
+      "Guardar los códigos de respaldo"
+    ],
+    "justificacion": "Seguridad desde el inicio de la cuenta.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_038",
+    "instruccion": "Ordena cómo detectar un intento de acceso a tu cuenta.",
+    "elementos": [
+      "Cerrar todas las sesiones",
+      "Revisar dispositivo y ubicación",
+      "Cambiar la contraseña",
+      "Recibir un aviso de inicio de sesión"
+    ],
+    "orden_correcto": [
+      "Recibir un aviso de inicio de sesión",
+      "Revisar dispositivo y ubicación",
+      "Cambiar la contraseña",
+      "Cerrar todas las sesiones"
+    ],
+    "justificacion": "Se verifica y se corta el acceso.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_039",
+    "instruccion": "Ordena cómo proteger la clave del WiFi de casa.",
+    "elementos": [
+      "Usar una clave larga y única",
+      "Cambiar la clave por defecto",
+      "Entrar al router",
+      "Compartirla solo con quienes la necesitan"
+    ],
+    "orden_correcto": [
+      "Entrar al router",
+      "Cambiar la clave por defecto",
+      "Usar una clave larga y única",
+      "Compartirla solo con quienes la necesitan"
+    ],
+    "justificacion": "Evita accesos no autorizados.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_040",
+    "instruccion": "Ordena la respuesta ante un correo que dice 'tu contraseña caducó'.",
+    "elementos": [
+      "No pulsar el enlace",
+      "Cambiarla desde el sitio oficial",
+      "Ir al sitio oficial escribiendo la dirección",
+      "Revisar si realmente caducó"
+    ],
+    "orden_correcto": [
+      "No pulsar el enlace",
+      "Ir al sitio oficial escribiendo la dirección",
+      "Revisar si realmente caducó",
+      "Cambiarla desde el sitio oficial"
+    ],
+    "justificacion": "El aviso puede ser phishing.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_OR_041",
+    "instruccion": "Ordena qué hacer si sospechas que tu equipo está infectado.",
+    "elementos": [
+      "Ejecutar un análisis antivirus",
+      "Desconectarlo de la red",
+      "Eliminar las amenazas",
+      "Cambiar tus contraseñas desde otro equipo"
+    ],
+    "orden_correcto": [
+      "Desconectarlo de la red",
+      "Ejecutar un análisis antivirus",
+      "Eliminar las amenazas",
+      "Cambiar tus contraseñas desde otro equipo"
+    ],
+    "justificacion": "Primero se aísla para evitar propagación.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_042",
+    "instruccion": "Ordena cómo responder a un ransomware.",
+    "elementos": [
+      "Restaurar desde la copia de seguridad",
+      "Desconectar el equipo",
+      "No pagar el rescate",
+      "Reportar a soporte o autoridades"
+    ],
+    "orden_correcto": [
+      "Desconectar el equipo",
+      "No pagar el rescate",
+      "Reportar a soporte o autoridades",
+      "Restaurar desde la copia de seguridad"
+    ],
+    "justificacion": "Se aísla, no se paga y se recupera desde copia.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_043",
+    "instruccion": "Ordena el ciclo de infección por un troyano.",
+    "elementos": [
+      "El atacante accede al equipo",
+      "Lo ejecuta",
+      "El usuario descarga un programa falso",
+      "El troyano se instala en segundo plano"
+    ],
+    "orden_correcto": [
+      "El usuario descarga un programa falso",
+      "Lo ejecuta",
+      "El troyano se instala en segundo plano",
+      "El atacante accede al equipo"
+    ],
+    "justificacion": "El engaño inicial permite la infección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_044",
+    "instruccion": "Ordena cómo instalar una app con seguridad.",
+    "elementos": [
+      "Abrir la tienda oficial",
+      "Instalar si todo es razonable",
+      "Revisar el desarrollador y reseñas",
+      "Revisar los permisos solicitados"
+    ],
+    "orden_correcto": [
+      "Abrir la tienda oficial",
+      "Revisar el desarrollador y reseñas",
+      "Revisar los permisos solicitados",
+      "Instalar si todo es razonable"
+    ],
+    "justificacion": "Verificar antes de instalar reduce riesgos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_045",
+    "instruccion": "Ordena cómo hacer una copia de seguridad.",
+    "elementos": [
+      "Elegir un destino seguro",
+      "Elegir qué archivos respaldar",
+      "Realizar la copia",
+      "Verificar que se pueda restaurar"
+    ],
+    "orden_correcto": [
+      "Elegir qué archivos respaldar",
+      "Elegir un destino seguro",
+      "Realizar la copia",
+      "Verificar que se pueda restaurar"
+    ],
+    "justificacion": "Una copia sin verificar puede fallar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_046",
+    "instruccion": "Ordena la actualización segura del sistema.",
+    "elementos": [
+      "Descargar la actualización oficial",
+      "Instalarla",
+      "Reiniciar y verificar",
+      "Hacer una copia de seguridad"
+    ],
+    "orden_correcto": [
+      "Hacer una copia de seguridad",
+      "Descargar la actualización oficial",
+      "Instalarla",
+      "Reiniciar y verificar"
+    ],
+    "justificacion": "Se protege la información antes de modificar el sistema.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_047",
+    "instruccion": "Ordena qué hacer con una USB desconocida.",
+    "elementos": [
+      "Preguntar si es de alguien",
+      "No conectarla",
+      "Evitar usarla en tu equipo",
+      "Entregarla al área de seguridad"
+    ],
+    "orden_correcto": [
+      "No conectarla",
+      "Preguntar si es de alguien",
+      "Entregarla al área de seguridad",
+      "Evitar usarla en tu equipo"
+    ],
+    "justificacion": "Las USB desconocidas son un riesgo clásico.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_048",
+    "instruccion": "Ordena cómo analizar un archivo descargado.",
+    "elementos": [
+      "No abrirlo de inmediato",
+      "Descargarlo desde una fuente oficial",
+      "Analizarlo con antivirus",
+      "Abrirlo si está limpio"
+    ],
+    "orden_correcto": [
+      "Descargarlo desde una fuente oficial",
+      "No abrirlo de inmediato",
+      "Analizarlo con antivirus",
+      "Abrirlo si está limpio"
+    ],
+    "justificacion": "Se verifica antes de ejecutar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_049",
+    "instruccion": "Ordena cómo responde un antivirus a una amenaza.",
+    "elementos": [
+      "Lo aísla en cuarentena",
+      "Detecta el archivo sospechoso",
+      "Lo elimina",
+      "Notifica al usuario"
+    ],
+    "orden_correcto": [
+      "Detecta el archivo sospechoso",
+      "Lo aísla en cuarentena",
+      "Notifica al usuario",
+      "Lo elimina"
+    ],
+    "justificacion": "Contiene antes de eliminar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_050",
+    "instruccion": "Ordena cómo se propaga un gusano.",
+    "elementos": [
+      "Explota una vulnerabilidad",
+      "Se replica en los nuevos equipos",
+      "Infecta un equipo",
+      "Busca otros equipos en la red"
+    ],
+    "orden_correcto": [
+      "Infecta un equipo",
+      "Busca otros equipos en la red",
+      "Explota una vulnerabilidad",
+      "Se replica en los nuevos equipos"
+    ],
+    "justificacion": "Se propaga solo por la red.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_051",
+    "instruccion": "Ordena la respuesta a un 'virus' falso en una ventana emergente.",
+    "elementos": [
+      "No pulsar nada en la ventana",
+      "Cerrar el navegador",
+      "Borrar extensiones sospechosas",
+      "Ejecutar un análisis legítimo"
+    ],
+    "orden_correcto": [
+      "No pulsar nada en la ventana",
+      "Cerrar el navegador",
+      "Ejecutar un análisis legítimo",
+      "Borrar extensiones sospechosas"
+    ],
+    "justificacion": "Las alertas falsas buscan instalar malware.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_052",
+    "instruccion": "Ordena cómo limpiar un navegador con adware.",
+    "elementos": [
+      "Limpiar caché y cookies",
+      "Eliminar las desconocidas",
+      "Ejecutar un análisis antivirus",
+      "Revisar extensiones instaladas"
+    ],
+    "orden_correcto": [
+      "Revisar extensiones instaladas",
+      "Eliminar las desconocidas",
+      "Limpiar caché y cookies",
+      "Ejecutar un análisis antivirus"
+    ],
+    "justificacion": "Se eliminan los componentes no deseados.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_053",
+    "instruccion": "Ordena la preparación ante un ransomware.",
+    "elementos": [
+      "Mantener copias desconectadas",
+      "Actualizar el sistema",
+      "Capacitar al personal",
+      "Hacer copias de seguridad"
+    ],
+    "orden_correcto": [
+      "Hacer copias de seguridad",
+      "Mantener copias desconectadas",
+      "Actualizar el sistema",
+      "Capacitar al personal"
+    ],
+    "justificacion": "Prevención en capas.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_054",
+    "instruccion": "Ordena cómo evitar el software pirata.",
+    "elementos": [
+      "Reconocer el riesgo",
+      "Mantener el antivirus activo",
+      "Buscar alternativas legales o gratuitas",
+      "Descargar desde fuentes oficiales"
+    ],
+    "orden_correcto": [
+      "Reconocer el riesgo",
+      "Buscar alternativas legales o gratuitas",
+      "Descargar desde fuentes oficiales",
+      "Mantener el antivirus activo"
+    ],
+    "justificacion": "Evitar cracks reduce infecciones.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_055",
+    "instruccion": "Ordena el aislamiento de un equipo en una oficina.",
+    "elementos": [
+      "Analizar y limpiar el equipo",
+      "Avisar al área de seguridad",
+      "Desconectarlo de la red",
+      "Detectar el equipo afectado"
+    ],
+    "orden_correcto": [
+      "Detectar el equipo afectado",
+      "Desconectarlo de la red",
+      "Avisar al área de seguridad",
+      "Analizar y limpiar el equipo"
+    ],
+    "justificacion": "Se contiene antes de remediar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_056",
+    "instruccion": "Ordena cómo notar un keylogger.",
+    "elementos": [
+      "Ejecutar un análisis anti-malware",
+      "Notar lentitud o comportamiento extraño",
+      "Cambiar las contraseñas desde otro equipo",
+      "Revisar procesos y programas"
+    ],
+    "orden_correcto": [
+      "Notar lentitud o comportamiento extraño",
+      "Revisar procesos y programas",
+      "Ejecutar un análisis anti-malware",
+      "Cambiar las contraseñas desde otro equipo"
+    ],
+    "justificacion": "Cambiar claves en un equipo infectado no sirve.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_057",
+    "instruccion": "Ordena cómo recuperar un equipo infectado.",
+    "elementos": [
+      "Hacer un análisis completo",
+      "Restaurar archivos desde copia limpia",
+      "Aislar el equipo",
+      "Restaurar o reinstalar el sistema si es necesario"
+    ],
+    "orden_correcto": [
+      "Aislar el equipo",
+      "Hacer un análisis completo",
+      "Restaurar o reinstalar el sistema si es necesario",
+      "Restaurar archivos desde copia limpia"
+    ],
+    "justificacion": "Se restaura desde copias limpias.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_058",
+    "instruccion": "Ordena cómo se instala un spyware.",
+    "elementos": [
+      "El spyware se ejecuta oculto",
+      "Registra la actividad del usuario",
+      "Envía los datos al atacante",
+      "La víctima instala un software engañoso"
+    ],
+    "orden_correcto": [
+      "La víctima instala un software engañoso",
+      "El spyware se ejecuta oculto",
+      "Registra la actividad del usuario",
+      "Envía los datos al atacante"
+    ],
+    "justificacion": "Actúa de forma oculta.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_059",
+    "instruccion": "Ordena cómo se forma una botnet.",
+    "elementos": [
+      "El dispositivo se conecta al servidor del atacante",
+      "El atacante lanza una acción coordinada",
+      "Se suman más dispositivos",
+      "Se infecta un dispositivo"
+    ],
+    "orden_correcto": [
+      "Se infecta un dispositivo",
+      "El dispositivo se conecta al servidor del atacante",
+      "Se suman más dispositivos",
+      "El atacante lanza una acción coordinada"
+    ],
+    "justificacion": "Una red de equipos controlados.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_060",
+    "instruccion": "Ordena la limpieza de un teléfono con apps maliciosas.",
+    "elementos": [
+      "Desinstalar las sospechosas",
+      "Ejecutar un análisis de seguridad",
+      "Revisar apps instaladas",
+      "Cambiar contraseñas importantes"
+    ],
+    "orden_correcto": [
+      "Revisar apps instaladas",
+      "Desinstalar las sospechosas",
+      "Ejecutar un análisis de seguridad",
+      "Cambiar contraseñas importantes"
+    ],
+    "justificacion": "Se elimina la fuente y se protegen las cuentas.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_OR_061",
+    "instruccion": "Ordena cómo activar la verificación en dos pasos.",
+    "elementos": [
+      "Escanear el código QR",
+      "Elegir un método (app autenticadora)",
+      "Entrar a la configuración de seguridad",
+      "Guardar los códigos de respaldo"
+    ],
+    "orden_correcto": [
+      "Entrar a la configuración de seguridad",
+      "Elegir un método (app autenticadora)",
+      "Escanear el código QR",
+      "Guardar los códigos de respaldo"
+    ],
+    "justificacion": "Los códigos de respaldo permiten recuperar el acceso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_062",
+    "instruccion": "Ordena un inicio de sesión con 2FA.",
+    "elementos": [
+      "Acceder a la cuenta",
+      "Ingresar el usuario",
+      "Ingresar la contraseña",
+      "Introducir el código de verificación"
+    ],
+    "orden_correcto": [
+      "Ingresar el usuario",
+      "Ingresar la contraseña",
+      "Introducir el código de verificación",
+      "Acceder a la cuenta"
+    ],
+    "justificacion": "Primero el factor conocido, luego el segundo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_063",
+    "instruccion": "Ordena de menos a más resistente al phishing.",
+    "elementos": [
+      "Llave de seguridad FIDO2",
+      "Código de app autenticadora",
+      "Contraseña sola",
+      "Código por SMS"
+    ],
+    "orden_correcto": [
+      "Contraseña sola",
+      "Código por SMS",
+      "Código de app autenticadora",
+      "Llave de seguridad FIDO2"
+    ],
+    "justificacion": "Cada método añade resistencia.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_064",
+    "instruccion": "Ordena cómo responder si te llega una aprobación de acceso que no solicitaste.",
+    "elementos": [
+      "No aprobarla",
+      "Cambiar tu contraseña",
+      "Rechazarla",
+      "Revisar sesiones activas"
+    ],
+    "orden_correcto": [
+      "No aprobarla",
+      "Rechazarla",
+      "Cambiar tu contraseña",
+      "Revisar sesiones activas"
+    ],
+    "justificacion": "Alguien más intenta acceder.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_065",
+    "instruccion": "Ordena qué hacer si pierdes tu teléfono con la app autenticadora.",
+    "elementos": [
+      "Revocar el dispositivo perdido",
+      "Usar un dispositivo de respaldo o códigos de respaldo",
+      "Entrar a tu cuenta",
+      "Configurar el 2FA en el nuevo teléfono"
+    ],
+    "orden_correcto": [
+      "Usar un dispositivo de respaldo o códigos de respaldo",
+      "Entrar a tu cuenta",
+      "Revocar el dispositivo perdido",
+      "Configurar el 2FA en el nuevo teléfono"
+    ],
+    "justificacion": "Se recupera el acceso y se revoca el dispositivo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_066",
+    "instruccion": "Ordena un ataque de SIM swapping.",
+    "elementos": [
+      "El atacante recopila tus datos",
+      "Recibe tus SMS de verificación",
+      "Convence al operador de cambiar la SIM",
+      "Toma control de tus cuentas"
+    ],
+    "orden_correcto": [
+      "El atacante recopila tus datos",
+      "Convence al operador de cambiar la SIM",
+      "Recibe tus SMS de verificación",
+      "Toma control de tus cuentas"
+    ],
+    "justificacion": "Aprovecha el SMS como segundo factor.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_067",
+    "instruccion": "Ordena cómo se protege contra el SIM swapping.",
+    "elementos": [
+      "Avisar al operador de tus requisitos",
+      "Usar app autenticadora en lugar de SMS",
+      "Revisar alertas de cambio de SIM",
+      "Poner un PIN en la línea"
+    ],
+    "orden_correcto": [
+      "Usar app autenticadora en lugar de SMS",
+      "Poner un PIN en la línea",
+      "Avisar al operador de tus requisitos",
+      "Revisar alertas de cambio de SIM"
+    ],
+    "justificacion": "Se reduce la dependencia del SMS.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_068",
+    "instruccion": "Ordena cómo configurar una passkey.",
+    "elementos": [
+      "Entrar a la configuración de seguridad",
+      "Verificar tu identidad con biometría o PIN",
+      "Guardar la passkey en tu dispositivo",
+      "Elegir 'crear passkey'"
+    ],
+    "orden_correcto": [
+      "Entrar a la configuración de seguridad",
+      "Elegir 'crear passkey'",
+      "Verificar tu identidad con biometría o PIN",
+      "Guardar la passkey en tu dispositivo"
+    ],
+    "justificacion": "Se vincula a tu dispositivo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_069",
+    "instruccion": "Ordena cómo asignar permisos con mínimo privilegio.",
+    "elementos": [
+      "Identificar las tareas del usuario",
+      "Revisarlos periódicamente",
+      "Asignar solo esos permisos",
+      "Definir los permisos necesarios"
+    ],
+    "orden_correcto": [
+      "Identificar las tareas del usuario",
+      "Definir los permisos necesarios",
+      "Asignar solo esos permisos",
+      "Revisarlos periódicamente"
+    ],
+    "justificacion": "Solo lo estrictamente necesario.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_070",
+    "instruccion": "Ordena la autenticación y autorización en un sistema.",
+    "elementos": [
+      "El sistema determina los permisos",
+      "Se concede el acceso permitido",
+      "El usuario se identifica",
+      "El sistema verifica la identidad"
+    ],
+    "orden_correcto": [
+      "El usuario se identifica",
+      "El sistema verifica la identidad",
+      "El sistema determina los permisos",
+      "Se concede el acceso permitido"
+    ],
+    "justificacion": "Primero autenticación, luego autorización.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_071",
+    "instruccion": "Ordena cómo detectar una fatiga de MFA.",
+    "elementos": [
+      "No aprobar ninguna",
+      "Recibir varias solicitudes seguidas",
+      "Cambiar la contraseña",
+      "Avisar al área de seguridad"
+    ],
+    "orden_correcto": [
+      "Recibir varias solicitudes seguidas",
+      "No aprobar ninguna",
+      "Cambiar la contraseña",
+      "Avisar al área de seguridad"
+    ],
+    "justificacion": "Alguien conoce tu clave y presiona para entrar.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_072",
+    "instruccion": "Ordena cómo revocar una sesión desconocida.",
+    "elementos": [
+      "Cambiar la contraseña",
+      "Ver sesiones activas",
+      "Cerrar la sesión desconocida",
+      "Entrar a la configuración de seguridad"
+    ],
+    "orden_correcto": [
+      "Entrar a la configuración de seguridad",
+      "Ver sesiones activas",
+      "Cerrar la sesión desconocida",
+      "Cambiar la contraseña"
+    ],
+    "justificacion": "Se corta el acceso del intruso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_073",
+    "instruccion": "Ordena cómo usar un token de hardware.",
+    "elementos": [
+      "Tocar o activar el token",
+      "Iniciar sesión con usuario y contraseña",
+      "Conectar o acercar el token",
+      "Acceder a la cuenta"
+    ],
+    "orden_correcto": [
+      "Conectar o acercar el token",
+      "Iniciar sesión con usuario y contraseña",
+      "Tocar o activar el token",
+      "Acceder a la cuenta"
+    ],
+    "justificacion": "El token actúa como segundo factor.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_074",
+    "instruccion": "Ordena cómo prepararte antes de cambiar de teléfono.",
+    "elementos": [
+      "Configurar el 2FA en el nuevo teléfono",
+      "Hacer respaldo de la app autenticadora",
+      "Borrar el teléfono antiguo",
+      "Anotar los códigos de respaldo"
+    ],
+    "orden_correcto": [
+      "Hacer respaldo de la app autenticadora",
+      "Anotar los códigos de respaldo",
+      "Configurar el 2FA en el nuevo teléfono",
+      "Borrar el teléfono antiguo"
+    ],
+    "justificacion": "Evita perder el acceso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_075",
+    "instruccion": "Ordena cómo verificar un cambio de acceso inesperado.",
+    "elementos": [
+      "Notar un aviso inesperado",
+      "Entrar a tu cuenta por el sitio oficial",
+      "No compartir códigos",
+      "Revisar y cambiar la configuración"
+    ],
+    "orden_correcto": [
+      "Notar un aviso inesperado",
+      "No compartir códigos",
+      "Entrar a tu cuenta por el sitio oficial",
+      "Revisar y cambiar la configuración"
+    ],
+    "justificacion": "Se verifica sin usar enlaces recibidos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_076",
+    "instruccion": "Ordena la incorporación de un empleado con acceso seguro.",
+    "elementos": [
+      "Capacitarlo en seguridad",
+      "Crear su cuenta personal",
+      "Asignar permisos según su rol",
+      "Configurar 2FA"
+    ],
+    "orden_correcto": [
+      "Crear su cuenta personal",
+      "Asignar permisos según su rol",
+      "Configurar 2FA",
+      "Capacitarlo en seguridad"
+    ],
+    "justificacion": "El acceso nace seguro.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_077",
+    "instruccion": "Ordena la baja de un empleado.",
+    "elementos": [
+      "Auditar el acceso",
+      "Recuperar sus dispositivos",
+      "Desactivar sus cuentas",
+      "Revocar sus permisos"
+    ],
+    "orden_correcto": [
+      "Desactivar sus cuentas",
+      "Revocar sus permisos",
+      "Recuperar sus dispositivos",
+      "Auditar el acceso"
+    ],
+    "justificacion": "Se corta el acceso de inmediato.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_078",
+    "instruccion": "Ordena el uso de SSO.",
+    "elementos": [
+      "Se autentica una sola vez",
+      "El usuario abre una aplicación",
+      "Es redirigido al proveedor de identidad",
+      "Accede a la aplicación"
+    ],
+    "orden_correcto": [
+      "El usuario abre una aplicación",
+      "Es redirigido al proveedor de identidad",
+      "Se autentica una sola vez",
+      "Accede a la aplicación"
+    ],
+    "justificacion": "Un único acceso para varias aplicaciones.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_079",
+    "instruccion": "Ordena cómo asegurar el correo principal.",
+    "elementos": [
+      "Crear una contraseña única y larga",
+      "Guardar códigos de respaldo",
+      "Activar 2FA",
+      "Revisar dispositivos conectados"
+    ],
+    "orden_correcto": [
+      "Crear una contraseña única y larga",
+      "Activar 2FA",
+      "Guardar códigos de respaldo",
+      "Revisar dispositivos conectados"
+    ],
+    "justificacion": "Es la cuenta más crítica.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_OR_080",
+    "instruccion": "Ordena cómo actuar si alguien te pide tu código de verificación.",
+    "elementos": [
+      "Cambiar tu contraseña por precaución",
+      "No compartirlo",
+      "Cortar la comunicación",
+      "Reportar el intento"
+    ],
+    "orden_correcto": [
+      "No compartirlo",
+      "Cortar la comunicación",
+      "Cambiar tu contraseña por precaución",
+      "Reportar el intento"
+    ],
+    "justificacion": "Quien lo pide intenta entrar a tu cuenta.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "PA_OR_001",
+    "instruccion": "Ordena los pasos de la RCP en un adulto.",
+    "elementos": [
+      "Comprobar si responde",
+      "Comprobar la seguridad de la escena",
+      "Iniciar compresiones torácicas",
+      "Llamar al 911 y pedir un DEA"
+    ],
+    "orden_correcto": [
+      "Comprobar la seguridad de la escena",
+      "Comprobar si responde",
+      "Llamar al 911 y pedir un DEA",
+      "Iniciar compresiones torácicas"
+    ],
+    "justificacion": "Se asegura, se evalúa, se pide ayuda y se comprime.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_002",
+    "instruccion": "Ordena la secuencia de compresiones y ventilaciones.",
+    "elementos": [
+      "2 ventilaciones",
+      "Abrir la vía aérea",
+      "30 compresiones",
+      "Reanudar compresiones"
+    ],
+    "orden_correcto": [
+      "30 compresiones",
+      "Abrir la vía aérea",
+      "2 ventilaciones",
+      "Reanudar compresiones"
+    ],
+    "justificacion": "Es el ciclo estándar 30:2.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_003",
+    "instruccion": "Ordena el uso de un DEA.",
+    "elementos": [
+      "Dar la descarga si lo indica",
+      "Encender el DEA",
+      "Colocar los parches en el pecho desnudo",
+      "Dejar que analice el ritmo"
+    ],
+    "orden_correcto": [
+      "Encender el DEA",
+      "Colocar los parches en el pecho desnudo",
+      "Dejar que analice el ritmo",
+      "Dar la descarga si lo indica"
+    ],
+    "justificacion": "El DEA guía paso a paso.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_004",
+    "instruccion": "Ordena la evaluación inicial de una persona inconsciente.",
+    "elementos": [
+      "Tocar los hombros y hablar fuerte",
+      "Llamar al 911",
+      "Comprobar si respira (máx. 10 s)",
+      "Verificar la seguridad"
+    ],
+    "orden_correcto": [
+      "Verificar la seguridad",
+      "Tocar los hombros y hablar fuerte",
+      "Comprobar si respira (máx. 10 s)",
+      "Llamar al 911"
+    ],
+    "justificacion": "Se evalúa antes de actuar.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_005",
+    "instruccion": "Ordena la RCP en un lactante.",
+    "elementos": [
+      "Pedir ayuda al 911",
+      "Dar ventilaciones suaves",
+      "Dar compresiones con dos dedos",
+      "Comprobar si responde"
+    ],
+    "orden_correcto": [
+      "Comprobar si responde",
+      "Pedir ayuda al 911",
+      "Dar compresiones con dos dedos",
+      "Dar ventilaciones suaves"
+    ],
+    "justificacion": "Se adapta a su tamaño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_006",
+    "instruccion": "Ordena la RCP en un niño.",
+    "elementos": [
+      "Comprobar respuesta",
+      "Llamar al 911",
+      "Verificar la seguridad",
+      "Iniciar compresiones y ventilaciones"
+    ],
+    "orden_correcto": [
+      "Verificar la seguridad",
+      "Comprobar respuesta",
+      "Llamar al 911",
+      "Iniciar compresiones y ventilaciones"
+    ],
+    "justificacion": "Similar al adulto con adaptaciones.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_007",
+    "instruccion": "Ordena los pasos para colocar las manos en las compresiones.",
+    "elementos": [
+      "Colocar el talón de la mano en el centro del pecho",
+      "Poner la otra mano encima",
+      "Comprimir con los brazos rectos",
+      "Arrodillarse junto a la víctima"
+    ],
+    "orden_correcto": [
+      "Arrodillarse junto a la víctima",
+      "Colocar el talón de la mano en el centro del pecho",
+      "Poner la otra mano encima",
+      "Comprimir con los brazos rectos"
+    ],
+    "justificacion": "Postura correcta.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_008",
+    "instruccion": "Ordena cómo abrir la vía aérea.",
+    "elementos": [
+      "Colocar una mano en la frente",
+      "Elevar el mentón con dos dedos",
+      "Acostar a la víctima boca arriba",
+      "Comprobar la respiración"
+    ],
+    "orden_correcto": [
+      "Acostar a la víctima boca arriba",
+      "Colocar una mano en la frente",
+      "Elevar el mentón con dos dedos",
+      "Comprobar la respiración"
+    ],
+    "justificacion": "Frente-mentón.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_009",
+    "instruccion": "Ordena la RCP con un acompañante.",
+    "elementos": [
+      "Uno llama al 911",
+      "Alguien trae el DEA",
+      "El otro inicia compresiones",
+      "Se turnan cada 2 minutos"
+    ],
+    "orden_correcto": [
+      "Uno llama al 911",
+      "El otro inicia compresiones",
+      "Alguien trae el DEA",
+      "Se turnan cada 2 minutos"
+    ],
+    "justificacion": "Se reparte el esfuerzo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_010",
+    "instruccion": "Ordena cuándo detener la RCP.",
+    "elementos": [
+      "Entregar al equipo de emergencia",
+      "Detener las compresiones",
+      "Seguir comprimiendo sin pausas",
+      "Llega la ayuda profesional"
+    ],
+    "orden_correcto": [
+      "Seguir comprimiendo sin pausas",
+      "Llega la ayuda profesional",
+      "Entregar al equipo de emergencia",
+      "Detener las compresiones"
+    ],
+    "justificacion": "Se continúa hasta el relevo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_011",
+    "instruccion": "Ordena la cadena de supervivencia.",
+    "elementos": [
+      "Atención avanzada",
+      "RCP precoz",
+      "Desfibrilación rápida",
+      "Reconocer el paro y pedir ayuda"
+    ],
+    "orden_correcto": [
+      "Reconocer el paro y pedir ayuda",
+      "RCP precoz",
+      "Desfibrilación rápida",
+      "Atención avanzada"
+    ],
+    "justificacion": "Cada eslabón mejora la supervivencia.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_012",
+    "instruccion": "Ordena la RCP solo con compresiones.",
+    "elementos": [
+      "Comprimir 100-120 por minuto",
+      "Colocar las manos en el centro del pecho",
+      "Llamar al 911",
+      "Comprobar que no responde"
+    ],
+    "orden_correcto": [
+      "Comprobar que no responde",
+      "Llamar al 911",
+      "Colocar las manos en el centro del pecho",
+      "Comprimir 100-120 por minuto"
+    ],
+    "justificacion": "Es válida si no sabes dar ventilaciones.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_013",
+    "instruccion": "Ordena cómo posicionar a la víctima.",
+    "elementos": [
+      "Comenzar las compresiones",
+      "Evaluar si hay peligro",
+      "Acostarla boca arriba",
+      "Colocarla sobre una superficie firme"
+    ],
+    "orden_correcto": [
+      "Evaluar si hay peligro",
+      "Acostarla boca arriba",
+      "Colocarla sobre una superficie firme",
+      "Comenzar las compresiones"
+    ],
+    "justificacion": "Superficie firme y boca arriba.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_014",
+    "instruccion": "Ordena el uso del DEA en un niño.",
+    "elementos": [
+      "Colocar parches pediátricos si hay",
+      "Encender el DEA",
+      "Alejarse mientras analiza",
+      "Dar la descarga si se indica"
+    ],
+    "orden_correcto": [
+      "Encender el DEA",
+      "Colocar parches pediátricos si hay",
+      "Alejarse mientras analiza",
+      "Dar la descarga si se indica"
+    ],
+    "justificacion": "Se usa con parches adecuados.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_015",
+    "instruccion": "Ordena los pasos al llamar al 911.",
+    "elementos": [
+      "Indicar tu ubicación exacta",
+      "Describir lo que ocurre",
+      "Marcar 911",
+      "Seguir las instrucciones del operador"
+    ],
+    "orden_correcto": [
+      "Marcar 911",
+      "Indicar tu ubicación exacta",
+      "Describir lo que ocurre",
+      "Seguir las instrucciones del operador"
+    ],
+    "justificacion": "Dar información clara agiliza la ayuda.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_016",
+    "instruccion": "Ordena la comprobación de respuesta.",
+    "elementos": [
+      "Acercarte a la persona",
+      "Observar si reacciona",
+      "Hablar en voz alta",
+      "Tocar suavemente los hombros"
+    ],
+    "orden_correcto": [
+      "Acercarte a la persona",
+      "Tocar suavemente los hombros",
+      "Hablar en voz alta",
+      "Observar si reacciona"
+    ],
+    "justificacion": "Evalúa la consciencia.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_017",
+    "instruccion": "Ordena el ciclo de 2 minutos de RCP.",
+    "elementos": [
+      "Repetir los ciclos",
+      "Comprimir 30 veces",
+      "Reevaluar tras 2 minutos",
+      "Dar 2 ventilaciones"
+    ],
+    "orden_correcto": [
+      "Comprimir 30 veces",
+      "Dar 2 ventilaciones",
+      "Repetir los ciclos",
+      "Reevaluar tras 2 minutos"
+    ],
+    "justificacion": "Ciclos continuos con reevaluación.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_018",
+    "instruccion": "Ordena los criterios para iniciar la RCP.",
+    "elementos": [
+      "Se pide ayuda",
+      "La persona no responde",
+      "Se inicia la RCP",
+      "No respira o solo jadea"
+    ],
+    "orden_correcto": [
+      "La persona no responde",
+      "No respira o solo jadea",
+      "Se pide ayuda",
+      "Se inicia la RCP"
+    ],
+    "justificacion": "Esos signos indican paro.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_019",
+    "instruccion": "Ordena cómo dar una ventilación boca a boca.",
+    "elementos": [
+      "Ver que el pecho se eleve",
+      "Abrir la vía aérea",
+      "Sellar la boca y soplar durante 1 segundo",
+      "Pinzar la nariz"
+    ],
+    "orden_correcto": [
+      "Abrir la vía aérea",
+      "Pinzar la nariz",
+      "Sellar la boca y soplar durante 1 segundo",
+      "Ver que el pecho se eleve"
+    ],
+    "justificacion": "Se verifica la eficacia.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_020",
+    "instruccion": "Ordena la RCP en una persona ahogada.",
+    "elementos": [
+      "Continuar con ciclos 30:2",
+      "Comprobar respuesta y respiración",
+      "Sacarla del agua con seguridad",
+      "Dar 5 ventilaciones iniciales"
+    ],
+    "orden_correcto": [
+      "Sacarla del agua con seguridad",
+      "Comprobar respuesta y respiración",
+      "Dar 5 ventilaciones iniciales",
+      "Continuar con ciclos 30:2"
+    ],
+    "justificacion": "Se prioriza la ventilación.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_OR_021",
+    "instruccion": "Ordena los pasos ante un atragantamiento grave en un adulto consciente.",
+    "elementos": [
+      "Dar 5 compresiones abdominales",
+      "Dar 5 golpes en la espalda",
+      "Reconocer la señal de atragantamiento",
+      "Preguntar '¿te estás atragantando?'"
+    ],
+    "orden_correcto": [
+      "Reconocer la señal de atragantamiento",
+      "Preguntar '¿te estás atragantando?'",
+      "Dar 5 golpes en la espalda",
+      "Dar 5 compresiones abdominales"
+    ],
+    "justificacion": "Se alternan golpes y compresiones.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_022",
+    "instruccion": "Ordena los pasos de la maniobra de Heimlich.",
+    "elementos": [
+      "Colocar el puño sobre el ombligo",
+      "Rodear su cintura con los brazos",
+      "Colocarte detrás de la persona",
+      "Comprimir hacia adentro y arriba"
+    ],
+    "orden_correcto": [
+      "Colocarte detrás de la persona",
+      "Rodear su cintura con los brazos",
+      "Colocar el puño sobre el ombligo",
+      "Comprimir hacia adentro y arriba"
+    ],
+    "justificacion": "Técnica correcta.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_023",
+    "instruccion": "Ordena el atragantamiento en un lactante.",
+    "elementos": [
+      "Girarlo boca arriba",
+      "Dar 5 compresiones torácicas",
+      "Colocarlo boca abajo sobre tu antebrazo",
+      "Dar 5 golpes en la espalda"
+    ],
+    "orden_correcto": [
+      "Colocarlo boca abajo sobre tu antebrazo",
+      "Dar 5 golpes en la espalda",
+      "Girarlo boca arriba",
+      "Dar 5 compresiones torácicas"
+    ],
+    "justificacion": "No se hacen compresiones abdominales.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_024",
+    "instruccion": "Ordena qué hacer si la víctima pierde la consciencia.",
+    "elementos": [
+      "Comenzar compresiones torácicas",
+      "Acostarla en el suelo",
+      "Llamar al 911",
+      "Revisar la boca por si el objeto es visible"
+    ],
+    "orden_correcto": [
+      "Acostarla en el suelo",
+      "Llamar al 911",
+      "Comenzar compresiones torácicas",
+      "Revisar la boca por si el objeto es visible"
+    ],
+    "justificacion": "Se pasa a RCP.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_025",
+    "instruccion": "Ordena la valoración de una obstrucción.",
+    "elementos": [
+      "Animar a toser si es leve",
+      "Actuar con maniobras",
+      "Detectar que no puede hablar ni respirar",
+      "Observar si tose con fuerza"
+    ],
+    "orden_correcto": [
+      "Observar si tose con fuerza",
+      "Animar a toser si es leve",
+      "Detectar que no puede hablar ni respirar",
+      "Actuar con maniobras"
+    ],
+    "justificacion": "Leve se anima a toser; grave exige maniobras.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_026",
+    "instruccion": "Ordena qué hacer si te atragantas solo.",
+    "elementos": [
+      "Comprimir hasta expulsar el objeto",
+      "Apoyarte contra una silla",
+      "Reconocer la obstrucción",
+      "Colocar el puño sobre el abdomen"
+    ],
+    "orden_correcto": [
+      "Reconocer la obstrucción",
+      "Colocar el puño sobre el abdomen",
+      "Apoyarte contra una silla",
+      "Comprimir hasta expulsar el objeto"
+    ],
+    "justificacion": "Imita la maniobra de Heimlich.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_027",
+    "instruccion": "Ordena la maniobra en embarazadas.",
+    "elementos": [
+      "Colocar el puño en el centro del pecho",
+      "Comprimir hacia atrás",
+      "Rodear el pecho con los brazos",
+      "Colocarte detrás de ella"
+    ],
+    "orden_correcto": [
+      "Colocarte detrás de ella",
+      "Rodear el pecho con los brazos",
+      "Colocar el puño en el centro del pecho",
+      "Comprimir hacia atrás"
+    ],
+    "justificacion": "Se evita comprimir el abdomen.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_028",
+    "instruccion": "Ordena la prevención del atragantamiento en niños.",
+    "elementos": [
+      "Cortar los alimentos en trozos pequeños",
+      "Sentarlos a comer",
+      "Evitar alimentos peligrosos",
+      "Supervisarlos mientras comen"
+    ],
+    "orden_correcto": [
+      "Cortar los alimentos en trozos pequeños",
+      "Sentarlos a comer",
+      "Supervisarlos mientras comen",
+      "Evitar alimentos peligrosos"
+    ],
+    "justificacion": "Evitar riesgos es lo primero.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_029",
+    "instruccion": "Ordena qué hacer tras expulsar el objeto.",
+    "elementos": [
+      "Mantener a la persona tranquila",
+      "Verificar que respire bien",
+      "Buscar valoración médica",
+      "Observar signos de dificultad"
+    ],
+    "orden_correcto": [
+      "Verificar que respire bien",
+      "Mantener a la persona tranquila",
+      "Observar signos de dificultad",
+      "Buscar valoración médica"
+    ],
+    "justificacion": "Pueden existir lesiones internas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_030",
+    "instruccion": "Ordena la respuesta a un niño que se atraganta.",
+    "elementos": [
+      "Repetir hasta que expulse el objeto",
+      "Preguntar si puede toser o hablar",
+      "Colocarte detrás de él",
+      "Dar compresiones abdominales"
+    ],
+    "orden_correcto": [
+      "Preguntar si puede toser o hablar",
+      "Colocarte detrás de él",
+      "Dar compresiones abdominales",
+      "Repetir hasta que expulse el objeto"
+    ],
+    "justificacion": "Se adapta la fuerza.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_031",
+    "instruccion": "Ordena cómo dar golpes en la espalda.",
+    "elementos": [
+      "Inclinar a la persona hacia adelante",
+      "Localizar la zona entre los omóplatos",
+      "Dar 5 golpes firmes",
+      "Usar el talón de la mano"
+    ],
+    "orden_correcto": [
+      "Inclinar a la persona hacia adelante",
+      "Localizar la zona entre los omóplatos",
+      "Usar el talón de la mano",
+      "Dar 5 golpes firmes"
+    ],
+    "justificacion": "Técnica correcta.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_032",
+    "instruccion": "Ordena la RCP tras pérdida de consciencia por atragantamiento.",
+    "elementos": [
+      "Acostar a la víctima",
+      "Mirar la boca antes de ventilar",
+      "Dar compresiones torácicas",
+      "Pedir ayuda al 911"
+    ],
+    "orden_correcto": [
+      "Acostar a la víctima",
+      "Pedir ayuda al 911",
+      "Dar compresiones torácicas",
+      "Mirar la boca antes de ventilar"
+    ],
+    "justificacion": "Se revisa por si el objeto es visible.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_033",
+    "instruccion": "Ordena la respuesta a una tos fuerte.",
+    "elementos": [
+      "Animar a seguir tosiendo",
+      "Vigilar hasta que se resuelva",
+      "Mantener la calma",
+      "No golpear ni dar agua"
+    ],
+    "orden_correcto": [
+      "Mantener la calma",
+      "Animar a seguir tosiendo",
+      "No golpear ni dar agua",
+      "Vigilar hasta que se resuelva"
+    ],
+    "justificacion": "La tos eficaz es el mejor recurso.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_034",
+    "instruccion": "Ordena la identificación de una obstrucción grave.",
+    "elementos": [
+      "No puede hablar ni toser",
+      "Su piel se vuelve azulada",
+      "La persona se lleva las manos al cuello",
+      "Se actúa de inmediato"
+    ],
+    "orden_correcto": [
+      "La persona se lleva las manos al cuello",
+      "No puede hablar ni toser",
+      "Su piel se vuelve azulada",
+      "Se actúa de inmediato"
+    ],
+    "justificacion": "La obstrucción grave es una emergencia.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_035",
+    "instruccion": "Ordena cómo ubicar el puño en Heimlich.",
+    "elementos": [
+      "Colocar el puño un poco por encima",
+      "Cubrir el puño con la otra mano",
+      "Localizar el ombligo",
+      "Comprimir con fuerza"
+    ],
+    "orden_correcto": [
+      "Localizar el ombligo",
+      "Colocar el puño un poco por encima",
+      "Cubrir el puño con la otra mano",
+      "Comprimir con fuerza"
+    ],
+    "justificacion": "Ubicación correcta.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_036",
+    "instruccion": "Ordena el atragantamiento de un adulto inconsciente.",
+    "elementos": [
+      "Comenzar compresiones",
+      "Llamar al 911",
+      "Revisar la boca tras cada ciclo",
+      "Comprobar que no responde"
+    ],
+    "orden_correcto": [
+      "Comprobar que no responde",
+      "Llamar al 911",
+      "Comenzar compresiones",
+      "Revisar la boca tras cada ciclo"
+    ],
+    "justificacion": "Se comprime y se revisa.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_037",
+    "instruccion": "Ordena la preparación para ayudar a un atragantado.",
+    "elementos": [
+      "Mantener la calma",
+      "Aplicarla con seguridad",
+      "Evaluar la gravedad",
+      "Elegir la técnica adecuada"
+    ],
+    "orden_correcto": [
+      "Mantener la calma",
+      "Evaluar la gravedad",
+      "Elegir la técnica adecuada",
+      "Aplicarla con seguridad"
+    ],
+    "justificacion": "Actuar con método.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_038",
+    "instruccion": "Ordena los pasos para verificar si hay mejoría.",
+    "elementos": [
+      "Revisar si respira",
+      "Detenerse si mejora",
+      "Ver si sale el objeto",
+      "Aplicar las maniobras"
+    ],
+    "orden_correcto": [
+      "Aplicar las maniobras",
+      "Ver si sale el objeto",
+      "Revisar si respira",
+      "Detenerse si mejora"
+    ],
+    "justificacion": "Se evalúa tras actuar.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_039",
+    "instruccion": "Ordena cómo ayudar a una persona con obesidad atragantada.",
+    "elementos": [
+      "Rodear el pecho",
+      "Colocarte detrás",
+      "Comprimir con fuerza hacia atrás",
+      "Colocar el puño en el esternón"
+    ],
+    "orden_correcto": [
+      "Colocarte detrás",
+      "Rodear el pecho",
+      "Colocar el puño en el esternón",
+      "Comprimir con fuerza hacia atrás"
+    ],
+    "justificacion": "Compresiones torácicas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_040",
+    "instruccion": "Ordena qué hacer si el objeto es visible en la boca.",
+    "elementos": [
+      "Ver el objeto",
+      "Retirarlo con cuidado",
+      "Abrir la boca de la persona",
+      "Evitar empujarlo hacia dentro"
+    ],
+    "orden_correcto": [
+      "Abrir la boca de la persona",
+      "Ver el objeto",
+      "Retirarlo con cuidado",
+      "Evitar empujarlo hacia dentro"
+    ],
+    "justificacion": "Solo si es visible y accesible.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_OR_041",
+    "instruccion": "Ordena los pasos ante una hemorragia externa.",
+    "elementos": [
+      "Ponerte guantes o usar una barrera",
+      "Colocar un vendaje de compresión",
+      "Aplicar presión directa con gasa",
+      "Añadir más capas si se empapa"
+    ],
+    "orden_correcto": [
+      "Ponerte guantes o usar una barrera",
+      "Aplicar presión directa con gasa",
+      "Añadir más capas si se empapa",
+      "Colocar un vendaje de compresión"
+    ],
+    "justificacion": "Presión directa y continua.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_042",
+    "instruccion": "Ordena la colocación de un torniquete.",
+    "elementos": [
+      "Apretar hasta que cese el sangrado",
+      "Anotar la hora",
+      "Fijarlo",
+      "Colocarlo 5-7 cm por encima de la herida"
+    ],
+    "orden_correcto": [
+      "Colocarlo 5-7 cm por encima de la herida",
+      "Apretar hasta que cese el sangrado",
+      "Fijarlo",
+      "Anotar la hora"
+    ],
+    "justificacion": "Registrar la hora es esencial.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_043",
+    "instruccion": "Ordena qué hacer con una hemorragia nasal.",
+    "elementos": [
+      "Sentar a la persona",
+      "Mantener 10 minutos",
+      "Inclinar la cabeza hacia adelante",
+      "Pinzar la parte blanda de la nariz"
+    ],
+    "orden_correcto": [
+      "Sentar a la persona",
+      "Inclinar la cabeza hacia adelante",
+      "Pinzar la parte blanda de la nariz",
+      "Mantener 10 minutos"
+    ],
+    "justificacion": "No se echa la cabeza hacia atrás.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_044",
+    "instruccion": "Ordena la atención de una herida con objeto clavado.",
+    "elementos": [
+      "Presionar alrededor",
+      "Estabilizarlo",
+      "No retirar el objeto",
+      "Llamar al 911"
+    ],
+    "orden_correcto": [
+      "No retirar el objeto",
+      "Estabilizarlo",
+      "Presionar alrededor",
+      "Llamar al 911"
+    ],
+    "justificacion": "Retirarlo aumentaría el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_045",
+    "instruccion": "Ordena cómo atender un shock hemorrágico.",
+    "elementos": [
+      "Abrigarla y llamar al 911",
+      "Detener el sangrado",
+      "Elevar las piernas",
+      "Acostar a la persona"
+    ],
+    "orden_correcto": [
+      "Detener el sangrado",
+      "Acostar a la persona",
+      "Elevar las piernas",
+      "Abrigarla y llamar al 911"
+    ],
+    "justificacion": "Se favorece la circulación.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_046",
+    "instruccion": "Ordena la atención de una amputación.",
+    "elementos": [
+      "Envolver la parte en gasa húmeda",
+      "Controlar el sangrado",
+      "Llamar al 911",
+      "Colocarla en una bolsa sobre hielo"
+    ],
+    "orden_correcto": [
+      "Controlar el sangrado",
+      "Llamar al 911",
+      "Envolver la parte en gasa húmeda",
+      "Colocarla en una bolsa sobre hielo"
+    ],
+    "justificacion": "Se conserva sin congelar directamente.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_047",
+    "instruccion": "Ordena cómo limpiar una herida leve.",
+    "elementos": [
+      "Secar con gasa limpia",
+      "Lavar la herida con agua y jabón",
+      "Lavarte las manos",
+      "Cubrir con un apósito"
+    ],
+    "orden_correcto": [
+      "Lavarte las manos",
+      "Lavar la herida con agua y jabón",
+      "Secar con gasa limpia",
+      "Cubrir con un apósito"
+    ],
+    "justificacion": "Se evita la infección.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_048",
+    "instruccion": "Ordena la atención de una evisceración.",
+    "elementos": [
+      "Mantener a la persona acostada",
+      "Llamar al 911",
+      "No reintroducir los intestinos",
+      "Cubrir con apósito húmedo"
+    ],
+    "orden_correcto": [
+      "No reintroducir los intestinos",
+      "Cubrir con apósito húmedo",
+      "Mantener a la persona acostada",
+      "Llamar al 911"
+    ],
+    "justificacion": "No se manipulan los órganos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_049",
+    "instruccion": "Ordena la respuesta a una herida grave en un brazo.",
+    "elementos": [
+      "Colocar vendaje compresivo",
+      "Presionar la herida",
+      "Usar torniquete si no cede",
+      "Elevar el brazo"
+    ],
+    "orden_correcto": [
+      "Presionar la herida",
+      "Elevar el brazo",
+      "Colocar vendaje compresivo",
+      "Usar torniquete si no cede"
+    ],
+    "justificacion": "El torniquete es último recurso.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_050",
+    "instruccion": "Ordena cómo reconocer una hemorragia interna.",
+    "elementos": [
+      "Notar moretones extensos",
+      "Observar dolor localizado",
+      "Detectar mareo y palidez",
+      "Llamar al 911"
+    ],
+    "orden_correcto": [
+      "Observar dolor localizado",
+      "Notar moretones extensos",
+      "Detectar mareo y palidez",
+      "Llamar al 911"
+    ],
+    "justificacion": "Puede no haber sangre visible.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_051",
+    "instruccion": "Ordena el uso de un vendaje de compresión.",
+    "elementos": [
+      "Verificar la circulación",
+      "Revisar que no se empape",
+      "Rodear con la venda de forma firme",
+      "Colocar la gasa sobre la herida"
+    ],
+    "orden_correcto": [
+      "Colocar la gasa sobre la herida",
+      "Rodear con la venda de forma firme",
+      "Verificar la circulación",
+      "Revisar que no se empape"
+    ],
+    "justificacion": "Firme pero sin cortar el riego.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_052",
+    "instruccion": "Ordena cómo actuar si la gasa se empapa.",
+    "elementos": [
+      "No retirar la primera gasa",
+      "Colocar otra encima",
+      "Llamar a emergencias",
+      "Mantener la presión"
+    ],
+    "orden_correcto": [
+      "No retirar la primera gasa",
+      "Colocar otra encima",
+      "Mantener la presión",
+      "Llamar a emergencias"
+    ],
+    "justificacion": "No se arrastran coágulos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_053",
+    "instruccion": "Ordena las prioridades ante un accidente con sangrado.",
+    "elementos": [
+      "Controlar el sangrado",
+      "Vigilar signos de shock",
+      "Llamar al 911",
+      "Asegurar la escena"
+    ],
+    "orden_correcto": [
+      "Asegurar la escena",
+      "Llamar al 911",
+      "Controlar el sangrado",
+      "Vigilar signos de shock"
+    ],
+    "justificacion": "Seguridad primero.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_054",
+    "instruccion": "Ordena cómo proteger a la víctima de la hipotermia.",
+    "elementos": [
+      "Vigilar su estado",
+      "Acostarla",
+      "Cubrirla con una manta",
+      "Detener el sangrado"
+    ],
+    "orden_correcto": [
+      "Detener el sangrado",
+      "Acostarla",
+      "Cubrirla con una manta",
+      "Vigilar su estado"
+    ],
+    "justificacion": "El shock baja la temperatura.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_055",
+    "instruccion": "Ordena los pasos tras colocar un torniquete.",
+    "elementos": [
+      "Llamar al 911",
+      "Vigilar a la persona",
+      "No aflojarlo",
+      "Anotar la hora"
+    ],
+    "orden_correcto": [
+      "No aflojarlo",
+      "Anotar la hora",
+      "Llamar al 911",
+      "Vigilar a la persona"
+    ],
+    "justificacion": "Lo maneja personal profesional.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_056",
+    "instruccion": "Ordena la atención de un corte profundo en la mano.",
+    "elementos": [
+      "Acudir a un centro de salud",
+      "Presionar con un paño limpio",
+      "Elevar la mano",
+      "Aplicar vendaje de compresión"
+    ],
+    "orden_correcto": [
+      "Presionar con un paño limpio",
+      "Elevar la mano",
+      "Aplicar vendaje de compresión",
+      "Acudir a un centro de salud"
+    ],
+    "justificacion": "Puede necesitar sutura.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_057",
+    "instruccion": "Ordena cómo atender una herida en la cabeza.",
+    "elementos": [
+      "Aplicar presión suave con gasa",
+      "Llamar al 911 si hay mareo o confusión",
+      "Vigilar la consciencia",
+      "Mantener a la persona sentada"
+    ],
+    "orden_correcto": [
+      "Aplicar presión suave con gasa",
+      "Mantener a la persona sentada",
+      "Vigilar la consciencia",
+      "Llamar al 911 si hay mareo o confusión"
+    ],
+    "justificacion": "Puede asociarse a lesiones graves.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_058",
+    "instruccion": "Ordena cómo evitar el contagio al atender sangre.",
+    "elementos": [
+      "Ponerte guantes",
+      "Lavarte las manos",
+      "Desechar el material contaminado",
+      "Evitar tocar la sangre con las manos desnudas"
+    ],
+    "orden_correcto": [
+      "Ponerte guantes",
+      "Evitar tocar la sangre con las manos desnudas",
+      "Desechar el material contaminado",
+      "Lavarte las manos"
+    ],
+    "justificacion": "Se protege el reanimador.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_059",
+    "instruccion": "Ordena la atención de una herida por mordedura.",
+    "elementos": [
+      "Controlar el sangrado",
+      "Cubrir con apósito",
+      "Acudir a evaluación médica",
+      "Lavar con agua y jabón"
+    ],
+    "orden_correcto": [
+      "Controlar el sangrado",
+      "Lavar con agua y jabón",
+      "Cubrir con apósito",
+      "Acudir a evaluación médica"
+    ],
+    "justificacion": "Hay riesgo de infección.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_060",
+    "instruccion": "Ordena la evaluación del tipo de hemorragia.",
+    "elementos": [
+      "Ver si sale a chorros",
+      "Identificar si es arterial",
+      "Actuar con rapidez",
+      "Observar el color de la sangre"
+    ],
+    "orden_correcto": [
+      "Observar el color de la sangre",
+      "Ver si sale a chorros",
+      "Identificar si es arterial",
+      "Actuar con rapidez"
+    ],
+    "justificacion": "Las arteriales son más graves.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_OR_061",
+    "instruccion": "Ordena los pasos ante una quemadura leve.",
+    "elementos": [
+      "Enfriar con agua fresca 20 minutos",
+      "Alejar a la persona de la fuente de calor",
+      "Retirar anillos y objetos ajustados",
+      "Cubrir con gasa estéril"
+    ],
+    "orden_correcto": [
+      "Alejar a la persona de la fuente de calor",
+      "Enfriar con agua fresca 20 minutos",
+      "Retirar anillos y objetos ajustados",
+      "Cubrir con gasa estéril"
+    ],
+    "justificacion": "El enfriamiento es la prioridad.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_062",
+    "instruccion": "Ordena qué hacer si la ropa está en llamas.",
+    "elementos": [
+      "Detenerse",
+      "Cubrirse la cara",
+      "Rodar hasta apagar las llamas",
+      "Tirarse al suelo"
+    ],
+    "orden_correcto": [
+      "Detenerse",
+      "Tirarse al suelo",
+      "Cubrirse la cara",
+      "Rodar hasta apagar las llamas"
+    ],
+    "justificacion": "Detenerse, tirarse y rodar.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_063",
+    "instruccion": "Ordena la atención de una quemadura química.",
+    "elementos": [
+      "Cubrir con un apósito limpio",
+      "Retirar la ropa contaminada",
+      "Lavar con abundante agua 20 minutos",
+      "Llamar al 911 si es grave"
+    ],
+    "orden_correcto": [
+      "Retirar la ropa contaminada",
+      "Lavar con abundante agua 20 minutos",
+      "Cubrir con un apósito limpio",
+      "Llamar al 911 si es grave"
+    ],
+    "justificacion": "El agua diluye y arrastra la sustancia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_064",
+    "instruccion": "Ordena la atención de una quemadura eléctrica.",
+    "elementos": [
+      "Llamar al 911",
+      "Cortar la corriente",
+      "Verificar que sea seguro acercarse",
+      "Comprobar respuesta y respiración"
+    ],
+    "orden_correcto": [
+      "Cortar la corriente",
+      "Verificar que sea seguro acercarse",
+      "Comprobar respuesta y respiración",
+      "Llamar al 911"
+    ],
+    "justificacion": "Primero tu seguridad.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_065",
+    "instruccion": "Ordena de menor a mayor gravedad.",
+    "elementos": [
+      "Segundo grado",
+      "Primer grado",
+      "Tercer grado",
+      "Quemadura con compromiso de la vía aérea"
+    ],
+    "orden_correcto": [
+      "Primer grado",
+      "Segundo grado",
+      "Tercer grado",
+      "Quemadura con compromiso de la vía aérea"
+    ],
+    "justificacion": "Aumenta la profundidad y el riesgo.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_066",
+    "instruccion": "Ordena cómo atender una escaldadura en un niño.",
+    "elementos": [
+      "Acudir al médico",
+      "Enfriar con agua fresca",
+      "Retirar el líquido o ropa mojada caliente",
+      "Cubrir con gasa estéril"
+    ],
+    "orden_correcto": [
+      "Retirar el líquido o ropa mojada caliente",
+      "Enfriar con agua fresca",
+      "Cubrir con gasa estéril",
+      "Acudir al médico"
+    ],
+    "justificacion": "Se detiene el calor primero.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_067",
+    "instruccion": "Ordena qué hacer con una ampolla.",
+    "elementos": [
+      "Vigilar signos de infección",
+      "Mantenerla limpia",
+      "Cubrirla con un apósito",
+      "No reventarla"
+    ],
+    "orden_correcto": [
+      "No reventarla",
+      "Mantenerla limpia",
+      "Cubrirla con un apósito",
+      "Vigilar signos de infección"
+    ],
+    "justificacion": "La ampolla protege la piel.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_068",
+    "instruccion": "Ordena la atención de una quemadura extensa.",
+    "elementos": [
+      "Llamar al 911",
+      "Cubrir con un paño limpio",
+      "Retirar la fuente de calor",
+      "Evitar hielo y vigilar el shock"
+    ],
+    "orden_correcto": [
+      "Llamar al 911",
+      "Retirar la fuente de calor",
+      "Cubrir con un paño limpio",
+      "Evitar hielo y vigilar el shock"
+    ],
+    "justificacion": "Es una emergencia médica.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_069",
+    "instruccion": "Ordena cómo enfriar una quemadura.",
+    "elementos": [
+      "Secar suavemente",
+      "Colocar la zona bajo agua corriente fresca",
+      "Cubrir sin apretar",
+      "Mantener unos 20 minutos"
+    ],
+    "orden_correcto": [
+      "Colocar la zona bajo agua corriente fresca",
+      "Mantener unos 20 minutos",
+      "Secar suavemente",
+      "Cubrir sin apretar"
+    ],
+    "justificacion": "Sin hielo.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_070",
+    "instruccion": "Ordena la atención de una quemadura solar.",
+    "elementos": [
+      "Hidratar a la persona",
+      "Salir del sol",
+      "Aplicar hidratante suave",
+      "Enfriar con agua fresca"
+    ],
+    "orden_correcto": [
+      "Salir del sol",
+      "Enfriar con agua fresca",
+      "Hidratar a la persona",
+      "Aplicar hidratante suave"
+    ],
+    "justificacion": "Calma la piel y previene deshidratación.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_071",
+    "instruccion": "Ordena cómo cubrir una quemadura.",
+    "elementos": [
+      "Colocar gasa estéril no adherente",
+      "Fijar con venda floja",
+      "Revisar periódicamente",
+      "Lavarte las manos"
+    ],
+    "orden_correcto": [
+      "Lavarte las manos",
+      "Colocar gasa estéril no adherente",
+      "Fijar con venda floja",
+      "Revisar periódicamente"
+    ],
+    "justificacion": "No debe apretar.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_072",
+    "instruccion": "Ordena la atención de una quemadura con inhalación de humo.",
+    "elementos": [
+      "Llamar al 911",
+      "Sacar a la persona del lugar",
+      "Mantenerla semisentada",
+      "Vigilar la respiración"
+    ],
+    "orden_correcto": [
+      "Sacar a la persona del lugar",
+      "Llamar al 911",
+      "Vigilar la respiración",
+      "Mantenerla semisentada"
+    ],
+    "justificacion": "La vía aérea puede comprometerse.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_073",
+    "instruccion": "Ordena la respuesta a una quemadura en la mano.",
+    "elementos": [
+      "Retirar anillos",
+      "Enfriar con agua",
+      "Cubrir con gasa",
+      "Acudir a atención médica"
+    ],
+    "orden_correcto": [
+      "Enfriar con agua",
+      "Retirar anillos",
+      "Cubrir con gasa",
+      "Acudir a atención médica"
+    ],
+    "justificacion": "Es una zona de riesgo.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_074",
+    "instruccion": "Ordena cómo evitar quemaduras en la cocina.",
+    "elementos": [
+      "Usar guantes de cocina",
+      "Apagar la estufa al terminar",
+      "Girar los mangos hacia adentro",
+      "Mantener a los niños lejos"
+    ],
+    "orden_correcto": [
+      "Girar los mangos hacia adentro",
+      "Mantener a los niños lejos",
+      "Usar guantes de cocina",
+      "Apagar la estufa al terminar"
+    ],
+    "justificacion": "Prevención doméstica.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_075",
+    "instruccion": "Ordena cómo reaccionar ante un incendio pequeño en una sartén.",
+    "elementos": [
+      "No usar agua",
+      "Tapar la sartén con una tapa",
+      "Esperar a que se enfríe",
+      "Apagar el fuego"
+    ],
+    "orden_correcto": [
+      "Apagar el fuego",
+      "Tapar la sartén con una tapa",
+      "No usar agua",
+      "Esperar a que se enfríe"
+    ],
+    "justificacion": "El agua propaga el fuego de aceite.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_076",
+    "instruccion": "Ordena los pasos para enfriar una quemadura en un niño.",
+    "elementos": [
+      "Enfriar con agua fresca",
+      "Quitar la ropa caliente",
+      "Evitar agua helada",
+      "Abrigar el resto del cuerpo"
+    ],
+    "orden_correcto": [
+      "Quitar la ropa caliente",
+      "Enfriar con agua fresca",
+      "Evitar agua helada",
+      "Abrigar el resto del cuerpo"
+    ],
+    "justificacion": "Evita hipotermia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_077",
+    "instruccion": "Ordena la atención de una quemadura de tercer grado.",
+    "elementos": [
+      "Llamar al 911",
+      "Cubrir con paño limpio",
+      "Vigilar la respiración",
+      "No aplicar agua ni cremas"
+    ],
+    "orden_correcto": [
+      "Llamar al 911",
+      "Cubrir con paño limpio",
+      "No aplicar agua ni cremas",
+      "Vigilar la respiración"
+    ],
+    "justificacion": "Requiere atención médica urgente.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_078",
+    "instruccion": "Ordena cómo atender una quemadura por vapor.",
+    "elementos": [
+      "Retirar objetos ajustados",
+      "Enfriar con agua fresca",
+      "Alejar de la fuente",
+      "Cubrir con gasa"
+    ],
+    "orden_correcto": [
+      "Alejar de la fuente",
+      "Enfriar con agua fresca",
+      "Retirar objetos ajustados",
+      "Cubrir con gasa"
+    ],
+    "justificacion": "El vapor causa quemaduras profundas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_079",
+    "instruccion": "Ordena cuándo buscar ayuda médica por una quemadura.",
+    "elementos": [
+      "Buscar atención si es necesario",
+      "Ver la zona afectada",
+      "Evaluar el tamaño y la profundidad",
+      "Considerar la edad de la persona"
+    ],
+    "orden_correcto": [
+      "Evaluar el tamaño y la profundidad",
+      "Ver la zona afectada",
+      "Considerar la edad de la persona",
+      "Buscar atención si es necesario"
+    ],
+    "justificacion": "Criterios de derivación.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_OR_080",
+    "instruccion": "Ordena la atención de una quemadura por contacto con metal caliente.",
+    "elementos": [
+      "Retirar el contacto",
+      "Cubrir la zona",
+      "Enfriar con agua",
+      "Retirar joyas"
+    ],
+    "orden_correcto": [
+      "Retirar el contacto",
+      "Enfriar con agua",
+      "Retirar joyas",
+      "Cubrir la zona"
+    ],
+    "justificacion": "Interrumpe el daño.",
+    "tema": "Quemaduras"
+  }
+]

@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "CIB_VF_001",
+    "afirmacion": "El phishing intenta engañarte para que entregues datos personales o financieros.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Suplanta entidades de confianza para robar información.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_002",
+    "afirmacion": "Un banco legítimo te pedirá tu clave completa por correo electrónico.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Ninguna entidad seria solicita contraseñas por correo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_003",
+    "afirmacion": "El candado de HTTPS garantiza que un sitio web es confiable.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "HTTPS solo cifra la conexión; un sitio fraudulento también puede tenerlo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_004",
+    "afirmacion": "Los mensajes que crean urgencia o amenazan con bloquear tu cuenta son una señal de alerta.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "La presión busca que actúes sin verificar.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_005",
+    "afirmacion": "El smishing es phishing que llega por mensajes SMS.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Smishing combina SMS y phishing.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_006",
+    "afirmacion": "Es seguro abrir un adjunto inesperado si el correo parece de un conocido.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "La cuenta del conocido pudo ser suplantada o hackeada.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_007",
+    "afirmacion": "Pasar el cursor sobre un enlace permite ver su destino real sin hacer clic.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Así puedes detectar enlaces engañosos.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_008",
+    "afirmacion": "El spear phishing es un ataque masivo y genérico enviado a millones de personas.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Es un ataque dirigido y personalizado a un objetivo concreto.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_009",
+    "afirmacion": "Si recibes un correo sospechoso de tu banco, debes contactar al banco por sus canales oficiales.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Verificar por un canal propio evita caer en el engaño.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_010",
+    "afirmacion": "El vishing se realiza mediante llamadas telefónicas.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Usa la voz para engañar a la víctima.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_011",
+    "afirmacion": "Un dominio como 'banco.com.verifica-cuenta.net' pertenece al banco.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "El dominio real es 'verifica-cuenta.net', no 'banco.com'.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_012",
+    "afirmacion": "Los códigos QR de origen desconocido pueden llevar a sitios fraudulentos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es el llamado 'quishing'.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_013",
+    "afirmacion": "Reenviar un correo de phishing a tus contactos ayuda a advertirles.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se debe reportar y eliminar, no reenviar.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_014",
+    "afirmacion": "Una oferta demasiado buena para ser verdad suele ser una estafa.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Los cebos económicos son una táctica clásica de fraude.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_015",
+    "afirmacion": "Los errores ortográficos y la redacción extraña pueden indicar un correo fraudulento.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Muchas campañas de phishing tienen textos mal elaborados.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_016",
+    "afirmacion": "Si ingresaste tus datos en un sitio falso, no es necesario cambiar tu contraseña.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debes cambiarla de inmediato y avisar al servicio.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_017",
+    "afirmacion": "El fraude del CEO consiste en suplantar a un directivo para pedir pagos o datos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se apoya en la autoridad y la urgencia.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_018",
+    "afirmacion": "El typosquatting aprovecha errores al escribir direcciones web.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Registra dominios similares al legítimo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_019",
+    "afirmacion": "La autenticación en dos pasos reduce el daño si te roban la contraseña por phishing.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Un segundo factor dificulta el acceso del atacante.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_020",
+    "afirmacion": "Marcar un correo como phishing o spam no sirve de nada.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Ayuda a mejorar los filtros y bloquear futuros envíos.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_VF_021",
+    "afirmacion": "Una contraseña larga es generalmente más segura que una corta.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "La longitud aumenta exponencialmente el esfuerzo de descifrado.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_022",
+    "afirmacion": "Usar la misma contraseña en todas tus cuentas es una buena práctica.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Si se filtra en un sitio, todas tus cuentas quedan expuestas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_023",
+    "afirmacion": "'123456' es una contraseña segura si la cambias cada mes.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Es de las claves más comunes y se adivina al instante.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_024",
+    "afirmacion": "Un gestor de contraseñas puede generar y guardar claves únicas.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Facilita usar claves fuertes distintas en cada sitio.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_025",
+    "afirmacion": "Es seguro compartir tu contraseña con un amigo de confianza.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Compartirla elimina el control sobre tu cuenta.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_026",
+    "afirmacion": "Una frase de varias palabras aleatorias puede ser una contraseña fuerte.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "La longitud aporta seguridad y es fácil de recordar.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_027",
+    "afirmacion": "Usar tu fecha de nacimiento como contraseña es una buena idea.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Es un dato personal fácil de deducir.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_028",
+    "afirmacion": "Cambiar una 'a' por '@' hace indescifrable una contraseña común.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Los atacantes conocen esas sustituciones.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_029",
+    "afirmacion": "Si tu contraseña aparece en una filtración, debes cambiarla en todos los sitios donde la usaste.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "La clave ya es conocida por terceros.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_030",
+    "afirmacion": "Escribir contraseñas en una nota pegada al monitor es seguro.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Cualquier persona cercana puede verla.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_031",
+    "afirmacion": "El hash permite guardar una huella de la contraseña sin almacenar el texto original.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Dificulta que roben las claves reales.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_032",
+    "afirmacion": "Se debe cambiar la contraseña por defecto del router WiFi.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Las claves de fábrica son conocidas por los atacantes.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_033",
+    "afirmacion": "Un ataque de fuerza bruta prueba combinaciones hasta acertar.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se automatiza para probar millones de intentos.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_034",
+    "afirmacion": "Las preguntas de seguridad con respuestas verdaderas y públicas son seguras.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se pueden deducir desde redes sociales.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_035",
+    "afirmacion": "Al usar un computador público, debes cerrar sesión al terminar.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Evita que otra persona acceda a tus cuentas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_036",
+    "afirmacion": "'Have I Been Pwned' permite comprobar si tu correo aparece en filtraciones.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Te ayuda a saber si debes cambiar tus claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_037",
+    "afirmacion": "Una contraseña de 6 caracteres es suficiente hoy en día.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se puede descifrar muy rápido por fuerza bruta.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_038",
+    "afirmacion": "El credential stuffing prueba credenciales filtradas en otros servicios.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Aprovecha la reutilización de contraseñas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_039",
+    "afirmacion": "Enviarte tus contraseñas por correo es un método seguro de guardarlas.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Si acceden a tu correo, obtienen todas tus claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_040",
+    "afirmacion": "Debes evitar usar nombres de mascotas o familiares en tus claves.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Son datos fáciles de obtener o adivinar.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_VF_041",
+    "afirmacion": "El malware es software diseñado para dañar, espiar o robar datos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es la abreviatura de 'malicious software'.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_042",
+    "afirmacion": "El ransomware cifra tus archivos y pide un rescate.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Bloquea el acceso hasta que se pague.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_043",
+    "afirmacion": "Pagar el rescate garantiza que recuperarás tus archivos.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "No hay garantía y se financia a los criminales.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_044",
+    "afirmacion": "Un troyano se disfraza de programa legítimo.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Engaña al usuario para que lo instale.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_045",
+    "afirmacion": "Los gusanos necesitan que el usuario abra un archivo para propagarse.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Los gusanos se propagan solos por la red.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_046",
+    "afirmacion": "Un keylogger registra lo que escribes.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Permite robar contraseñas y mensajes.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_047",
+    "afirmacion": "Descargar programas piratas es seguro si tienes antivirus.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Los cracks suelen incluir malware que burla el antivirus.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_048",
+    "afirmacion": "Mantener el sistema actualizado ayuda a evitar infecciones.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Corrige vulnerabilidades explotadas por malware.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_049",
+    "afirmacion": "Es seguro conectar a tu computador una USB encontrada en la calle.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Puede contener malware que se ejecuta al conectarla.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_050",
+    "afirmacion": "Las copias de seguridad ayudan a recuperarte de un ransomware.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Puedes restaurar tus datos sin pagar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_051",
+    "afirmacion": "Un antivirus protege de todas las amenazas sin necesidad de actualizarse.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debe actualizarse y no sustituye la precaución.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_052",
+    "afirmacion": "El spyware recopila información de tu actividad sin consentimiento.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Espía hábitos y datos personales.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_053",
+    "afirmacion": "Una botnet es una red de dispositivos infectados controlados a distancia.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se usa para spam y ataques DDoS.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_054",
+    "afirmacion": "Instalar apps solo desde tiendas oficiales reduce el riesgo.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Las tiendas revisan las aplicaciones.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_055",
+    "afirmacion": "Si sospechas una infección, debes seguir conectado a la red para avisar a todos.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debes desconectar el equipo para evitar la propagación.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_056",
+    "afirmacion": "El adware muestra publicidad no deseada.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Puede ser intrusivo y traer otros riesgos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_057",
+    "afirmacion": "Un rootkit oculta la presencia del malware en el sistema.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Da acceso privilegiado y dificulta su detección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_058",
+    "afirmacion": "Un equipo muy lento con ventanas emergentes puede indicar malware.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Son síntomas habituales de infección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_059",
+    "afirmacion": "El cryptojacking usa tus recursos para minar criptomonedas sin que lo sepas.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Consume CPU y batería en beneficio del atacante.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_060",
+    "afirmacion": "Hacer clic en anuncios emergentes que dicen 'tu equipo está infectado' es la mejor solución.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Suelen ser engaños que instalan malware.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_VF_061",
+    "afirmacion": "La autenticación en dos factores combina dos tipos distintos de verificación.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Ej.: algo que sabes y algo que tienes.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_062",
+    "afirmacion": "Tener dos contraseñas diferentes cuenta como 2FA.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Ambas son 'algo que sabes'; deben ser factores distintos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_063",
+    "afirmacion": "Una huella dactilar es un factor de tipo 'algo que eres'.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es un rasgo biométrico.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_064",
+    "afirmacion": "Debes compartir el código de verificación si quien llama dice ser del banco.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Nunca compartas códigos con nadie.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_065",
+    "afirmacion": "Una app autenticadora suele ser más segura que el SMS.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "El SMS puede interceptarse por SIM swapping.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_066",
+    "afirmacion": "El SIM swapping permite al atacante recibir tus SMS de verificación.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Transfiere tu número a otra SIM.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_067",
+    "afirmacion": "Los códigos OTP son de un solo uso.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Caducan tras usarse o en poco tiempo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_068",
+    "afirmacion": "Si recibes una aprobación de inicio de sesión que no iniciaste, debes aprobarla para que se detenga.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debes rechazarla y cambiar tu contraseña.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_069",
+    "afirmacion": "Las llaves de seguridad FIDO2 resisten mejor el phishing.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Solo funcionan con el sitio legítimo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_070",
+    "afirmacion": "Autenticación y autorización significan lo mismo.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Autenticación verifica identidad; autorización define permisos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_071",
+    "afirmacion": "El principio de mínimo privilegio da a cada usuario solo los permisos necesarios.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Limita el daño de una cuenta comprometida.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_072",
+    "afirmacion": "Guardar los códigos de respaldo en un lugar seguro es una buena práctica.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Permiten recuperar acceso si pierdes el dispositivo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_073",
+    "afirmacion": "La biometría se puede cambiar fácilmente si se filtra.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "No puedes reemplazar tu huella o tu rostro.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_074",
+    "afirmacion": "Conviene activar 2FA primero en el correo principal.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Controla el restablecimiento de muchas otras cuentas.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_075",
+    "afirmacion": "Las passkeys reemplazan la contraseña con criptografía de clave pública.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Son resistentes al phishing.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_076",
+    "afirmacion": "Si ves una sesión desconocida abierta, es mejor ignorarla.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debes cerrarla y cambiar tu contraseña.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_077",
+    "afirmacion": "El SSO permite acceder a varios servicios con una sola identidad.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Centraliza la autenticación.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_078",
+    "afirmacion": "La fatiga de MFA es el envío repetido de solicitudes para que aprobemos por error.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "El atacante busca que cedas por cansancio.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_079",
+    "afirmacion": "El 2FA hace inútil tener una contraseña fuerte.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Ambos se complementan.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_VF_080",
+    "afirmacion": "Las preguntas de seguridad con datos públicos son un buen segundo factor.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Son fáciles de adivinar y no son un factor robusto.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "PA_VF_001",
+    "afirmacion": "Antes de atender a una víctima debes asegurar que la escena sea segura.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Tu seguridad es prioritaria.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_002",
+    "afirmacion": "Las compresiones se hacen en el centro del pecho.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Mitad inferior del esternón.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_003",
+    "afirmacion": "La profundidad de las compresiones en un adulto es de 1 a 2 cm.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debe ser de 5 a 6 cm.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_004",
+    "afirmacion": "El ritmo recomendado es de 100 a 120 compresiones por minuto.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Mantiene un flujo sanguíneo adecuado.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_005",
+    "afirmacion": "En el adulto se alternan 30 compresiones y 2 ventilaciones.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es la relación estándar.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_006",
+    "afirmacion": "Debes apoyarte sobre el pecho entre compresiones.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debes permitir la reexpansión completa del tórax.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_007",
+    "afirmacion": "El 911 es el número de emergencias en Ecuador.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es el número unificado.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_008",
+    "afirmacion": "La víctima debe estar sobre una cama blanda para la RCP.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se necesita una superficie firme y plana.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_009",
+    "afirmacion": "Si no estás entrenado en ventilaciones, puedes hacer solo compresiones.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es mejor que no hacer nada.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_010",
+    "afirmacion": "Se debe comprobar la respiración durante un minuto antes de iniciar la RCP.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "No más de 10 segundos.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_011",
+    "afirmacion": "Un DEA analiza el ritmo y solo descarga si es necesario.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Guía por voz paso a paso.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_012",
+    "afirmacion": "Los jadeos agónicos son una respiración normal.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Indican paro y requieren RCP.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_013",
+    "afirmacion": "En lactantes las compresiones se hacen con dos dedos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se adapta la fuerza al tamaño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_014",
+    "afirmacion": "Debes detener la RCP cuando te canses un poco.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se continúa hasta que llegue ayuda o la víctima reaccione.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_015",
+    "afirmacion": "Se deben minimizar las pausas entre compresiones.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Cada pausa reduce el flujo sanguíneo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_016",
+    "afirmacion": "La RCP puede romper costillas y aun así debe continuarse.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Salvar la vida es la prioridad.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_017",
+    "afirmacion": "Para comprobar respuesta se debe sacudir con violencia a la víctima.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se toca suavemente los hombros y se habla fuerte.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_018",
+    "afirmacion": "Los brazos deben estar rectos y los hombros sobre las manos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Permite usar el peso del cuerpo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_019",
+    "afirmacion": "En un niño se comprime aproximadamente un tercio del tórax.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se adapta la profundidad al tamaño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_020",
+    "afirmacion": "Una persona que no responde y no respira normal necesita RCP.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es la señal de un posible paro.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_VF_021",
+    "afirmacion": "Llevarse las manos al cuello es una señal universal de atragantamiento.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es un gesto instintivo.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_022",
+    "afirmacion": "Si la persona tose con fuerza, debes golpearle la espalda de inmediato.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debes animarla a seguir tosiendo.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_023",
+    "afirmacion": "Una obstrucción grave impide toser, hablar y respirar.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "No pasa aire.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_024",
+    "afirmacion": "La maniobra de Heimlich consiste en compresiones abdominales.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se aplican hacia adentro y arriba.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_025",
+    "afirmacion": "En lactantes se deben hacer compresiones abdominales.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se usan golpes en la espalda y compresiones torácicas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_026",
+    "afirmacion": "En embarazadas se deben hacer compresiones torácicas.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se evita comprimir el abdomen.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_027",
+    "afirmacion": "Dar agua a una persona atragantada ayuda a destapar la vía aérea.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Puede empeorar la obstrucción.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_028",
+    "afirmacion": "Si la víctima pierde la consciencia, se inicia RCP.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Pierde la consciencia por falta de oxígeno.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_029",
+    "afirmacion": "Debes meter los dedos a ciegas en la boca para sacar el objeto.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Puedes empujarlo más adentro.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_030",
+    "afirmacion": "Se alternan 5 golpes en la espalda y 5 compresiones abdominales en un adulto consciente.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Ambas técnicas ayudan a expulsar el objeto.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_031",
+    "afirmacion": "Si te atragantas solo, puedes comprimir tu abdomen contra el respaldo de una silla.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Imita la maniobra.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_032",
+    "afirmacion": "Los labios azulados pueden indicar falta de oxígeno grave.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es cianosis por hipoxia.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_033",
+    "afirmacion": "Tras una maniobra de Heimlich exitosa no hace falta evaluación médica.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Pueden haber lesiones internas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_034",
+    "afirmacion": "Las uvas enteras son peligrosas para niños pequeños.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Pueden obstruir completamente la vía aérea.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_035",
+    "afirmacion": "Los golpes en la espalda se dan entre los omóplatos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Transmiten el impacto a la vía aérea.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_036",
+    "afirmacion": "Un lactante se coloca boca arriba en una mesa para los golpes en la espalda.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se coloca boca abajo sobre tu antebrazo con la cabeza más baja.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_037",
+    "afirmacion": "Hay que repetir las maniobras hasta que expulse el objeto o pierda la consciencia.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Se persiste hasta resolver.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_038",
+    "afirmacion": "Hablar mientras se come no aumenta el riesgo de atragantamiento.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Aumenta el riesgo de obstrucción.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_039",
+    "afirmacion": "En obstrucción leve, la persona aún puede toser y respirar.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Entra algo de aire.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_040",
+    "afirmacion": "El puño se coloca sobre el pecho en la maniobra de Heimlich.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se coloca sobre el abdomen, por encima del ombligo.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_VF_041",
+    "afirmacion": "La presión directa es la primera medida ante una hemorragia externa.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es la más eficaz para detener el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_042",
+    "afirmacion": "Si la gasa se empapa debes retirarla y poner una nueva.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se añaden más capas sin retirar la primera.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_043",
+    "afirmacion": "Elevar una extremidad herida puede ayudar a reducir el sangrado.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Disminuye el flujo de sangre a la zona.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_044",
+    "afirmacion": "Un torniquete es la primera opción en cualquier herida.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Es último recurso en hemorragias graves de extremidades.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_045",
+    "afirmacion": "Una vez colocado, el torniquete se afloja cada minuto.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Aflojarlo puede reactivar el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_046",
+    "afirmacion": "En una hemorragia nasal se debe inclinar la cabeza hacia atrás.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se inclina hacia adelante para no tragar sangre.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_047",
+    "afirmacion": "Se debe retirar un objeto clavado en la herida.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se estabiliza sin retirarlo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_048",
+    "afirmacion": "Piel pálida, fría y pulso rápido pueden indicar shock.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Son signos de pérdida de volumen sanguíneo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_049",
+    "afirmacion": "Debes usar guantes u otra barrera al atender una herida sangrante.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Reduce el riesgo de contagio.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_050",
+    "afirmacion": "Se pueden poner café o telarañas sobre una herida para detener el sangrado.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Producen infecciones.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_051",
+    "afirmacion": "La sangre roja brillante a chorros suele ser arterial.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Sale a presión desde el corazón.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_052",
+    "afirmacion": "La hemorragia interna siempre se ve por fuera.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Puede no verse y causar mareo y palidez.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_053",
+    "afirmacion": "Se debe anotar la hora de colocación de un torniquete.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "El personal médico necesita esa información.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_054",
+    "afirmacion": "La parte amputada se coloca directamente sobre hielo.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se envuelve en gasa húmeda, se mete en una bolsa y luego sobre hielo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_055",
+    "afirmacion": "Un vendaje de compresión no debe cortar la circulación.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Debe controlar el sangrado sin dejar sin riego.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_056",
+    "afirmacion": "Un raspón leve se limpia con agua y jabón.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Elimina suciedad sin dañar el tejido.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_057",
+    "afirmacion": "Se deben reintroducir los intestinos expuestos en una evisceración.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se cubren con un apósito húmedo sin reintroducirlos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_058",
+    "afirmacion": "En shock sin sospecha de lesión de columna, se acuesta a la persona y se elevan sus piernas.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Favorece la circulación hacia órganos vitales.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_059",
+    "afirmacion": "Levantar la gasa para mirar la herida ayuda a coagular mejor.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Interrumpe la formación del coágulo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_060",
+    "afirmacion": "El torniquete se coloca sobre una articulación.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debe ir sobre una zona de un solo hueso.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_VF_061",
+    "afirmacion": "Una quemadura leve se enfría con agua fresca corriente.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Detiene el avance del daño.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_062",
+    "afirmacion": "Se debe aplicar hielo directamente sobre una quemadura.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Puede dañar más el tejido.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_063",
+    "afirmacion": "Una quemadura de primer grado afecta solo la capa superficial.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Hay enrojecimiento y dolor sin ampollas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_064",
+    "afirmacion": "Se deben reventar las ampollas para que sanen más rápido.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "La ampolla protege de infecciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_065",
+    "afirmacion": "La mantequilla o pasta dental ayudan a curar quemaduras.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Retienen calor y favorecen infecciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_066",
+    "afirmacion": "En una quemadura química se lava con abundante agua unos 20 minutos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "El agua arrastra la sustancia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_067",
+    "afirmacion": "Ante una quemadura eléctrica se corta primero la corriente.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Si no, tú también corres peligro.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_068",
+    "afirmacion": "Una quemadura de tercer grado siempre duele muchísimo.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Destruye nervios, por lo que puede doler poco.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_069",
+    "afirmacion": "Se retiran anillos y pulseras antes de que se inflame la zona.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "La inflamación puede cortar la circulación.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_070",
+    "afirmacion": "Si la ropa está pegada a la quemadura, se debe arrancar.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Se enfría alrededor y no se despega.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_071",
+    "afirmacion": "Si la ropa está en llamas, la persona debe correr.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Debe detenerse, tirarse y rodar.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_072",
+    "afirmacion": "Las quemaduras en cara, manos o articulaciones requieren atención médica.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Son zonas de mayor riesgo.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_073",
+    "afirmacion": "Una quemadura solar suele ser de primer grado.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Afecta la capa superficial.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_074",
+    "afirmacion": "Para cubrir una quemadura se usa algodón suelto.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Deja fibras; se usa gasa estéril no adherente.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_075",
+    "afirmacion": "Tras quemaduras en un incendio, la tos o voz ronca pueden indicar inhalación de humo.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es una emergencia por riesgo de la vía aérea.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_076",
+    "afirmacion": "Una quemadura extensa puede provocar shock.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Hay pérdida de líquidos y riesgo de hipotermia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_077",
+    "afirmacion": "Se debe enfriar una quemadura unos 20 minutos.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Es el tiempo recomendado.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_078",
+    "afirmacion": "Los líquidos calientes deben mantenerse al alcance de los niños.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Deben estar fuera de su alcance.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_079",
+    "afirmacion": "Las quemaduras de segundo grado presentan ampollas.",
+    "respuesta_correcta": "Verdadero",
+    "justificacion": "Afectan capas más profundas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_VF_080",
+    "afirmacion": "Aplicar aceite sobre una quemadura recién producida es lo ideal.",
+    "respuesta_correcta": "Falso",
+    "justificacion": "Atrapa el calor y puede infectar.",
+    "tema": "Quemaduras"
+  }
+]

@@ -1,0 +1,2082 @@
+[
+  {
+    "id": "CIB_MC_001",
+    "pregunta": "¿Qué es el phishing?",
+    "opciones": [
+      "Un virus que borra archivos",
+      "Un engaño para robar datos haciéndose pasar por una entidad confiable",
+      "Un programa que acelera el equipo",
+      "Una copia de seguridad en la nube"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "El phishing suplanta a una entidad de confianza para que entregues datos sensibles.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_002",
+    "pregunta": "¿Cuál es una señal de alerta típica de un correo de phishing?",
+    "opciones": [
+      "Saludo con tu nombre y sin enlaces",
+      "Correo de un contacto habitual sin adjuntos",
+      "Mensaje urgente que amenaza con cerrar tu cuenta",
+      "Boletín al que te suscribiste"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La urgencia y las amenazas buscan que actúes sin pensar.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_003",
+    "pregunta": "Recibes un SMS del banco con un enlace para 'verificar' tu cuenta. ¿Qué haces?",
+    "opciones": [
+      "Pulsar el enlace rápido",
+      "Responder con tus datos",
+      "Reenviarlo a tus amigos",
+      "Ignorar el enlace y contactar al banco por sus canales oficiales"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Verificar por un canal oficial evita entregar datos a un sitio falso.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_004",
+    "pregunta": "El smishing es phishing realizado mediante:",
+    "opciones": [
+      "Correo electrónico",
+      "Mensajes de texto (SMS)",
+      "Redes WiFi",
+      "Llamadas de voz"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Smishing viene de SMS: el engaño llega por mensaje de texto.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_005",
+    "pregunta": "El vishing es un fraude que se realiza principalmente por:",
+    "opciones": [
+      "Memorias USB",
+      "Sitios web falsos",
+      "Llamada telefónica",
+      "Foros públicos"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Vishing usa la voz (llamadas) para engañar a la víctima.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_006",
+    "pregunta": "¿Qué caracteriza al spear phishing?",
+    "opciones": [
+      "Es un ataque masivo y genérico",
+      "Es un ataque a routers",
+      "Es un ataque a impresoras",
+      "Es un ataque dirigido y personalizado a una persona u organización"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "El atacante investiga a su objetivo y personaliza el mensaje.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_007",
+    "pregunta": "Antes de hacer clic en un enlace sospechoso, lo más prudente es:",
+    "opciones": [
+      "Hacer clic para comprobar",
+      "Pasar el cursor para ver la URL real sin pulsar",
+      "Reenviarlo a un amigo",
+      "Descargar el archivo"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Al pasar el cursor se muestra el destino real del enlace.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_008",
+    "pregunta": "¿Cuál de estos dominios es más sospechoso?",
+    "opciones": [
+      "www.banco.com/ayuda",
+      "soporte.banco.com",
+      "banco.com",
+      "banco.com.verifica-cuenta.net"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "El dominio real es 'verifica-cuenta.net'; 'banco.com' solo es un subdominio engañoso.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_009",
+    "pregunta": "¿Qué archivo adjunto es el más riesgoso?",
+    "opciones": [
+      "Factura.pdf.exe",
+      "Un archivo .txt",
+      "Una imagen .png de un contacto conocido",
+      "Un documento tuyo guardado"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La doble extensión .pdf.exe disfraza un ejecutable como documento.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_010",
+    "pregunta": "Escribiste tu contraseña en una página falsa. ¿Qué haces primero?",
+    "opciones": [
+      "Nada, quizá no pase algo",
+      "Cambiarla de inmediato, activar 2FA y avisar al servicio",
+      "Esperar unos días",
+      "Borrar solo el correo"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Actuar rápido limita el daño de las credenciales expuestas.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_011",
+    "pregunta": "El 'whaling' es un tipo de phishing dirigido a:",
+    "opciones": [
+      "Bases de datos",
+      "Redes de pesca",
+      "Altos directivos y ejecutivos",
+      "Servidores web"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Apunta a 'peces gordos' con acceso a información valiosa.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_012",
+    "pregunta": "¿Qué es el typosquatting?",
+    "opciones": [
+      "Registrar dominios con errores tipográficos parecidos a uno real",
+      "Escribir rápido en el teclado",
+      "Usar teclados virtuales",
+      "Cifrar el teclado"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Ej.: 'gooogle.com' aprovecha errores al escribir la dirección.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_013",
+    "pregunta": "El candado (HTTPS) en el navegador significa que:",
+    "opciones": [
+      "El sitio está libre de virus",
+      "La conexión está cifrada, pero el sitio aún podría ser fraudulento",
+      "El sitio es del gobierno",
+      "El sitio es legítimo con seguridad total"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "HTTPS cifra la comunicación, no certifica la honestidad del sitio.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_014",
+    "pregunta": "Te avisan que ganaste una lotería en la que no participaste. Lo más probable es:",
+    "opciones": [
+      "Un premio real",
+      "Un error bancario",
+      "Un sorteo automático",
+      "Una estafa"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "No se puede ganar un sorteo en el que no se participó; es un cebo clásico.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_015",
+    "pregunta": "¿Qué es el 'quishing'?",
+    "opciones": [
+      "Phishing mediante códigos QR maliciosos",
+      "Fallo de impresión",
+      "Virus en pantalla",
+      "Error de cámara"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Un QR falso te lleva a sitios fraudulentos o descargas dañinas.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_016",
+    "pregunta": "Un correo de tu 'jefe' desde una dirección rara pide tarjetas de regalo urgentes. ¿Qué haces?",
+    "opciones": [
+      "Comprarlas de inmediato",
+      "Enviar los códigos por correo",
+      "Verificar con tu jefe por otro canal conocido",
+      "Pagar desde tu cuenta personal"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Es fraude del CEO; confirmar por otro canal desactiva el engaño.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_017",
+    "pregunta": "¿Una entidad legítima te pedirá tu contraseña por correo?",
+    "opciones": [
+      "Sí, siempre",
+      "Solo los viernes",
+      "Solo si es un banco",
+      "Nunca solicitan tu contraseña por correo o mensaje"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Ninguna entidad seria pide contraseñas por mensajes.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_018",
+    "pregunta": "¿Qué debes hacer con un correo de phishing?",
+    "opciones": [
+      "Marcarlo como phishing/spam y eliminarlo",
+      "Responder al remitente",
+      "Publicarlo con tus datos",
+      "Reenviarlo a tus contactos"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Reportarlo ayuda a bloquear futuros envíos.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_019",
+    "pregunta": "¿Cuál es la mejor defensa general contra el phishing?",
+    "opciones": [
+      "Desactivar el antivirus",
+      "Desconfiar, verificar el remitente y usar autenticación en dos pasos",
+      "Abrir todos los adjuntos",
+      "Usar la misma clave siempre"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Combinar atención y 2FA reduce mucho el riesgo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_020",
+    "pregunta": "¿Por qué los phishers usan mensajes urgentes?",
+    "opciones": [
+      "Por requisito legal",
+      "Para ahorrar tiempo de envío",
+      "Para mejorar el diseño",
+      "Para que actúes sin pensar ni verificar"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La presión reduce tu capacidad de análisis crítico.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_MC_021",
+    "pregunta": "¿Qué longitud mínima se recomienda hoy para una contraseña?",
+    "opciones": [
+      "4 caracteres",
+      "12 caracteres o más",
+      "6 caracteres",
+      "8 solo con números"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "A mayor longitud, mucho más difícil es descifrarla por fuerza bruta.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_022",
+    "pregunta": "¿Cuál es la contraseña más fuerte?",
+    "opciones": [
+      "123456",
+      "Qwerty2024",
+      "Tn!9vLq#4rXw$7Bz",
+      "Tu nombre y fecha de nacimiento"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Es larga, aleatoria y mezcla tipos de caracteres.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_023",
+    "pregunta": "¿Por qué es mala idea reutilizar la misma contraseña?",
+    "opciones": [
+      "Es práctica y segura",
+      "Es lo recomendado",
+      "Solo importa si es corta",
+      "Si se filtra en un sitio, todas tus cuentas quedan expuestas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Los atacantes prueban credenciales filtradas en otros servicios.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_024",
+    "pregunta": "¿Para qué sirve un gestor de contraseñas?",
+    "opciones": [
+      "Publicar tus claves",
+      "Almacenar y generar contraseñas únicas de forma cifrada",
+      "Adivinar claves ajenas",
+      "Eliminar virus"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Permite usar claves únicas y fuertes sin memorizarlas todas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_025",
+    "pregunta": "¿Qué es una frase de contraseña (passphrase)?",
+    "opciones": [
+      "Una sola palabra común",
+      "Tu nombre completo",
+      "Varias palabras aleatorias, largas y fáciles de recordar",
+      "Solo una secuencia numérica"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La longitud aporta seguridad y las palabras facilitan recordarla.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_026",
+    "pregunta": "¿Cuál de estas contraseñas es la más débil?",
+    "opciones": [
+      "Xk9$mP2#vL8q",
+      "correcto-caballo-batería-grapa",
+      "R7#tQ!zN4&wE",
+      "password"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "'password' está en todas las listas de claves más comunes.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_027",
+    "pregunta": "¿Qué es un ataque de fuerza bruta?",
+    "opciones": [
+      "Probar combinaciones sistemáticamente hasta acertar",
+      "Engañar por llamada",
+      "Interceptar una red WiFi",
+      "Instalar spyware"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "El atacante automatiza intentos hasta dar con la clave.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_028",
+    "pregunta": "¿Qué es el 'credential stuffing'?",
+    "opciones": [
+      "Crear contraseñas nuevas",
+      "Cifrar credenciales",
+      "Borrar cuentas",
+      "Probar en otros sitios credenciales filtradas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Aprovecha que muchas personas reutilizan contraseñas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_029",
+    "pregunta": "¿Cuándo conviene cambiar una contraseña?",
+    "opciones": [
+      "Si hay sospecha de filtración o compromiso",
+      "Cada hora",
+      "Nunca, ni tras una filtración",
+      "Cada día"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Se cambia ante riesgo real; lo clave es que sea única y fuerte.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_030",
+    "pregunta": "Anotar tu contraseña en una nota adhesiva pegada al monitor es:",
+    "opciones": [
+      "Seguro",
+      "Inseguro: cualquiera cercano puede verla",
+      "Recomendado",
+      "Una forma de cifrado"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La exposición física permite que otros la vean o la fotografíen.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_031",
+    "pregunta": "Las respuestas a preguntas de seguridad deben ser:",
+    "opciones": [
+      "Verdaderas y públicas",
+      "Siempre 'azul'",
+      "Difíciles de adivinar y no deducibles de tus redes sociales",
+      "Iguales a tu contraseña"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Si se deducen de tu perfil público, un atacante las adivina.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_032",
+    "pregunta": "¿Para qué sirve 'Have I Been Pwned'?",
+    "opciones": [
+      "Comprobar si tu correo aparece en filtraciones de datos",
+      "Descargar programas",
+      "Crear claves",
+      "Eliminar cuentas"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Permite saber si debes cambiar credenciales expuestas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_033",
+    "pregunta": "¿Es buena idea compartir tu contraseña con un compañero?",
+    "opciones": [
+      "Sí, por confianza",
+      "No; cada persona debe tener su propia cuenta",
+      "Sí, por chat",
+      "Sí, por correo"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Compartir claves elimina la trazabilidad y multiplica el riesgo.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_034",
+    "pregunta": "¿Qué hace el hash de una contraseña?",
+    "opciones": [
+      "La envía por correo",
+      "La muestra en pantalla",
+      "La convierte en una huella irreversible para no guardar el texto original",
+      "La acorta"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Aunque roben la base de datos, no obtienen directamente las claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_035",
+    "pregunta": "La contraseña de WiFi que viene por defecto en el router:",
+    "opciones": [
+      "Se cambia por una única y fuerte",
+      "Se deja igual",
+      "Se usa 'admin'",
+      "Se publica"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Las claves por defecto son conocidas y fáciles de explotar.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_036",
+    "pregunta": "Cambiar letras por símbolos predecibles (P@ssw0rd) es:",
+    "opciones": [
+      "Muy seguro",
+      "Indescifrable",
+      "Poco efectivo; los atacantes conocen esos patrones",
+      "Obligatorio"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Los diccionarios de ataque ya incluyen estas sustituciones comunes.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_037",
+    "pregunta": "¿Dónde es más seguro guardar tus contraseñas?",
+    "opciones": [
+      "Un archivo 'claves.txt' en el escritorio",
+      "Un correo enviado a ti mismo",
+      "Un navegador de uso público",
+      "Un gestor de contraseñas cifrado"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Un gestor cifra los datos y protege el acceso con una clave maestra.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_038",
+    "pregunta": "Al usar un computador público, debes:",
+    "opciones": [
+      "Cerrar sesión y no guardar credenciales",
+      "Guardar la contraseña",
+      "Dejar la sesión abierta",
+      "Reenviar tus claves"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Evita que la siguiente persona acceda a tus cuentas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_039",
+    "pregunta": "¿Qué debes evitar usar en una contraseña?",
+    "opciones": [
+      "Mayúsculas",
+      "Datos personales como nombre, mascota o cumpleaños",
+      "Longitud",
+      "Aleatoriedad"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Los datos personales son fáciles de deducir u obtener.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_040",
+    "pregunta": "Tu contraseña aparece en una filtración. ¿Qué haces?",
+    "opciones": [
+      "Ignorarlo",
+      "Hacerla más corta",
+      "Esperar un mes",
+      "Cambiarla ya en ese sitio y en todos donde la reutilizaste"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La clave ya es conocida; hay que reemplazarla en todas partes.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_MC_041",
+    "pregunta": "¿Qué es el malware?",
+    "opciones": [
+      "Software malicioso diseñado para dañar, espiar o robar",
+      "Una aplicación de oficina",
+      "Un controlador de hardware",
+      "Un navegador web"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "'Malware' proviene de 'malicious software'.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_042",
+    "pregunta": "¿Qué hace el ransomware?",
+    "opciones": [
+      "Acelera el equipo",
+      "Muestra anuncios útiles",
+      "Cifra tus archivos y exige un rescate",
+      "Limpia la caché"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Bloquea el acceso a tus datos hasta que se pague un rescate.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_043",
+    "pregunta": "¿Qué caracteriza a un troyano?",
+    "opciones": [
+      "Se copia solo por red sin ayuda",
+      "Es un tipo de antivirus",
+      "Es un componente físico",
+      "Se disfraza de programa legítimo"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Como el caballo de Troya, engaña al usuario para que lo instale.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_044",
+    "pregunta": "¿Qué distingue a un gusano (worm)?",
+    "opciones": [
+      "Siempre requiere abrir un adjunto",
+      "Se propaga solo por redes sin intervención del usuario",
+      "Es un firewall",
+      "Es una copia de seguridad"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Se replica automáticamente aprovechando vulnerabilidades de red.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_045",
+    "pregunta": "¿Qué hace el spyware?",
+    "opciones": [
+      "Protege tu equipo",
+      "Actualiza el sistema",
+      "Espía tu actividad y recopila información sin consentimiento",
+      "Comprime archivos"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Roba datos como hábitos de navegación o credenciales.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_046",
+    "pregunta": "Un keylogger se encarga de:",
+    "opciones": [
+      "Leer huellas dactilares",
+      "Limpiar el disco",
+      "Sincronizar archivos",
+      "Registrar las teclas que pulsas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Permite capturar contraseñas y mensajes escritos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_047",
+    "pregunta": "¿Qué es el adware?",
+    "opciones": [
+      "Software que muestra publicidad no deseada, a veces intrusiva",
+      "Cifrado de datos",
+      "Control de la cámara",
+      "Un antivirus"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Genera anuncios invasivos y puede venir con otros riesgos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_048",
+    "pregunta": "¿Qué es una botnet?",
+    "opciones": [
+      "Una red social",
+      "Un tipo de cable",
+      "Una red de dispositivos infectados controlados remotamente",
+      "Un antivirus"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Los atacantes la usan para spam, ataques DDoS y más.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_049",
+    "pregunta": "¿Cuál es la fuente más segura para instalar aplicaciones?",
+    "opciones": [
+      "Las tiendas oficiales",
+      "Enlaces enviados por mensaje",
+      "Sitios de programas crackeados",
+      "Memorias USB encontradas"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Las tiendas oficiales revisan las apps y reducen el riesgo.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_050",
+    "pregunta": "¿Por qué es importante actualizar el software?",
+    "opciones": [
+      "Solo cambia los colores",
+      "Corrige vulnerabilidades que el malware podría explotar",
+      "Gasta batería",
+      "No sirve de nada"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Las actualizaciones cierran brechas de seguridad conocidas.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_051",
+    "pregunta": "¿Pagar el rescate de un ransomware garantiza recuperar tus archivos?",
+    "opciones": [
+      "Sí, siempre",
+      "Sí, en 24 horas",
+      "No, y además financia a los atacantes",
+      "Es obligatorio legalmente"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "No hay garantía de que entreguen la clave de descifrado.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_052",
+    "pregunta": "¿Cuál es la mejor protección ante el ransomware?",
+    "opciones": [
+      "Hacer copias de seguridad periódicas y desconectadas",
+      "Desactivar las actualizaciones",
+      "Abrir todos los adjuntos",
+      "Compartir tus claves"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Con copias limpias puedes restaurar tus datos sin pagar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_053",
+    "pregunta": "Encuentras una memoria USB en el estacionamiento. ¿Qué haces?",
+    "opciones": [
+      "Conectarla para ver su contenido",
+      "No conectarla: puede contener malware",
+      "Formatearla en tu PC",
+      "Prestarla a un colega"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Las USB abandonadas son un método clásico de infección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_054",
+    "pregunta": "¿Cuál es un síntoma posible de infección por malware?",
+    "opciones": [
+      "El equipo no cambia nunca",
+      "Menos ruido del ventilador",
+      "Lentitud inusual, ventanas emergentes y programas desconocidos",
+      "Pantalla más limpia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Estos cambios anómalos suelen indicar actividad maliciosa.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_055",
+    "pregunta": "¿Qué es un virus informático?",
+    "opciones": [
+      "Un componente de hardware",
+      "Un mensaje de texto",
+      "Un navegador",
+      "Código que se adjunta a archivos y se propaga al ejecutarlos"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Necesita un archivo anfitrión y que alguien lo ejecute.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_056",
+    "pregunta": "¿Qué hace un rootkit?",
+    "opciones": [
+      "Gestiona tus claves",
+      "Funciona como un firewall",
+      "Oculta la presencia del malware y da acceso privilegiado",
+      "Edita documentos"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Dificulta su detección y mantiene control profundo del sistema.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_057",
+    "pregunta": "Sobre el antivirus, es correcto afirmar que:",
+    "opciones": [
+      "Es infalible y reemplaza el sentido común",
+      "Nunca necesita actualizarse",
+      "Solo bloquea publicidad",
+      "Detecta y elimina amenazas, pero debe mantenerse actualizado"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Es una capa de defensa útil, no una protección absoluta.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_058",
+    "pregunta": "El software pirata suele:",
+    "opciones": [
+      "Incluir malware con frecuencia",
+      "Ser más seguro",
+      "Estar libre de riesgos",
+      "Actualizarse solo"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Los cracks son un vehículo habitual para distribuir malware.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_059",
+    "pregunta": "Si sospechas que tu equipo está infectado, lo primero es:",
+    "opciones": [
+      "Seguir trabajando normal",
+      "Desconectarlo de la red y ejecutar un análisis con antivirus",
+      "Compartir tus archivos",
+      "Reiniciar y olvidarlo"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Aislar el equipo evita que el malware se propague o envíe datos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_060",
+    "pregunta": "¿Qué es el cryptojacking?",
+    "opciones": [
+      "Cifrado de archivos con rescate",
+      "Robo de billeteras en tiendas",
+      "Un tipo de phishing",
+      "Uso oculto de tu dispositivo para minar criptomonedas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Consume tus recursos (CPU/batería) en beneficio del atacante.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_MC_061",
+    "pregunta": "¿Qué es la autenticación en dos factores (2FA)?",
+    "opciones": [
+      "Verificar tu identidad con dos factores distintos",
+      "Usar dos contraseñas iguales",
+      "Tener dos usuarios",
+      "Tener dos correos"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Combina dos categorías distintas, como contraseña y código.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_062",
+    "pregunta": "La contraseña o el PIN corresponden al factor:",
+    "opciones": [
+      "Algo que eres",
+      "Algo que sabes",
+      "Algo que tienes",
+      "Dónde estás"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Es información que solo el usuario debería conocer.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_063",
+    "pregunta": "La huella dactilar corresponde al factor:",
+    "opciones": [
+      "Algo que sabes",
+      "Algo que tienes",
+      "Algo que escribes",
+      "Algo que eres"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Es un rasgo biométrico propio de la persona.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_064",
+    "pregunta": "Un token físico o tu teléfono con una app corresponden al factor:",
+    "opciones": [
+      "Algo que sabes",
+      "Algo que tienes",
+      "Algo que eres",
+      "Algo que olvidas"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Es un objeto que posees para verificar tu identidad.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_065",
+    "pregunta": "¿Qué método de 2FA suele ser más seguro?",
+    "opciones": [
+      "Códigos por SMS",
+      "Preguntas de seguridad",
+      "App autenticadora o llave de seguridad física",
+      "Contraseña repetida"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Son menos vulnerables que el SMS al robo de línea o la interceptación.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_066",
+    "pregunta": "¿Qué es el SIM swapping?",
+    "opciones": [
+      "Cambiar de operador legalmente",
+      "Formatear el teléfono",
+      "Actualizar la SIM",
+      "Que el atacante transfiera tu número a otra SIM para interceptar códigos"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Permite recibir tus SMS de verificación y tomar tus cuentas.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_067",
+    "pregunta": "Un código OTP (One-Time Password) es:",
+    "opciones": [
+      "Una clave de un solo uso y de corta duración",
+      "Una clave permanente",
+      "Una clave pública",
+      "Una clave que nunca vence"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Caduca tras usarse o pasados unos segundos o minutos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_068",
+    "pregunta": "Alguien te llama y te pide el código de verificación que recibiste. ¿Qué haces?",
+    "opciones": [
+      "Dárselo si suena amable",
+      "Dárselo si dice ser del banco",
+      "No compartirlo con nadie, nunca",
+      "Dárselo si insiste"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Los códigos son personales; quien los pide intenta tomar tu cuenta.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_069",
+    "pregunta": "MFA significa:",
+    "opciones": [
+      "Múltiple Firewall Activo",
+      "Módulo de Fallos Automáticos",
+      "Mensaje Firmado Anual",
+      "Autenticación Multifactor"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Exige dos o más factores de verificación para acceder.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_070",
+    "pregunta": "¿Por qué las llaves de seguridad FIDO2 resisten mejor el phishing?",
+    "opciones": [
+      "Porque son más baratas",
+      "Solo funcionan con el sitio legítimo al que están vinculadas",
+      "Porque usan SMS",
+      "Porque no necesitan dispositivo"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Verifican el dominio real, por lo que no funcionan en sitios falsos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_071",
+    "pregunta": "¿Qué permite el inicio de sesión único (SSO)?",
+    "opciones": [
+      "Usar contraseñas más cortas",
+      "Compartir cuentas",
+      "Acceder a varios servicios con una sola identidad verificada",
+      "Cambiar de contraseña a diario"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Centraliza la autenticación en un solo proveedor de identidad.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_072",
+    "pregunta": "¿Qué debes hacer con los códigos de respaldo de tu 2FA?",
+    "opciones": [
+      "Guardarlos en un lugar seguro",
+      "Publicarlos",
+      "Enviarlos por correo",
+      "Dejarlos en el escritorio"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Te permiten recuperar el acceso si pierdes tu dispositivo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_073",
+    "pregunta": "¿Cuál es una limitación importante de la biometría?",
+    "opciones": [
+      "Es lenta siempre",
+      "Si se filtra, no puedes cambiar tu huella o rostro",
+      "Cambia cada semana",
+      "Necesita internet siempre"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "A diferencia de una contraseña, un rasgo biológico no se puede reemplazar.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_074",
+    "pregunta": "Te llega una aprobación de inicio de sesión que tú no iniciaste. ¿Qué haces?",
+    "opciones": [
+      "Aprobarla para que pare",
+      "Ignorarla siempre",
+      "Rechazarla y cambiar tu contraseña de inmediato",
+      "Aprobarla si insiste"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Alguien más tiene tu clave e intenta entrar.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_075",
+    "pregunta": "¿Cuál es la diferencia entre autenticación y autorización?",
+    "opciones": [
+      "Son lo mismo",
+      "Autorización verifica quién eres",
+      "Autenticación define permisos",
+      "Autenticación verifica quién eres; autorización define qué puedes hacer"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Primero se comprueba la identidad y luego se asignan permisos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_076",
+    "pregunta": "¿En qué cuentas es prioritario activar 2FA?",
+    "opciones": [
+      "Solo en juegos",
+      "Correo principal y banca, que protegen otras cuentas",
+      "En ninguna",
+      "Solo en redes sociales"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Quien controla tu correo puede restablecer casi todas tus claves.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_077",
+    "pregunta": "El principio de mínimo privilegio establece que:",
+    "opciones": [
+      "Todos son administradores",
+      "Se da más acceso por comodidad",
+      "Los permisos nunca se revisan",
+      "Cada usuario solo debe tener los permisos estrictamente necesarios"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Limita el daño si una cuenta es comprometida.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_078",
+    "pregunta": "Ves una sesión abierta en un dispositivo desconocido. ¿Qué haces?",
+    "opciones": [
+      "Cerrar esa sesión y cambiar tu contraseña",
+      "Dejarla así",
+      "Esperar a que se cierre sola",
+      "Reenviar el aviso"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Revocar sesiones sospechosas corta el acceso del intruso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_079",
+    "pregunta": "¿Qué son las passkeys?",
+    "opciones": [
+      "Contraseñas de 4 dígitos",
+      "Credenciales con criptografía de clave pública que reemplazan la contraseña",
+      "Claves escritas en papel",
+      "Preguntas secretas"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Son más seguras y resistentes al phishing que las contraseñas tradicionales.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_MC_080",
+    "pregunta": "¿En qué consiste la 'fatiga de MFA'?",
+    "opciones": [
+      "Cansancio al configurar 2FA",
+      "Fallo de la batería",
+      "Un error del servidor",
+      "Bombardear al usuario con solicitudes hasta que apruebe una por error"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "El atacante busca que apruebes por cansancio o confusión.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "PA_MC_001",
+    "pregunta": "¿Qué es la RCP?",
+    "opciones": [
+      "Un tipo de vendaje",
+      "Maniobras para mantener circulación y respiración cuando el corazón se detiene",
+      "Un medicamento",
+      "Una técnica de masaje"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La reanimación cardiopulmonar sustituye temporalmente la función del corazón.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_002",
+    "pregunta": "¿Qué haces antes de atender a una víctima?",
+    "opciones": [
+      "Moverla de inmediato",
+      "Darle agua",
+      "Asegurar que la escena sea segura",
+      "Levantarle la cabeza"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Tu seguridad es prioritaria: no puedes ayudar si te conviertes en víctima.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_003",
+    "pregunta": "¿Cómo compruebas si una persona responde?",
+    "opciones": [
+      "Echándole agua",
+      "Dándole palmadas fuertes en la cara",
+      "Gritándole al oído sin tocarla",
+      "Tocando sus hombros y hablándole en voz alta"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Estimular suave y hablar fuerte evalúa la consciencia sin lesionar.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_004",
+    "pregunta": "¿Qué número llamas para pedir ayuda de emergencia en Ecuador?",
+    "opciones": [
+      "123",
+      "911",
+      "171",
+      "101"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "El 911 es el número unificado de emergencias en Ecuador.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_005",
+    "pregunta": "¿Dónde colocas las manos para las compresiones en un adulto?",
+    "opciones": [
+      "Sobre el abdomen",
+      "En el cuello",
+      "En el centro del pecho, mitad inferior del esternón",
+      "Sobre el hombro"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Comprimir el esternón inferior bombea sangre eficazmente.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_006",
+    "pregunta": "¿Qué profundidad deben tener las compresiones en un adulto?",
+    "opciones": [
+      "1 a 2 cm",
+      "3 a 4 cm",
+      "10 cm",
+      "5 a 6 cm"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Entre 5 y 6 cm genera circulación sin causar daño excesivo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_007",
+    "pregunta": "¿Qué ritmo de compresiones se recomienda?",
+    "opciones": [
+      "60 por minuto",
+      "100 a 120 por minuto",
+      "80 por minuto",
+      "140 por minuto"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Ese rango mantiene un flujo sanguíneo adecuado.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_008",
+    "pregunta": "¿Cuál es la relación compresiones-ventilaciones en un adulto?",
+    "opciones": [
+      "15:1",
+      "10:5",
+      "5:1",
+      "30:2"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Se alternan 30 compresiones con 2 ventilaciones.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_009",
+    "pregunta": "Entre compresiones, debes:",
+    "opciones": [
+      "Dejar que el tórax se expanda por completo",
+      "Apoyarte en el pecho",
+      "Presionar sin soltar",
+      "Retirar las manos del pecho"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La reexpansión completa permite que el corazón se llene de sangre.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_010",
+    "pregunta": "¿Para qué sirve un DEA (desfibrilador externo automático)?",
+    "opciones": [
+      "Medir la temperatura",
+      "Analizar el ritmo cardiaco y dar una descarga si es necesaria",
+      "Dar oxígeno",
+      "Tomar la presión"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "El DEA guía por voz y solo descarga si detecta un ritmo desfibrilable.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_011",
+    "pregunta": "¿Cuándo puedes detener la RCP?",
+    "opciones": [
+      "Cuando te canses un poco",
+      "A los dos minutos",
+      "Cuando llega ayuda profesional, la víctima reacciona o la escena es insegura",
+      "Cuando alguien te lo pide"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Se continúa hasta que otro asuma, la víctima se recupere o haya peligro.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_012",
+    "pregunta": "¿Sobre qué superficie debe estar la víctima para la RCP?",
+    "opciones": [
+      "Una superficie firme y plana",
+      "Una cama blanda",
+      "Un sofá",
+      "Una silla"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Una superficie blanda absorbe la fuerza y reduce la eficacia.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_013",
+    "pregunta": "¿Cómo se hacen las compresiones en un niño?",
+    "opciones": [
+      "Con la punta de un dedo",
+      "Con una o dos manos, hundiendo aproximadamente un tercio del tórax",
+      "Con el codo",
+      "No se hacen"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Se adapta la fuerza al tamaño del niño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_014",
+    "pregunta": "En un lactante, las compresiones se hacen con:",
+    "opciones": [
+      "Un puño",
+      "Ambas manos",
+      "El talón de la mano",
+      "Dos dedos en el centro del pecho"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Dos dedos permiten comprimir con la fuerza adecuada, unos 4 cm.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_015",
+    "pregunta": "Si no tienes entrenamiento en ventilaciones, ¿qué haces?",
+    "opciones": [
+      "RCP solo con compresiones continuas",
+      "Nada",
+      "Esperar sin hacer nada",
+      "Dar agua a la víctima"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Las compresiones continuas son mejores que no hacer nada.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_016",
+    "pregunta": "¿Qué ayuda a mantener el ritmo de compresiones?",
+    "opciones": [
+      "Contar muy lento",
+      "Hacerlo sin ritmo",
+      "Seguir una canción con ritmo de 100-120 pulsos por minuto",
+      "Descansar a mitad"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Una canción con ese ritmo ayuda a mantener la frecuencia correcta.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_017",
+    "pregunta": "¿Qué indica un posible paro cardiorrespiratorio?",
+    "opciones": [
+      "Habla con normalidad",
+      "Se queja de dolor",
+      "Tose con fuerza",
+      "No responde y no respira o solo jadea"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Los jadeos agónicos no son una respiración normal.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_018",
+    "pregunta": "¿Cuánto tiempo máximo debes interrumpir las compresiones?",
+    "opciones": [
+      "Lo menos posible, menos de 10 segundos",
+      "Un minuto",
+      "30 segundos",
+      "Cinco minutos"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Cada pausa reduce el flujo de sangre al cerebro y al corazón.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_019",
+    "pregunta": "¿Cuánto tiempo dedicas a comprobar si la persona respira?",
+    "opciones": [
+      "Un minuto",
+      "No más de 10 segundos",
+      "30 segundos",
+      "Dos minutos"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "No se debe retrasar el inicio de la RCP.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_020",
+    "pregunta": "¿Cuál es la postura correcta del reanimador?",
+    "opciones": [
+      "Brazos doblados y de lado",
+      "Sentado a distancia",
+      "Codos flexionados",
+      "Brazos rectos, con los hombros sobre las manos"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Permite usar el peso del cuerpo y comprimir con menos fatiga.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_MC_021",
+    "pregunta": "¿Cuál es la señal universal de atragantamiento?",
+    "opciones": [
+      "Saludar con la mano",
+      "Llevarse las manos al cuello",
+      "Señalar el estómago",
+      "Cerrar los ojos"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Es el gesto instintivo cuando la vía aérea está obstruida.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_022",
+    "pregunta": "Si la persona tose con fuerza ante una obstrucción leve, debes:",
+    "opciones": [
+      "Darle agua",
+      "Golpearle la espalda de inmediato",
+      "Animarla a seguir tosiendo",
+      "Hacerle la maniobra de Heimlich"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La tos eficaz es el mejor mecanismo para expulsar el objeto.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_023",
+    "pregunta": "¿Qué indica una obstrucción grave?",
+    "opciones": [
+      "Tos fuerte",
+      "Habla normal",
+      "Respiración tranquila",
+      "No puede toser, hablar ni respirar"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "El aire no pasa y se requiere actuar de inmediato.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_024",
+    "pregunta": "En un adulto consciente con obstrucción grave, ¿qué haces?",
+    "opciones": [
+      "Darle agua",
+      "Alternar 5 golpes en la espalda y 5 compresiones abdominales",
+      "Acostarlo boca arriba y esperar",
+      "Hacerlo vomitar"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Ambas técnicas ayudan a desalojar el objeto.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_025",
+    "pregunta": "La maniobra de Heimlich consiste en:",
+    "opciones": [
+      "Golpes en la cabeza",
+      "Estirar los brazos",
+      "Compresiones abdominales hacia adentro y arriba",
+      "Masajear el cuello"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Genera presión que empuja el aire y expulsa el objeto.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_026",
+    "pregunta": "¿Dónde se coloca el puño en la maniobra de Heimlich?",
+    "opciones": [
+      "Sobre el pecho",
+      "Sobre la garganta",
+      "Sobre las costillas inferiores",
+      "Sobre el abdomen, por encima del ombligo y bajo el esternón"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Esa zona permite aplicar presión eficaz sin dañar órganos.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_027",
+    "pregunta": "En un lactante atragantado, se aplican:",
+    "opciones": [
+      "5 golpes en la espalda y 5 compresiones torácicas",
+      "Compresiones abdominales",
+      "Solo agua",
+      "Compresiones abdominales fuertes"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "En lactantes no se hacen compresiones abdominales por riesgo de lesión.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_028",
+    "pregunta": "En una embarazada o persona con obesidad se realizan:",
+    "opciones": [
+      "Compresiones abdominales",
+      "Golpes en la cabeza",
+      "Ninguna maniobra",
+      "Compresiones torácicas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Se evita comprimir el abdomen y se comprime el tórax.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_029",
+    "pregunta": "Si la persona atragantada pierde la consciencia:",
+    "opciones": [
+      "Se llama al 911 y se inicia RCP",
+      "Se la deja en el suelo",
+      "Se le da agua",
+      "Se espera a que despierte"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Pierde la consciencia por falta de oxígeno y requiere RCP.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_030",
+    "pregunta": "¿Qué NO debes hacer si la persona puede toser?",
+    "opciones": [
+      "Vigilarla",
+      "Golpearla o darle de beber",
+      "Animarla a toser",
+      "Mantenerte cerca"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Puede empeorar la obstrucción y mover el objeto más adentro.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_031",
+    "pregunta": "¿Es correcto meter los dedos a ciegas en la boca para sacar el objeto?",
+    "opciones": [
+      "Sí, siempre",
+      "Sí, si es pequeño",
+      "No; puede empujar el objeto más adentro",
+      "Solo en niños"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Solo se retira un objeto si es visible y accesible.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_032",
+    "pregunta": "Si te atragantas estando solo, puedes:",
+    "opciones": [
+      "Comprimir tu abdomen contra el respaldo de una silla",
+      "Esperar sin hacer nada",
+      "Beber mucha agua",
+      "Acostarte"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Imita la maniobra de Heimlich usando un objeto firme.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_033",
+    "pregunta": "¿Qué alimento es especialmente peligroso para niños pequeños?",
+    "opciones": [
+      "Puré",
+      "Uvas enteras",
+      "Pan blando",
+      "Yogur"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Su forma y tamaño pueden obstruir completamente la vía aérea.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_034",
+    "pregunta": "¿Dónde se dan los golpes en la espalda?",
+    "opciones": [
+      "En la nuca",
+      "En la cintura",
+      "Entre los omóplatos con el talón de la mano",
+      "En las costillas"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Esa zona transmite el impacto hacia la vía aérea.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_035",
+    "pregunta": "¿Hasta cuándo se repiten las maniobras en un adulto consciente?",
+    "opciones": [
+      "Hasta que expulse el objeto o pierda la consciencia",
+      "Dos veces",
+      "Tres minutos",
+      "Una sola vez"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Se persiste hasta resolver la obstrucción o cambiar a RCP.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_036",
+    "pregunta": "Tras una maniobra de Heimlich exitosa, lo recomendable es:",
+    "opciones": [
+      "Nada más",
+      "Beber alcohol",
+      "Una evaluación médica",
+      "Hacer ejercicio"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Las compresiones pueden causar lesiones internas no visibles.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_037",
+    "pregunta": "¿Cómo se coloca a un lactante para los golpes en la espalda?",
+    "opciones": [
+      "Boca arriba en el suelo",
+      "De pie",
+      "Sentado",
+      "Boca abajo sobre tu antebrazo, con la cabeza más baja que el tronco"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La gravedad ayuda a que el objeto salga.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_038",
+    "pregunta": "Una tos fuerte y eficaz indica:",
+    "opciones": [
+      "Obstrucción parcial: aún pasa aire",
+      "Obstrucción completa",
+      "Que debes golpear la espalda",
+      "Que se debe iniciar RCP"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Si tose con fuerza, aún hay entrada de aire.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_039",
+    "pregunta": "¿Qué ayuda a prevenir el atragantamiento?",
+    "opciones": [
+      "Hablar mientras comes",
+      "Masticar bien, cortar en trozos pequeños y no hablar con comida en la boca",
+      "Comer corriendo",
+      "Comer acostado"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Comer con calma reduce el riesgo de obstrucción.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_040",
+    "pregunta": "Labios azulados en una persona atragantada indican:",
+    "opciones": [
+      "Frío",
+      "Alergia",
+      "Cansancio",
+      "Falta de oxígeno grave"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La cianosis es señal de hipoxia severa.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_MC_041",
+    "pregunta": "¿Qué haces primero ante una hemorragia externa?",
+    "opciones": [
+      "Presión directa con gasa o paño limpio",
+      "Aplicar hielo",
+      "Lavar con alcohol",
+      "Dar de beber"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La presión directa es la medida más eficaz para detener el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_042",
+    "pregunta": "Si la gasa se empapa de sangre, debes:",
+    "opciones": [
+      "Retirarla y poner otra",
+      "Quitarla para mirar",
+      "Añadir más capas encima sin retirar la primera",
+      "Dejar de presionar"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Retirarla arrastra los coágulos que se están formando.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_043",
+    "pregunta": "En una herida de brazo o pierna sin fractura, además de presionar puedes:",
+    "opciones": [
+      "Moverla",
+      "Dejarla colgando",
+      "Doblarla bruscamente",
+      "Elevar la extremidad por encima del corazón"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Elevarla reduce el flujo de sangre a la zona.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_044",
+    "pregunta": "¿Cuándo se usa un torniquete?",
+    "opciones": [
+      "En cualquier herida",
+      "Como último recurso, en una hemorragia grave de extremidad que no cede",
+      "En heridas del cuello",
+      "En raspones"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Puede salvar la vida, pero tiene riesgos si se usa sin necesidad.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_045",
+    "pregunta": "¿Dónde se coloca un torniquete?",
+    "opciones": [
+      "Sobre la herida",
+      "Sobre una articulación",
+      "Unos 5-7 cm por encima de la herida, sin cubrir una articulación",
+      "En el cuello"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Debe quedar en una zona de un solo hueso y cercana a la herida.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_046",
+    "pregunta": "En una hemorragia nasal, ¿qué debes hacer?",
+    "opciones": [
+      "Echar la cabeza hacia atrás",
+      "Acostar a la persona",
+      "Sonarse con fuerza",
+      "Sentarla, inclinar la cabeza hacia adelante y pinzar la parte blanda de la nariz"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Inclinarla evita tragar sangre y la presión detiene el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_047",
+    "pregunta": "La sangre roja brillante que sale a chorros suele indicar una hemorragia:",
+    "opciones": [
+      "Arterial",
+      "Venosa",
+      "Capilar",
+      "Leve"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Las arterias llevan sangre a presión desde el corazón.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_048",
+    "pregunta": "Si hay un objeto clavado en la herida, debes:",
+    "opciones": [
+      "Retirarlo de inmediato",
+      "Moverlo",
+      "Estabilizarlo sin retirarlo y presionar alrededor",
+      "Empujarlo más"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Retirarlo puede aumentar el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_049",
+    "pregunta": "¿Qué signos sugieren shock por pérdida de sangre?",
+    "opciones": [
+      "Piel pálida y fría, pulso rápido y debilidad",
+      "Piel caliente y roja",
+      "Pulso lento",
+      "Sudor abundante solo"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "El cuerpo reacciona a la pérdida de volumen sanguíneo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_050",
+    "pregunta": "Ante signos de shock sin sospecha de lesión de columna, conviene:",
+    "opciones": [
+      "Sentar a la persona",
+      "Acostarla y elevar las piernas",
+      "Darle de comer",
+      "Hacerla caminar"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Favorece el retorno de sangre hacia órganos vitales.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_051",
+    "pregunta": "¿Qué protección debes usar al atender una herida sangrante?",
+    "opciones": [
+      "Ninguna",
+      "Una bufanda",
+      "Guantes u otra barrera",
+      "Perfume"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Reduce el riesgo de contagio por contacto con sangre.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_052",
+    "pregunta": "Una herida leve (raspón) se limpia con:",
+    "opciones": [
+      "Agua y jabón",
+      "Alcohol puro",
+      "Agua oxigenada siempre",
+      "Tierra"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Es suave y elimina la suciedad sin dañar el tejido.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_053",
+    "pregunta": "¿Qué sugiere una hemorragia interna?",
+    "opciones": [
+      "Solo un raspón",
+      "Dolor abdominal, moretones extensos, mareo y palidez",
+      "Hambre",
+      "Sueño"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "No se ve la sangre, pero hay síntomas de pérdida de volumen.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_054",
+    "pregunta": "¿Cómo se aplica la presión directa?",
+    "opciones": [
+      "Intermitente y suave",
+      "Un segundo",
+      "Continua y firme, sin levantar para mirar",
+      "Solo con un dedo"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Levantar interrumpe la coagulación.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_055",
+    "pregunta": "Tras colocar un torniquete, debes:",
+    "opciones": [
+      "Ocultarlo",
+      "Aflojarlo cada minuto",
+      "Quitarlo pronto",
+      "Anotar la hora de colocación"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "El personal médico necesita saber cuánto tiempo lleva puesto.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_056",
+    "pregunta": "Una vez colocado, el torniquete:",
+    "opciones": [
+      "Se afloja si duele",
+      "Se retira a los 10 minutos",
+      "No se afloja: lo maneja el personal profesional",
+      "Se cambia de sitio"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Aflojarlo puede reactivar un sangrado potencialmente mortal.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_057",
+    "pregunta": "Si hay evisceración (intestinos fuera), debes:",
+    "opciones": [
+      "Reintroducirlos",
+      "Ignorarlo",
+      "Darle de beber",
+      "Cubrirlos con apósito húmedo y limpio sin reintroducirlos"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Reintroducir puede causar infecciones y daños internos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_058",
+    "pregunta": "Ante una amputación, la parte amputada se:",
+    "opciones": [
+      "Envuelve en gasa húmeda, se mete en una bolsa y se coloca sobre hielo",
+      "Echa al hielo directamente",
+      "Descarta",
+      "Lava con alcohol"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "El frío indirecto conserva el tejido sin dañarlo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_059",
+    "pregunta": "Un vendaje de compresión debe estar:",
+    "opciones": [
+      "Muy flojo",
+      "Firme, pero sin cortar la circulación",
+      "Tan apretado que corte la circulación",
+      "Sin apoyo"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Debe controlar el sangrado sin dejar la extremidad sin riego.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_060",
+    "pregunta": "¿Qué NO debes aplicar sobre una herida sangrante?",
+    "opciones": [
+      "Gasa estéril",
+      "Paño limpio",
+      "Vendaje",
+      "Café, polvo o telarañas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Son remedios caseros que causan infecciones.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_MC_061",
+    "pregunta": "¿Qué haces primero ante una quemadura térmica leve?",
+    "opciones": [
+      "Enfriarla con agua corriente fresca unos 20 minutos",
+      "Aplicar hielo",
+      "Aplicar mantequilla",
+      "Reventar las ampollas"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "El agua fresca detiene el avance de la quemadura y alivia el dolor.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_062",
+    "pregunta": "¿Por qué no se debe aplicar hielo directamente en una quemadura?",
+    "opciones": [
+      "Porque es caro",
+      "Porque daña más el tejido ya lesionado",
+      "Porque no enfría",
+      "Porque ensucia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "El frío extremo puede agravar la lesión de la piel.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_063",
+    "pregunta": "Una quemadura de primer grado se caracteriza por:",
+    "opciones": [
+      "Piel carbonizada",
+      "Ampollas grandes",
+      "Piel blanca sin dolor",
+      "Enrojecimiento y dolor, sin ampollas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Afecta solo la capa superficial de la piel.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_064",
+    "pregunta": "Una quemadura de segundo grado presenta:",
+    "opciones": [
+      "Solo enrojecimiento",
+      "Ampollas y dolor intenso",
+      "Piel carbonizada",
+      "Ninguna molestia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Afecta capas más profundas y forma ampollas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_065",
+    "pregunta": "Una quemadura de tercer grado suele verse:",
+    "opciones": [
+      "Roja y húmeda",
+      "Con ampollas",
+      "Blanca, marrón o carbonizada, y con poco dolor",
+      "Como un enrojecimiento leve"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Destruye terminaciones nerviosas, por eso duele poco; es una emergencia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_066",
+    "pregunta": "¿Qué haces con las ampollas?",
+    "opciones": [
+      "Reventarlas con aguja",
+      "Frotarlas",
+      "Cubrirlas con alcohol",
+      "No reventarlas"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La ampolla protege la piel de infecciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_067",
+    "pregunta": "¿Se debe aplicar mantequilla, pasta dental o aceite en una quemadura?",
+    "opciones": [
+      "No; retienen calor y favorecen la infección",
+      "Sí, siempre",
+      "Sí, solo mantequilla",
+      "Sí, si es pequeña"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "Son remedios caseros que empeoran la lesión.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_068",
+    "pregunta": "Si la ropa está pegada a la quemadura, debes:",
+    "opciones": [
+      "Arrancarla",
+      "Tirar con fuerza",
+      "No despegarla y enfriar alrededor",
+      "Frotar la zona"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Arrancarla daña más la piel.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_069",
+    "pregunta": "Ante una quemadura química, lo primero es:",
+    "opciones": [
+      "Aplicar un neutralizante",
+      "Cubrir sin lavar",
+      "Frotar con una toalla seca",
+      "Retirar la ropa contaminada y lavar con abundante agua al menos 20 minutos"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "El agua diluye y arrastra la sustancia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_070",
+    "pregunta": "Ante una quemadura eléctrica, lo primero es:",
+    "opciones": [
+      "Tocar a la persona",
+      "Cortar la corriente antes de tocar a la víctima",
+      "Echar agua a la víctima",
+      "Mover los cables con la mano"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Tocar a la víctima conectada a la corriente te pone en peligro.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_071",
+    "pregunta": "¿Cuándo hay que buscar atención médica urgente por una quemadura?",
+    "opciones": [
+      "Si es muy pequeña y roja",
+      "Nunca",
+      "Si es extensa, profunda o afecta cara, manos, genitales o articulaciones",
+      "Solo si hay ampollas pequeñas"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Estas localizaciones y tamaños tienen mayor riesgo de complicaciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_072",
+    "pregunta": "Con qué se cubre una quemadura tras enfriarla:",
+    "opciones": [
+      "Con gasa estéril o un paño limpio y no adherente",
+      "Con algodón suelto",
+      "Con hielo",
+      "Con crema casera"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "El algodón deja fibras y se adhiere a la herida.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_073",
+    "pregunta": "Antes de que se hinche la zona, ¿qué se retira?",
+    "opciones": [
+      "Nada",
+      "Anillos, pulseras y objetos ajustados",
+      "La piel quemada",
+      "Las ampollas"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La inflamación puede comprimir y cortar la circulación.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_074",
+    "pregunta": "Si la ropa de una persona está en llamas, debe:",
+    "opciones": [
+      "Correr",
+      "Abanicarse",
+      "Detenerse, tirarse al suelo y rodar",
+      "Quitarse la ropa corriendo"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "Correr aviva el fuego; rodar lo sofoca.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_075",
+    "pregunta": "Una quemadura solar es una quemadura de:",
+    "opciones": [
+      "Tercer grado",
+      "Eléctrica",
+      "Química",
+      "Primer grado, generalmente"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Afecta la capa superficial de la piel.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_076",
+    "pregunta": "Tras quemadura por escaldadura (líquido caliente) en un niño, ¿qué haces?",
+    "opciones": [
+      "Aplicar mantequilla",
+      "Enfriar con agua y retirar ropa mojada caliente",
+      "Cubrir con ropa gruesa",
+      "Reventar las ampollas"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Retirar el líquido y el calor limita el daño.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_077",
+    "pregunta": "Si una persona con quemaduras extensas está en shock, ¿qué haces?",
+    "opciones": [
+      "Darle de beber agua fría",
+      "Hacerla caminar",
+      "Sumergirla en hielo",
+      "Llamar al 911, mantenerla abrigada y tranquila"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Las quemaduras grandes pueden causar shock e hipotermia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_078",
+    "pregunta": "Hay quemaduras en la cara y la persona tose o tiene voz ronca tras un incendio. Esto indica:",
+    "opciones": [
+      "Posible inhalación de humo: emergencia",
+      "Alergia leve",
+      "Algo sin importancia",
+      "Resfriado"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La vía aérea puede quedar comprometida.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_079",
+    "pregunta": "¿Cuánto tiempo se enfría una quemadura con agua?",
+    "opciones": [
+      "10 segundos",
+      "Alrededor de 20 minutos",
+      "1 minuto",
+      "2 horas"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "Es el tiempo recomendado para frenar el daño y calmar el dolor.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_MC_080",
+    "pregunta": "¿Cómo se previenen las quemaduras domésticas en niños?",
+    "opciones": [
+      "Dejar ollas al borde",
+      "Cargarlos mientras cocinas",
+      "Dejar fósforos a mano",
+      "Mangos de ollas hacia adentro y líquidos calientes fuera de su alcance"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "Muchas quemaduras infantiles ocurren en la cocina.",
+    "tema": "Quemaduras"
+  }
+]

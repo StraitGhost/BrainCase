@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475580444646",
+    "project_id": "braincase-a11d4",
+    "storage_bucket": "braincase-a11d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475580444646:android:65ea8e29a7561f2a3bf027",
+        "android_client_info": {
+          "package_name": "com.example.psy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWUS8UwMo0cuVqZyRCScYYXGWzHV0og-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

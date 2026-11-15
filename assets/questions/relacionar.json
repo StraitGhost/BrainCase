@@ -1,0 +1,3380 @@
+[
+  {
+    "id": "CIB_RE_001",
+    "instruccion": "Relaciona cada tipo de phishing con su medio.",
+    "columna_a": [
+      "Smishing",
+      "Vishing",
+      "Quishing",
+      "Phishing clásico"
+    ],
+    "columna_b": [
+      "Llamadas telefónicas",
+      "Códigos QR",
+      "Correo electrónico",
+      "Mensajes SMS"
+    ],
+    "pares_correctos": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "justificacion": "Cada variante usa un canal distinto.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_002",
+    "instruccion": "Relaciona cada ataque con su objetivo.",
+    "columna_a": [
+      "Spear phishing",
+      "Whaling",
+      "Phishing masivo"
+    ],
+    "columna_b": [
+      "Una persona concreta",
+      "Miles de víctimas genéricas",
+      "Altos directivos"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Varía el grado de personalización.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_003",
+    "instruccion": "Relaciona cada señal con lo que indica.",
+    "columna_a": [
+      "Urgencia exagerada",
+      "Dominio extraño",
+      "Doble extensión .pdf.exe",
+      "Errores de redacción"
+    ],
+    "columna_b": [
+      "Ejecutable disfrazado",
+      "Intento de presionar",
+      "Sitio falso",
+      "Posible fraude"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "justificacion": "Son indicios típicos de phishing.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_004",
+    "instruccion": "Relaciona cada situación con la acción correcta.",
+    "columna_a": [
+      "SMS del banco con enlace",
+      "Adjunto inesperado",
+      "Datos ingresados en sitio falso"
+    ],
+    "columna_b": [
+      "No abrirlo y verificar",
+      "Contactar al banco por un canal oficial",
+      "Cambiar contraseña de inmediato"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Cada riesgo tiene su respuesta.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_005",
+    "instruccion": "Relaciona cada término con su definición.",
+    "columna_a": [
+      "Typosquatting",
+      "Suplantación",
+      "Cebo"
+    ],
+    "columna_b": [
+      "Oferta atractiva para engañar",
+      "Dominios con errores tipográficos",
+      "Fingir ser otra entidad"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Son técnicas del atacante.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_006",
+    "instruccion": "Relaciona cada dominio con su evaluación.",
+    "columna_a": [
+      "banco.com",
+      "banco.com.verifica.net",
+      "bancoo.com"
+    ],
+    "columna_b": [
+      "Sospechoso: error tipográfico",
+      "Sospechoso: dominio real distinto",
+      "Dominio legítimo"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "El dominio real es lo que cuenta.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_007",
+    "instruccion": "Relaciona cada fraude con su rasgo.",
+    "columna_a": [
+      "Fraude del CEO",
+      "Lotería falsa",
+      "Soporte técnico falso"
+    ],
+    "columna_b": [
+      "Premio inexistente",
+      "Aviso de virus inventado",
+      "Suplanta a un directivo"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Cada fraude usa un pretexto.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_008",
+    "instruccion": "Relaciona cada herramienta con su función.",
+    "columna_a": [
+      "Filtro antispam",
+      "2FA",
+      "Antivirus"
+    ],
+    "columna_b": [
+      "Bloquea correos sospechosos",
+      "Detecta software malicioso",
+      "Segundo factor de acceso"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Defensas complementarias.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_009",
+    "instruccion": "Relaciona cada acción con su efecto.",
+    "columna_a": [
+      "Pasar el cursor sobre un enlace",
+      "Reportar el correo",
+      "No responder"
+    ],
+    "columna_b": [
+      "Evitar dar información",
+      "Ver el destino real",
+      "Mejorar los filtros"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Pequeñas acciones reducen riesgos.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_010",
+    "instruccion": "Relaciona cada elemento con su riesgo.",
+    "columna_a": [
+      "Enlace acortado",
+      "Adjunto .exe",
+      "Solicitud de claves"
+    ],
+    "columna_b": [
+      "Robo de credenciales",
+      "Oculta el destino",
+      "Posible malware"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cada elemento puede ocultar un ataque.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_011",
+    "instruccion": "Relaciona cada rol con su responsabilidad.",
+    "columna_a": [
+      "Usuario",
+      "Equipo de seguridad",
+      "Directivo"
+    ],
+    "columna_b": [
+      "Analizar y bloquear amenazas",
+      "Fomentar una cultura de seguridad",
+      "Reportar mensajes sospechosos"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "La seguridad es compartida.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_012",
+    "instruccion": "Relaciona cada mensaje con la táctica.",
+    "columna_a": [
+      "Tu cuenta será cerrada hoy",
+      "Ganaste un premio",
+      "Soy tu jefe, ayúdame ahora"
+    ],
+    "columna_b": [
+      "Urgencia",
+      "Autoridad",
+      "Codicia"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Se explotan emociones.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_013",
+    "instruccion": "Relaciona cada canal con la mejor práctica.",
+    "columna_a": [
+      "Correo",
+      "SMS",
+      "Llamada"
+    ],
+    "columna_b": [
+      "No pulsar enlaces desconocidos",
+      "Colgar y llamar al número oficial",
+      "Verificar el remitente real"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Cada canal tiene su precaución.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_014",
+    "instruccion": "Relaciona cada concepto con su ejemplo.",
+    "columna_a": [
+      "Ingeniería social",
+      "Phishing",
+      "Malware"
+    ],
+    "columna_b": [
+      "Archivo adjunto infectado",
+      "Manipular a una persona",
+      "Correo falso del banco"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Conceptos relacionados.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_015",
+    "instruccion": "Relaciona cada acción tras caer en phishing con su finalidad.",
+    "columna_a": [
+      "Cambiar contraseña",
+      "Activar 2FA",
+      "Avisar al servicio"
+    ],
+    "columna_b": [
+      "Proteger la cuenta",
+      "Cortar el acceso del atacante",
+      "Bloquear el fraude"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Reducir el daño.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_016",
+    "instruccion": "Relaciona cada sitio con su señal.",
+    "columna_a": [
+      "Candado HTTPS",
+      "Dominio oficial",
+      "Diseño copiado"
+    ],
+    "columna_b": [
+      "No garantiza legitimidad",
+      "Mayor confianza",
+      "Conexión cifrada"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "El candado no certifica honestidad.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_017",
+    "instruccion": "Relaciona cada ataque con su protección.",
+    "columna_a": [
+      "Smishing",
+      "Quishing",
+      "Vishing"
+    ],
+    "columna_b": [
+      "No dar datos por teléfono",
+      "Verificar el QR antes de escanear",
+      "No pulsar enlaces en SMS"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Cada ataque tiene su defensa.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_018",
+    "instruccion": "Relaciona cada señal en un correo con su categoría.",
+    "columna_a": [
+      "Remitente desconocido",
+      "Enlace sospechoso",
+      "Tono amenazante"
+    ],
+    "columna_b": [
+      "Contenido",
+      "Psicología",
+      "Origen"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Se analiza de varias formas.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_019",
+    "instruccion": "Relaciona cada tipo de mensaje con su respuesta.",
+    "columna_a": [
+      "Aviso de paquete falso",
+      "Promoción increíble",
+      "Cambio de datos bancarios"
+    ],
+    "columna_b": [
+      "Desconfiar",
+      "Entrar al sitio oficial",
+      "Verificar por otro canal"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Verificar antes de actuar.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_020",
+    "instruccion": "Relaciona cada medida con el tipo de riesgo que reduce.",
+    "columna_a": [
+      "Capacitación",
+      "Filtros de correo",
+      "2FA"
+    ],
+    "columna_b": [
+      "Mensajes masivos",
+      "Robo de contraseñas",
+      "Error humano"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Defensa en capas.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_RE_021",
+    "instruccion": "Relaciona cada contraseña con su nivel.",
+    "columna_a": [
+      "123456",
+      "Ana1990",
+      "Tn!9vLq#4rXw$7Bz"
+    ],
+    "columna_b": [
+      "Fuerte",
+      "Muy débil",
+      "Débil"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Longitud y aleatoriedad aumentan la fuerza.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_022",
+    "instruccion": "Relaciona cada ataque con su descripción.",
+    "columna_a": [
+      "Fuerza bruta",
+      "Credential stuffing",
+      "Diccionario"
+    ],
+    "columna_b": [
+      "Probar palabras comunes",
+      "Probar combinaciones",
+      "Usar credenciales filtradas"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Son técnicas de adivinación.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_023",
+    "instruccion": "Relaciona cada concepto con su función.",
+    "columna_a": [
+      "Gestor de contraseñas",
+      "Hash",
+      "Clave maestra"
+    ],
+    "columna_b": [
+      "Guardar claves cifradas",
+      "Proteger el gestor",
+      "Huella irreversible"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Cada elemento protege tus claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_024",
+    "instruccion": "Relaciona cada práctica con su valoración.",
+    "columna_a": [
+      "Reutilizar claves",
+      "Claves únicas",
+      "Compartir claves"
+    ],
+    "columna_b": [
+      "Compromete varias cuentas a la vez",
+      "Pierdes el control de la cuenta",
+      "Limitan el daño de una filtración"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Cada cuenta debe ser independiente.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_025",
+    "instruccion": "Relaciona cada situación con su acción.",
+    "columna_a": [
+      "Clave en filtración",
+      "Equipo público",
+      "Router nuevo"
+    ],
+    "columna_b": [
+      "Cerrar sesión",
+      "Cambiar la clave por defecto",
+      "Cambiarla en todos los sitios"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Reaccionar según el contexto.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_026",
+    "instruccion": "Relaciona cada tipo de clave con su característica.",
+    "columna_a": [
+      "Passphrase",
+      "PIN",
+      "Clave aleatoria"
+    ],
+    "columna_b": [
+      "Pocos dígitos",
+      "Generada por un gestor",
+      "Varias palabras largas"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Distintos tipos de credenciales.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_027",
+    "instruccion": "Relaciona cada error con su riesgo.",
+    "columna_a": [
+      "Nota adhesiva en el monitor",
+      "Datos personales en la clave",
+      "Misma clave en todo"
+    ],
+    "columna_b": [
+      "Compromiso en cadena",
+      "Exposición física",
+      "Fácil de deducir"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cada error abre una puerta.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_028",
+    "instruccion": "Relaciona cada recurso con su utilidad.",
+    "columna_a": [
+      "Have I Been Pwned",
+      "Gestor",
+      "2FA"
+    ],
+    "columna_b": [
+      "Revisar filtraciones",
+      "Segundo factor",
+      "Generar claves únicas"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Herramientas útiles.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_029",
+    "instruccion": "Relaciona cada longitud con su valoración.",
+    "columna_a": [
+      "4 caracteres",
+      "8 caracteres",
+      "12 o más"
+    ],
+    "columna_b": [
+      "Recomendada",
+      "Muy insegura",
+      "Mínima"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "A mayor longitud, más seguridad.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_030",
+    "instruccion": "Relaciona cada concepto con su ejemplo.",
+    "columna_a": [
+      "Dato personal",
+      "Patrón común",
+      "Sustitución predecible"
+    ],
+    "columna_b": [
+      "Fecha de nacimiento",
+      "P@ssw0rd",
+      "qwerty"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Son ejemplos de claves débiles.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_031",
+    "instruccion": "Relaciona cada medida con su beneficio.",
+    "columna_a": [
+      "Clave larga",
+      "Clave única",
+      "Gestor"
+    ],
+    "columna_b": [
+      "Facilita usar claves distintas",
+      "Limita el daño",
+      "Más difícil de adivinar"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Cada medida suma.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_032",
+    "instruccion": "Relaciona cada entorno con su recomendación.",
+    "columna_a": [
+      "Router doméstico",
+      "Oficina",
+      "Equipo público"
+    ],
+    "columna_b": [
+      "Clave WiFi fuerte",
+      "No guardar credenciales",
+      "Política de contraseñas"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Se adapta al contexto.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_033",
+    "instruccion": "Relaciona cada pregunta de seguridad con su calidad.",
+    "columna_a": [
+      "Nombre de tu mascota (público)",
+      "Respuesta aleatoria guardada en gestor",
+      "Ciudad natal (pública)"
+    ],
+    "columna_b": [
+      "Fácil de averiguar",
+      "Deducible desde tus redes",
+      "Imposible de adivinar"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Lo público es deducible.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_034",
+    "instruccion": "Relaciona cada paso con su momento.",
+    "columna_a": [
+      "Crear la clave",
+      "Cambiarla",
+      "Revisarla"
+    ],
+    "columna_b": [
+      "Al registrarte",
+      "Periódicamente",
+      "Tras una filtración"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Cada paso tiene su ocasión.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_035",
+    "instruccion": "Relaciona cada término con su definición.",
+    "columna_a": [
+      "Texto plano",
+      "Cifrado",
+      "Hash"
+    ],
+    "columna_b": [
+      "Huella irreversible",
+      "Clave sin proteger",
+      "Datos ilegibles sin clave"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Protegen de formas distintas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_036",
+    "instruccion": "Relaciona cada error con su corrección.",
+    "columna_a": [
+      "Clave corta",
+      "Clave repetida",
+      "Clave compartida"
+    ],
+    "columna_b": [
+      "Alargarla",
+      "Crear cuentas individuales",
+      "Hacerla única"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Cada error se corrige.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_037",
+    "instruccion": "Relaciona cada herramienta con su tipo.",
+    "columna_a": [
+      "Bitwarden",
+      "Google Authenticator",
+      "Llave USB FIDO2"
+    ],
+    "columna_b": [
+      "App autenticadora",
+      "Gestor de contraseñas",
+      "Llave de seguridad"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Distintas herramientas de seguridad.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_038",
+    "instruccion": "Relaciona cada escenario con su riesgo.",
+    "columna_a": [
+      "Wi-Fi público",
+      "Clave simple",
+      "Phishing"
+    ],
+    "columna_b": [
+      "Robo de credenciales",
+      "Adivinación",
+      "Intercepción de datos"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Varios riesgos de claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_039",
+    "instruccion": "Relaciona cada hábito con su efecto.",
+    "columna_a": [
+      "Revisar filtraciones",
+      "Cambiar claves reutilizadas",
+      "Usar 2FA"
+    ],
+    "columna_b": [
+      "Reducir riesgo",
+      "Detectar exposición",
+      "Proteger la cuenta"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Hábitos que protegen.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_040",
+    "instruccion": "Relaciona cada cuenta con su prioridad de protección.",
+    "columna_a": [
+      "Correo principal",
+      "Banca en línea",
+      "Foro sin importancia"
+    ],
+    "columna_b": [
+      "Contiene dinero y datos financieros",
+      "Permite restablecer otras cuentas",
+      "Poco impacto si se compromete"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Las cuentas críticas protegen otras.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_RE_041",
+    "instruccion": "Relaciona cada malware con su descripción.",
+    "columna_a": [
+      "Ransomware",
+      "Spyware",
+      "Adware",
+      "Keylogger"
+    ],
+    "columna_b": [
+      "Muestra publicidad no deseada",
+      "Espía la actividad",
+      "Registra teclas",
+      "Cifra archivos y exige rescate"
+    ],
+    "pares_correctos": [
+      3,
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Cada tipo tiene un fin distinto.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_042",
+    "instruccion": "Relaciona cada malware con su forma de propagación.",
+    "columna_a": [
+      "Gusano",
+      "Virus",
+      "Troyano"
+    ],
+    "columna_b": [
+      "Se adjunta a archivos",
+      "Se propaga solo por la red",
+      "Se disfraza de programa legítimo"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "La propagación los diferencia.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_043",
+    "instruccion": "Relaciona cada síntoma con su posible causa.",
+    "columna_a": [
+      "Equipo muy lento",
+      "Ventanas emergentes",
+      "Archivos cifrados"
+    ],
+    "columna_b": [
+      "Adware",
+      "Ransomware",
+      "Posible malware"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Los síntomas orientan el diagnóstico.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_044",
+    "instruccion": "Relaciona cada medida con su beneficio.",
+    "columna_a": [
+      "Actualizaciones",
+      "Copias de seguridad",
+      "Antivirus"
+    ],
+    "columna_b": [
+      "Permiten recuperar datos",
+      "Detecta amenazas",
+      "Cierran vulnerabilidades"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Defensas básicas.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_045",
+    "instruccion": "Relaciona cada amenaza con su protección.",
+    "columna_a": [
+      "Ransomware",
+      "Troyano",
+      "Phishing con adjunto"
+    ],
+    "columna_b": [
+      "No abrir adjuntos sospechosos",
+      "Copias de seguridad desconectadas",
+      "Descargar solo de fuentes oficiales"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cada amenaza tiene su defensa.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_046",
+    "instruccion": "Relaciona cada concepto con su definición.",
+    "columna_a": [
+      "Botnet",
+      "Rootkit",
+      "Cryptojacking"
+    ],
+    "columna_b": [
+      "Minería oculta de criptomonedas",
+      "Oculta malware",
+      "Red de equipos controlados"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Amenazas sofisticadas.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_047",
+    "instruccion": "Relaciona cada fuente con su nivel de riesgo.",
+    "columna_a": [
+      "Tienda oficial",
+      "Sitio de cracks",
+      "USB desconocida"
+    ],
+    "columna_b": [
+      "Suele incluir malware",
+      "Apps revisadas y riesgo bajo",
+      "Puede infectar al conectarla"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "El origen importa.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_048",
+    "instruccion": "Relaciona cada acción con su resultado.",
+    "columna_a": [
+      "Desconectar de la red",
+      "Análisis antivirus",
+      "Restaurar copia"
+    ],
+    "columna_b": [
+      "Recupera archivos",
+      "Evita la propagación",
+      "Detecta amenazas"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Pasos de respuesta.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_049",
+    "instruccion": "Relaciona cada tipo de malware con lo que roba o daña.",
+    "columna_a": [
+      "Spyware",
+      "Ransomware",
+      "Cryptojacking"
+    ],
+    "columna_b": [
+      "Acceso a los archivos",
+      "Recursos del equipo",
+      "Datos personales"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Distintos objetivos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_050",
+    "instruccion": "Relaciona cada herramienta con su función.",
+    "columna_a": [
+      "Firewall",
+      "Antimalware",
+      "Gestor de actualizaciones"
+    ],
+    "columna_b": [
+      "Filtra el tráfico de red",
+      "Aplica parches",
+      "Elimina amenazas"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Capas de protección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_051",
+    "instruccion": "Relaciona cada dispositivo con su riesgo.",
+    "columna_a": [
+      "USB desconocida",
+      "App no oficial",
+      "Correo con adjunto"
+    ],
+    "columna_b": [
+      "Troyano",
+      "Malware",
+      "Infección al conectar"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Cada vía tiene riesgos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_052",
+    "instruccion": "Relaciona cada término con su significado.",
+    "columna_a": [
+      "Cuarentena",
+      "Parche",
+      "Firma"
+    ],
+    "columna_b": [
+      "Corrección de seguridad",
+      "Aislar un archivo sospechoso",
+      "Patrón conocido de malware"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Términos del antivirus.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_053",
+    "instruccion": "Relaciona cada señal con su causa probable.",
+    "columna_a": [
+      "Cámara que se enciende sola",
+      "Batería que se agota rápido",
+      "Anuncios constantes"
+    ],
+    "columna_b": [
+      "Cryptojacking",
+      "Spyware",
+      "Adware"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Síntomas de infección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_054",
+    "instruccion": "Relaciona cada tipo con su ejemplo.",
+    "columna_a": [
+      "Troyano",
+      "Virus",
+      "Gusano"
+    ],
+    "columna_b": [
+      "Se copia por la red",
+      "Archivo infectado",
+      "Falso instalador"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Ejemplos comunes.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_055",
+    "instruccion": "Relaciona cada acción con su error.",
+    "columna_a": [
+      "Pagar el rescate",
+      "Usar software pirata",
+      "Ignorar actualizaciones"
+    ],
+    "columna_b": [
+      "Riesgo de malware",
+      "No garantiza recuperar datos",
+      "Vulnerabilidades abiertas"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Errores comunes.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_056",
+    "instruccion": "Relaciona cada rol con su responsabilidad.",
+    "columna_a": [
+      "Usuario",
+      "Administrador",
+      "Equipo de seguridad"
+    ],
+    "columna_b": [
+      "Monitorear amenazas",
+      "Mantener parches",
+      "No instalar software dudoso"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Responsabilidad compartida.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_057",
+    "instruccion": "Relaciona cada situación con su respuesta.",
+    "columna_a": [
+      "Ventana de falso virus",
+      "Archivo sospechoso",
+      "Equipo infectado"
+    ],
+    "columna_b": [
+      "Analizar con antivirus",
+      "Cerrar sin pulsar",
+      "Aislar de la red"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Reaccionar con criterio.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_058",
+    "instruccion": "Relaciona cada amenaza con su objetivo.",
+    "columna_a": [
+      "Ransomware",
+      "Spyware",
+      "Botnet"
+    ],
+    "columna_b": [
+      "Control remoto",
+      "Dinero",
+      "Información"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Motivaciones del atacante.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_059",
+    "instruccion": "Relaciona cada elemento con su momento.",
+    "columna_a": [
+      "Prevención",
+      "Detección",
+      "Recuperación"
+    ],
+    "columna_b": [
+      "Durante el ataque",
+      "Antes del ataque",
+      "Después del ataque"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Fases de respuesta.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_060",
+    "instruccion": "Relaciona cada herramienta con su uso.",
+    "columna_a": [
+      "Copia en la nube",
+      "Antivirus",
+      "Modo avión"
+    ],
+    "columna_b": [
+      "Respaldo de archivos",
+      "Aislamiento rápido",
+      "Protección en tiempo real"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Opciones útiles.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_RE_061",
+    "instruccion": "Relaciona cada factor con su ejemplo.",
+    "columna_a": [
+      "Algo que sabes",
+      "Algo que tienes",
+      "Algo que eres"
+    ],
+    "columna_b": [
+      "Contraseña",
+      "Huella dactilar",
+      "Token o teléfono"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Los tres tipos de factores.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_062",
+    "instruccion": "Relaciona cada método con su nivel de seguridad.",
+    "columna_a": [
+      "SMS",
+      "App autenticadora",
+      "Llave FIDO2"
+    ],
+    "columna_b": [
+      "Medio",
+      "Muy alto",
+      "Alto"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Resistencia al phishing.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_063",
+    "instruccion": "Relaciona cada término con su definición.",
+    "columna_a": [
+      "OTP",
+      "SSO",
+      "MFA"
+    ],
+    "columna_b": [
+      "Un acceso para varios servicios",
+      "Código de un solo uso",
+      "Dos o más factores"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Conceptos básicos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_064",
+    "instruccion": "Relaciona cada ataque con su descripción.",
+    "columna_a": [
+      "SIM swapping",
+      "Fatiga de MFA",
+      "Phishing de códigos"
+    ],
+    "columna_b": [
+      "Solicitudes repetidas",
+      "Robo del número",
+      "Pedir el código por engaño"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Ataques al segundo factor.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_065",
+    "instruccion": "Relaciona cada concepto con su función.",
+    "columna_a": [
+      "Autenticación",
+      "Autorización",
+      "Auditoría"
+    ],
+    "columna_b": [
+      "Verifica quién eres",
+      "Registra qué hiciste",
+      "Define qué puedes hacer"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Control de acceso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_066",
+    "instruccion": "Relaciona cada situación con su acción.",
+    "columna_a": [
+      "Aprobación no solicitada",
+      "Sesión desconocida",
+      "Pérdida de teléfono"
+    ],
+    "columna_b": [
+      "Usar códigos de respaldo",
+      "Cerrarla",
+      "Rechazar y cambiar la clave"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Reaccionar ante incidentes.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_067",
+    "instruccion": "Relaciona cada tecnología con su característica.",
+    "columna_a": [
+      "Passkey",
+      "Biometría",
+      "Token"
+    ],
+    "columna_b": [
+      "Dispositivo físico",
+      "Sin contraseña",
+      "Rasgo físico"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Alternativas modernas.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_068",
+    "instruccion": "Relaciona cada principio con su descripción.",
+    "columna_a": [
+      "Mínimo privilegio",
+      "Segregación de funciones",
+      "Confianza cero"
+    ],
+    "columna_b": [
+      "Verificar siempre",
+      "Dividir responsabilidades",
+      "Solo permisos necesarios"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Principios de seguridad.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_069",
+    "instruccion": "Relaciona cada método con su vulnerabilidad.",
+    "columna_a": [
+      "SMS",
+      "Contraseña",
+      "Biometría"
+    ],
+    "columna_b": [
+      "No se puede cambiar",
+      "SIM swapping",
+      "Phishing"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cada método tiene limitaciones.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_070",
+    "instruccion": "Relaciona cada elemento con su utilidad.",
+    "columna_a": [
+      "Códigos de respaldo",
+      "App autenticadora",
+      "Llave física"
+    ],
+    "columna_b": [
+      "Recuperar acceso",
+      "Verificar presencia",
+      "Generar códigos"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Herramientas del 2FA.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_071",
+    "instruccion": "Relaciona cada cuenta con su prioridad.",
+    "columna_a": [
+      "Correo principal",
+      "Banca",
+      "Red social"
+    ],
+    "columna_b": [
+      "Protege tu dinero",
+      "Protege tu identidad pública",
+      "Controla la recuperación de claves"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Priorizar según el riesgo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_072",
+    "instruccion": "Relaciona cada paso con su momento.",
+    "columna_a": [
+      "Registro",
+      "Inicio de sesión",
+      "Cierre de sesión"
+    ],
+    "columna_b": [
+      "Terminar el acceso",
+      "Verificar identidad",
+      "Crear credenciales"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Ciclo de acceso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_073",
+    "instruccion": "Relaciona cada rasgo biométrico con su tipo.",
+    "columna_a": [
+      "Huella",
+      "Rostro",
+      "Iris"
+    ],
+    "columna_b": [
+      "Facial",
+      "Dactilar",
+      "Ocular"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Distintos rasgos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_074",
+    "instruccion": "Relaciona cada dispositivo con su factor.",
+    "columna_a": [
+      "Teléfono",
+      "PIN",
+      "Rostro"
+    ],
+    "columna_b": [
+      "Algo que sabes",
+      "Algo que tienes",
+      "Algo que eres"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Clasificación de factores.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_075",
+    "instruccion": "Relaciona cada riesgo con su medida.",
+    "columna_a": [
+      "Robo de contraseña",
+      "Pérdida de dispositivo",
+      "Acceso excesivo"
+    ],
+    "columna_b": [
+      "Códigos de respaldo",
+      "Mínimo privilegio",
+      "Activar 2FA"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Cada riesgo tiene su defensa.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_076",
+    "instruccion": "Relaciona cada sigla con su significado.",
+    "columna_a": [
+      "2FA",
+      "OTP",
+      "SSO"
+    ],
+    "columna_b": [
+      "Inicio de sesión único",
+      "Contraseña de un solo uso",
+      "Verificación en dos pasos"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Siglas frecuentes.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_077",
+    "instruccion": "Relaciona cada rol con su permiso típico.",
+    "columna_a": [
+      "Invitado",
+      "Editor",
+      "Administrador"
+    ],
+    "columna_b": [
+      "Gestionar usuarios",
+      "Solo lectura",
+      "Modificar contenido"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Permisos por rol.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_078",
+    "instruccion": "Relaciona cada alerta con su respuesta.",
+    "columna_a": [
+      "Intento de acceso desconocido",
+      "Nuevo dispositivo",
+      "Cambio de correo"
+    ],
+    "columna_b": [
+      "Revisar la cuenta",
+      "Verificar que seas tú",
+      "Cambiar clave"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Atender las alertas.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_079",
+    "instruccion": "Relaciona cada estándar con su característica.",
+    "columna_a": [
+      "FIDO2",
+      "TOTP",
+      "SMS OTP"
+    ],
+    "columna_b": [
+      "Dependiente de la línea",
+      "Código temporal",
+      "Resistente al phishing"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Estándares de autenticación.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_RE_080",
+    "instruccion": "Relaciona cada error con su corrección.",
+    "columna_a": [
+      "Compartir códigos",
+      "Aprobar sin revisar",
+      "Sin 2FA"
+    ],
+    "columna_b": [
+      "Activarlo",
+      "Nunca compartirlos",
+      "Verificar antes"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Corregir malos hábitos.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "PA_RE_001",
+    "instruccion": "Relaciona cada dato de la RCP con su valor.",
+    "columna_a": [
+      "Profundidad en adulto",
+      "Ritmo",
+      "Relación compresión-ventilación",
+      "Número de emergencias en Ecuador"
+    ],
+    "columna_b": [
+      "5 a 6 cm",
+      "911",
+      "100 a 120 por minuto",
+      "30:2"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "justificacion": "Parámetros clave.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_002",
+    "instruccion": "Relaciona cada paciente con su técnica de compresión.",
+    "columna_a": [
+      "Adulto",
+      "Niño",
+      "Lactante"
+    ],
+    "columna_b": [
+      "Dos dedos",
+      "Una o dos manos",
+      "Dos manos"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Se adapta al tamaño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_003",
+    "instruccion": "Relaciona cada elemento con su función.",
+    "columna_a": [
+      "DEA",
+      "Compresión",
+      "Ventilación"
+    ],
+    "columna_b": [
+      "Aporta oxígeno",
+      "Analiza y descarga si es necesario",
+      "Bombea sangre"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Elementos de la RCP.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_004",
+    "instruccion": "Relaciona cada paso con su orden.",
+    "columna_a": [
+      "Seguridad",
+      "Respuesta",
+      "Llamar al 911",
+      "Compresiones"
+    ],
+    "columna_b": [
+      "Primero",
+      "Cuarto",
+      "Tercero",
+      "Segundo"
+    ],
+    "pares_correctos": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "justificacion": "Secuencia inicial.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_005",
+    "instruccion": "Relaciona cada signo con su significado.",
+    "columna_a": [
+      "No responde y no respira",
+      "Jadeos",
+      "Respira normal"
+    ],
+    "columna_b": [
+      "No es respiración normal",
+      "No hay paro",
+      "Posible paro"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Se evalúa antes de actuar.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_006",
+    "instruccion": "Relaciona cada error con su corrección.",
+    "columna_a": [
+      "Comprimir muy suave",
+      "Demasiadas pausas",
+      "Apoyarse en el pecho"
+    ],
+    "columna_b": [
+      "Minimizar interrupciones",
+      "Permitir la reexpansión",
+      "Comprimir 5-6 cm"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Mejorar la técnica.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_007",
+    "instruccion": "Relaciona cada situación con su acción.",
+    "columna_a": [
+      "Sin entrenamiento",
+      "Con DEA",
+      "Escena peligrosa"
+    ],
+    "columna_b": [
+      "Usarlo cuanto antes",
+      "Solo compresiones",
+      "No acercarse"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Actuar según el contexto.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_008",
+    "instruccion": "Relaciona cada término con su definición.",
+    "columna_a": [
+      "RCP",
+      "DEA",
+      "Paro cardiorrespiratorio"
+    ],
+    "columna_b": [
+      "Desfibrilador automático",
+      "Maniobras de reanimación",
+      "Cese de circulación y respiración"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Conceptos básicos.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_009",
+    "instruccion": "Relaciona cada parte de la mano con su uso.",
+    "columna_a": [
+      "Talón de la mano",
+      "Dedos entrelazados",
+      "Brazos rectos"
+    ],
+    "columna_b": [
+      "Mantener firmeza",
+      "Comprimir",
+      "Usar el peso del cuerpo"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Postura de compresión.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_010",
+    "instruccion": "Relaciona cada eslabón de la cadena con su acción.",
+    "columna_a": [
+      "Reconocer y llamar",
+      "RCP precoz",
+      "Desfibrilación"
+    ],
+    "columna_b": [
+      "Restablecer el ritmo",
+      "Pedir ayuda",
+      "Mantener circulación"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cadena de supervivencia.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_011",
+    "instruccion": "Relaciona cada ayuda con su rol.",
+    "columna_a": [
+      "Quien llama al 911",
+      "Quien comprime",
+      "Quien trae el DEA"
+    ],
+    "columna_b": [
+      "Da RCP",
+      "Pide ayuda",
+      "Lleva el equipo"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Trabajo en equipo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_012",
+    "instruccion": "Relaciona cada edad con su técnica de ventilación.",
+    "columna_a": [
+      "Adulto",
+      "Niño",
+      "Lactante"
+    ],
+    "columna_b": [
+      "Cubrir boca y nariz",
+      "Soplar 1 segundo",
+      "Soplar con menos volumen"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Se adapta la ventilación.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_013",
+    "instruccion": "Relaciona cada parte con su ubicación.",
+    "columna_a": [
+      "Compresiones",
+      "Frente-mentón",
+      "Parches del DEA"
+    ],
+    "columna_b": [
+      "Pecho desnudo",
+      "Centro del pecho",
+      "Vía aérea"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Ubicaciones correctas.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_014",
+    "instruccion": "Relaciona cada señal con su posible causa.",
+    "columna_a": [
+      "Palidez",
+      "Labios azulados",
+      "Pupilas dilatadas"
+    ],
+    "columna_b": [
+      "Falta de riego cerebral",
+      "Falta de oxígeno",
+      "Falta de circulación"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Signos de paro.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_015",
+    "instruccion": "Relaciona cada superficie con su valoración.",
+    "columna_a": [
+      "Suelo firme",
+      "Cama blanda",
+      "Sofá"
+    ],
+    "columna_b": [
+      "Absorbe la fuerza de la compresión",
+      "Hunde el cuerpo y reduce la eficacia",
+      "Ideal para comprimir"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Superficie firme.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_016",
+    "instruccion": "Relaciona cada acción con su efecto.",
+    "columna_a": [
+      "Compresiones",
+      "Ventilaciones",
+      "DEA"
+    ],
+    "columna_b": [
+      "Oxigenación",
+      "Ritmo cardíaco",
+      "Circulación"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Cada acción cumple un rol.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_017",
+    "instruccion": "Relaciona cada situación con su respuesta.",
+    "columna_a": [
+      "Víctima responde",
+      "Víctima no responde ni respira",
+      "Víctima respira"
+    ],
+    "columna_b": [
+      "Iniciar RCP",
+      "Vigilar",
+      "No hacer RCP"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Decidir según la valoración.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_018",
+    "instruccion": "Relaciona cada dato con su categoría.",
+    "columna_a": [
+      "100-120",
+      "5-6 cm",
+      "10 segundos"
+    ],
+    "columna_b": [
+      "Ritmo",
+      "Tiempo de evaluación",
+      "Profundidad"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Datos de la técnica.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_019",
+    "instruccion": "Relaciona cada duración con su acción.",
+    "columna_a": [
+      "2 minutos",
+      "10 segundos",
+      "Continuo"
+    ],
+    "columna_b": [
+      "Comprobar respiración",
+      "Compresiones sin pausas largas",
+      "Cambiar de reanimador"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Tiempos en la RCP.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_020",
+    "instruccion": "Relaciona cada persona con su consideración.",
+    "columna_a": [
+      "Embarazada",
+      "Niño",
+      "Adulto mayor"
+    ],
+    "columna_b": [
+      "Técnica estándar",
+      "Fuerza adaptada",
+      "Posición según protocolo"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Adaptaciones.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_RE_021",
+    "instruccion": "Relaciona cada situación con su maniobra.",
+    "columna_a": [
+      "Adulto consciente",
+      "Lactante",
+      "Embarazada",
+      "Inconsciente"
+    ],
+    "columna_b": [
+      "Golpes y compresiones torácicas",
+      "Golpes y compresiones abdominales",
+      "RCP",
+      "Compresiones torácicas"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "justificacion": "La técnica varía según el caso.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_022",
+    "instruccion": "Relaciona cada signo con su gravedad.",
+    "columna_a": [
+      "Tos fuerte",
+      "No puede hablar",
+      "Cianosis"
+    ],
+    "columna_b": [
+      "Falta de oxígeno",
+      "Obstrucción leve",
+      "Obstrucción grave"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Evaluar la gravedad.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_023",
+    "instruccion": "Relaciona cada acción con su efecto.",
+    "columna_a": [
+      "Golpes en la espalda",
+      "Compresiones abdominales",
+      "Animar a toser"
+    ],
+    "columna_b": [
+      "Generar presión de aire",
+      "Usar el reflejo natural",
+      "Desalojar el objeto"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Técnicas de desobstrucción.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_024",
+    "instruccion": "Relaciona cada error con su riesgo.",
+    "columna_a": [
+      "Dar agua",
+      "Meter los dedos a ciegas",
+      "Golpear en la cabeza"
+    ],
+    "columna_b": [
+      "Empujar el objeto",
+      "Empeorar la obstrucción",
+      "Lesión"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Errores que se deben evitar.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_025",
+    "instruccion": "Relaciona cada alimento con su riesgo.",
+    "columna_a": [
+      "Uvas enteras",
+      "Puré",
+      "Frutos secos enteros"
+    ],
+    "columna_b": [
+      "Fragmentos que pueden obstruir",
+      "Riesgo bajo",
+      "Pueden tapar por completo la vía aérea"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Prevenir en la alimentación.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_026",
+    "instruccion": "Relaciona cada paso con su momento.",
+    "columna_a": [
+      "Reconocer",
+      "Maniobras",
+      "Evaluación médica"
+    ],
+    "columna_b": [
+      "Final",
+      "Primero",
+      "Después"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Secuencia.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_027",
+    "instruccion": "Relaciona cada zona con su uso.",
+    "columna_a": [
+      "Entre omóplatos",
+      "Sobre el ombligo",
+      "Centro del pecho"
+    ],
+    "columna_b": [
+      "Golpes en la espalda",
+      "Compresión torácica",
+      "Compresión abdominal"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Zonas de aplicación.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_028",
+    "instruccion": "Relaciona cada paciente con su posición.",
+    "columna_a": [
+      "Adulto",
+      "Lactante",
+      "Inconsciente"
+    ],
+    "columna_b": [
+      "Acostado",
+      "Boca abajo en el antebrazo",
+      "De pie, inclinado"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Posición según el paciente.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_029",
+    "instruccion": "Relaciona cada señal con su significado.",
+    "columna_a": [
+      "Manos al cuello",
+      "Voz ronca",
+      "Silencio total"
+    ],
+    "columna_b": [
+      "Obstrucción total",
+      "Obstrucción parcial",
+      "Señal universal"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Interpretar los signos.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_030",
+    "instruccion": "Relaciona cada medida con su beneficio.",
+    "columna_a": [
+      "Cortar en trozos",
+      "Comer sentado",
+      "Supervisar a niños"
+    ],
+    "columna_b": [
+      "Reacción rápida",
+      "Mejor control",
+      "Menos riesgo"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Medidas preventivas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_031",
+    "instruccion": "Relaciona cada acción con la víctima.",
+    "columna_a": [
+      "Se desmaya",
+      "Tose con fuerza",
+      "No respira"
+    ],
+    "columna_b": [
+      "Llamar al 911",
+      "Dar maniobras",
+      "Animar a toser"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Actuar según el estado.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_032",
+    "instruccion": "Relaciona cada herramienta con su uso.",
+    "columna_a": [
+      "Heimlich",
+      "RCP",
+      "911"
+    ],
+    "columna_b": [
+      "Víctima inconsciente",
+      "Ayuda profesional",
+      "Compresión abdominal"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Respuestas ante la emergencia.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_033",
+    "instruccion": "Relaciona cada caso con su error común.",
+    "columna_a": [
+      "Lactante",
+      "Embarazada",
+      "Niño"
+    ],
+    "columna_b": [
+      "Comprimir el abdomen",
+      "Hacer Heimlich",
+      "Fuerza excesiva"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Técnicas incorrectas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_034",
+    "instruccion": "Relaciona cada paso con su criterio.",
+    "columna_a": [
+      "Evaluar",
+      "Actuar",
+      "Reevaluar"
+    ],
+    "columna_b": [
+      "¿Puede toser?",
+      "¿Salió el objeto?",
+      "¿No puede respirar?"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Evaluación continua.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_035",
+    "instruccion": "Relaciona cada síntoma con su causa.",
+    "columna_a": [
+      "Tos",
+      "Cianosis",
+      "Pérdida de consciencia"
+    ],
+    "columna_b": [
+      "Hipoxia severa",
+      "Reflejo de expulsión",
+      "Falta de oxígeno"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cómo progresa la obstrucción.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_036",
+    "instruccion": "Relaciona cada edad con su alimento a evitar.",
+    "columna_a": [
+      "Lactante",
+      "Niño pequeño",
+      "Adulto"
+    ],
+    "columna_b": [
+      "Uvas enteras",
+      "Comer apurado",
+      "Trozos grandes"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Prevención por edad.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_037",
+    "instruccion": "Relaciona cada acción con su número.",
+    "columna_a": [
+      "Golpes en la espalda",
+      "Compresiones abdominales",
+      "Ayuda de emergencia"
+    ],
+    "columna_b": [
+      "911",
+      "Cinco por ronda, tras los golpes",
+      "Cinco por ronda"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Parámetros de la técnica.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_038",
+    "instruccion": "Relaciona cada recurso con su utilidad.",
+    "columna_a": [
+      "Silla",
+      "Brazos",
+      "Talón de la mano"
+    ],
+    "columna_b": [
+      "Golpes en la espalda",
+      "Compresión abdominal",
+      "Maniobra en solitario"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Recursos disponibles.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_039",
+    "instruccion": "Relaciona cada consecuencia con su manejo.",
+    "columna_a": [
+      "Objeto expulsado",
+      "Sin respuesta",
+      "Tos efectiva"
+    ],
+    "columna_b": [
+      "Seguir tosiendo",
+      "Evaluación médica",
+      "RCP"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Siguientes pasos.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_040",
+    "instruccion": "Relaciona cada hábito con su efecto.",
+    "columna_a": [
+      "Masticar bien",
+      "Hablar comiendo",
+      "Comer acostado"
+    ],
+    "columna_b": [
+      "Dificulta tragar con seguridad",
+      "Previene obstrucciones",
+      "Se aspira comida con facilidad"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Hábitos al comer.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_RE_041",
+    "instruccion": "Relaciona cada tipo de hemorragia con su rasgo.",
+    "columna_a": [
+      "Arterial",
+      "Venosa",
+      "Capilar"
+    ],
+    "columna_b": [
+      "Flujo continuo, rojo oscuro",
+      "Goteo leve",
+      "Sangre a chorros, roja brillante"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Cada tipo tiene signos propios.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_042",
+    "instruccion": "Relaciona cada medida con su utilidad.",
+    "columna_a": [
+      "Presión directa",
+      "Elevación",
+      "Torniquete"
+    ],
+    "columna_b": [
+      "Reducir el flujo",
+      "Último recurso en extremidades",
+      "Detener el sangrado"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Escalada de medidas.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_043",
+    "instruccion": "Relaciona cada situación con su acción.",
+    "columna_a": [
+      "Hemorragia nasal",
+      "Objeto clavado",
+      "Amputación"
+    ],
+    "columna_b": [
+      "Conservar el segmento en frío",
+      "No retirarlo",
+      "Inclinar la cabeza hacia adelante"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Situaciones específicas.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_044",
+    "instruccion": "Relaciona cada signo con su significado.",
+    "columna_a": [
+      "Piel pálida y fría",
+      "Pulso rápido",
+      "Sed intensa"
+    ],
+    "columna_b": [
+      "Pérdida de volumen",
+      "Deshidratación",
+      "Posible shock"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Reconocer el shock.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_045",
+    "instruccion": "Relaciona cada error con su riesgo.",
+    "columna_a": [
+      "Retirar la gasa",
+      "Aflojar el torniquete",
+      "Usar café en la herida"
+    ],
+    "columna_b": [
+      "Perder el coágulo",
+      "Infección",
+      "Reiniciar el sangrado"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Errores frecuentes.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_046",
+    "instruccion": "Relaciona cada material con su uso.",
+    "columna_a": [
+      "Gasa estéril",
+      "Venda",
+      "Guantes"
+    ],
+    "columna_b": [
+      "Cubrir la herida",
+      "Protección",
+      "Fijar la compresión"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Materiales de primeros auxilios.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_047",
+    "instruccion": "Relaciona cada zona con su tratamiento.",
+    "columna_a": [
+      "Brazo",
+      "Cuello",
+      "Abdomen"
+    ],
+    "columna_b": [
+      "No presionar fuerte si hay evisceración",
+      "Presión sin torniquete",
+      "Presión y elevación"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Según la zona.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_048",
+    "instruccion": "Relaciona cada dato del torniquete con su valor.",
+    "columna_a": [
+      "Ubicación",
+      "Anotar",
+      "Aflojarlo"
+    ],
+    "columna_b": [
+      "Hora de colocación",
+      "No lo hagas",
+      "5-7 cm sobre la herida"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Uso correcto.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_049",
+    "instruccion": "Relaciona cada paso con su momento.",
+    "columna_a": [
+      "Proteger",
+      "Presionar",
+      "Llamar al 911"
+    ],
+    "columna_b": [
+      "Antes de tocar",
+      "Si es grave",
+      "Al ver el sangrado"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Secuencia.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_050",
+    "instruccion": "Relaciona cada hemorragia con su peligro.",
+    "columna_a": [
+      "Arterial",
+      "Interna",
+      "Externa"
+    ],
+    "columna_b": [
+      "Pérdida rápida",
+      "Visible",
+      "Oculta"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Peligros distintos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_051",
+    "instruccion": "Relaciona cada síntoma con su causa.",
+    "columna_a": [
+      "Mareo",
+      "Palidez",
+      "Sudor frío"
+    ],
+    "columna_b": [
+      "Vasos contraídos",
+      "Respuesta de estrés",
+      "Falta de sangre en el cerebro"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Signos de shock.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_052",
+    "instruccion": "Relaciona cada herida con su limpieza.",
+    "columna_a": [
+      "Raspón",
+      "Corte profundo",
+      "Mordedura"
+    ],
+    "columna_b": [
+      "Presión y atención médica",
+      "Lavar y evaluación médica",
+      "Agua y jabón"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Tipos de herida.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_053",
+    "instruccion": "Relaciona cada acción con su efecto.",
+    "columna_a": [
+      "Compresión",
+      "Elevación",
+      "Frío indirecto"
+    ],
+    "columna_b": [
+      "Menos presión de sangre",
+      "Cierra los vasos",
+      "Reduce hinchazón"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Mecanismos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_054",
+    "instruccion": "Relaciona cada riesgo con su prevención.",
+    "columna_a": [
+      "Contagio",
+      "Infección",
+      "Shock"
+    ],
+    "columna_b": [
+      "Posición adecuada",
+      "Guantes",
+      "Limpieza"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Prevenir complicaciones.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_055",
+    "instruccion": "Relaciona cada elemento con su ubicación.",
+    "columna_a": [
+      "Torniquete",
+      "Presión",
+      "Elevación"
+    ],
+    "columna_b": [
+      "Sobre la herida",
+      "Por encima de la herida",
+      "Por encima del corazón"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Ubicaciones.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_056",
+    "instruccion": "Relaciona cada caso con su prioridad.",
+    "columna_a": [
+      "Sangrado que no cede",
+      "Raspón",
+      "Sangrado nasal"
+    ],
+    "columna_b": [
+      "Limpieza",
+      "Pinzar la nariz",
+      "Torniquete"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Prioridades de acción.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_057",
+    "instruccion": "Relaciona cada instrumento con su error común.",
+    "columna_a": [
+      "Venda",
+      "Torniquete",
+      "Gasa"
+    ],
+    "columna_b": [
+      "Retirada",
+      "Muy apretada",
+      "Mal ubicado"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Evitar errores.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_058",
+    "instruccion": "Relaciona cada paso con su efecto en el shock.",
+    "columna_a": [
+      "Acostar",
+      "Elevar piernas",
+      "Abrigar"
+    ],
+    "columna_b": [
+      "Evita hipotermia",
+      "Mejora circulación",
+      "Aumenta el retorno"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Manejo del shock.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_059",
+    "instruccion": "Relaciona cada duración con su acción.",
+    "columna_a": [
+      "10 minutos",
+      "Continua",
+      "Hora exacta"
+    ],
+    "columna_b": [
+      "Pinzar la nariz",
+      "Torniquete",
+      "Presión directa"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Tiempos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_060",
+    "instruccion": "Relaciona cada amenaza con su respuesta.",
+    "columna_a": [
+      "Sangrado externo",
+      "Sangrado interno",
+      "Shock"
+    ],
+    "columna_b": [
+      "Llamar al 911",
+      "Presionar",
+      "Acostar y abrigar"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Respuestas ante la emergencia.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_RE_061",
+    "instruccion": "Relaciona cada grado de quemadura con su aspecto.",
+    "columna_a": [
+      "Primer grado",
+      "Segundo grado",
+      "Tercer grado"
+    ],
+    "columna_b": [
+      "Ampollas y dolor intenso",
+      "Piel blanca o carbonizada",
+      "Enrojecimiento sin ampollas"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "La profundidad cambia el aspecto.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_062",
+    "instruccion": "Relaciona cada tipo de quemadura con su primera acción.",
+    "columna_a": [
+      "Térmica",
+      "Química",
+      "Eléctrica"
+    ],
+    "columna_b": [
+      "Lavar con abundante agua",
+      "Cortar la corriente",
+      "Enfriar con agua"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Cada tipo exige su primer paso.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_063",
+    "instruccion": "Relaciona cada situación con su acción.",
+    "columna_a": [
+      "Ropa en llamas",
+      "Ropa pegada",
+      "Ampolla"
+    ],
+    "columna_b": [
+      "No reventarla",
+      "No despegarla",
+      "Detenerse, tirarse y rodar"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Acciones específicas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_064",
+    "instruccion": "Relaciona cada error con su riesgo.",
+    "columna_a": [
+      "Aplicar hielo",
+      "Usar mantequilla",
+      "Reventar ampollas"
+    ],
+    "columna_b": [
+      "Infección",
+      "Daña más el tejido",
+      "Retiene calor e infecta"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Errores frecuentes.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_065",
+    "instruccion": "Relaciona cada zona con su riesgo.",
+    "columna_a": [
+      "Cara",
+      "Manos",
+      "Articulaciones"
+    ],
+    "columna_b": [
+      "Vía aérea",
+      "Movilidad",
+      "Función"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Zonas críticas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_066",
+    "instruccion": "Relaciona cada material con su uso.",
+    "columna_a": [
+      "Gasa estéril",
+      "Agua fresca",
+      "Venda floja"
+    ],
+    "columna_b": [
+      "Cubrir la quemadura",
+      "Fijar sin apretar",
+      "Enfriar"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Materiales.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_067",
+    "instruccion": "Relaciona cada duración con su acción.",
+    "columna_a": [
+      "20 minutos",
+      "Inmediato",
+      "Pronto"
+    ],
+    "columna_b": [
+      "Buscar atención médica si es grave",
+      "Retirar anillos",
+      "Enfriar con agua"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Tiempos.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_068",
+    "instruccion": "Relaciona cada fuente con su tipo de quemadura.",
+    "columna_a": [
+      "Agua hirviendo",
+      "Fuego",
+      "Cable eléctrico"
+    ],
+    "columna_b": [
+      "Térmica",
+      "Escaldadura",
+      "Eléctrica"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Origen de la quemadura.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_069",
+    "instruccion": "Relaciona cada paciente con su cuidado.",
+    "columna_a": [
+      "Niño",
+      "Adulto mayor",
+      "Persona con quemadura extensa"
+    ],
+    "columna_b": [
+      "Evitar hipotermia",
+      "Llamar al 911",
+      "Mayor riesgo"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Grupos de riesgo.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_070",
+    "instruccion": "Relaciona cada signo con su gravedad.",
+    "columna_a": [
+      "Enrojecimiento",
+      "Ampollas",
+      "Carbonización"
+    ],
+    "columna_b": [
+      "Leve",
+      "Grave",
+      "Moderada"
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "justificacion": "Gravedad creciente.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_071",
+    "instruccion": "Relaciona cada acción con su finalidad.",
+    "columna_a": [
+      "Enfriar",
+      "Cubrir",
+      "Retirar joyas"
+    ],
+    "columna_b": [
+      "Proteger",
+      "Evitar compresión por inflamación",
+      "Detener el daño"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Finalidad.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_072",
+    "instruccion": "Relaciona cada error con su corrección.",
+    "columna_a": [
+      "Hielo",
+      "Remedios caseros",
+      "Despegar la ropa"
+    ],
+    "columna_b": [
+      "Enfriar alrededor",
+      "Agua fresca",
+      "Gasa estéril"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Corregir errores.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_073",
+    "instruccion": "Relaciona cada riesgo con su prevención.",
+    "columna_a": [
+      "Escaldaduras en niños",
+      "Quemaduras solares",
+      "Quemaduras eléctricas"
+    ],
+    "columna_b": [
+      "Protector solar",
+      "Proteger enchufes",
+      "Mangos hacia adentro"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Prevención doméstica.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_074",
+    "instruccion": "Relaciona cada síntoma con su causa.",
+    "columna_a": [
+      "Voz ronca",
+      "Piel blanca",
+      "Ampollas"
+    ],
+    "columna_b": [
+      "Segundo grado",
+      "Inhalación de humo",
+      "Quemadura profunda"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Interpretar signos.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_075",
+    "instruccion": "Relaciona cada situación con quién avisar.",
+    "columna_a": [
+      "Quemadura extensa",
+      "Quemadura leve",
+      "Duda sobre profundidad"
+    ],
+    "columna_b": [
+      "Centro de salud",
+      "911",
+      "Cuidado en casa"
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "justificacion": "Cuándo derivar.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_076",
+    "instruccion": "Relaciona cada riesgo con su consecuencia.",
+    "columna_a": [
+      "Hipotermia",
+      "Infección",
+      "Shock"
+    ],
+    "columna_b": [
+      "Pérdida de líquidos",
+      "Piel dañada",
+      "Enfriar demasiado"
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "justificacion": "Complicaciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_077",
+    "instruccion": "Relaciona cada paso con su momento.",
+    "columna_a": [
+      "Retirar la fuente",
+      "Enfriar",
+      "Cubrir"
+    ],
+    "columna_b": [
+      "Segundo",
+      "Primero",
+      "Tercero"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Orden de acción.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_078",
+    "instruccion": "Relaciona cada agente con su manejo.",
+    "columna_a": [
+      "Ácido",
+      "Fuego",
+      "Electricidad"
+    ],
+    "columna_b": [
+      "Rodar",
+      "Cortar corriente",
+      "Lavar con agua"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Agentes y respuestas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_079",
+    "instruccion": "Relaciona cada elemento con su ubicación.",
+    "columna_a": [
+      "Gasa",
+      "Agua",
+      "Anillos"
+    ],
+    "columna_b": [
+      "Sobre la zona afectada",
+      "Sobre la quemadura",
+      "Se retiran antes de la inflamación"
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "justificacion": "Ubicaciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_RE_080",
+    "instruccion": "Relaciona cada situación con su prioridad.",
+    "columna_a": [
+      "Vía aérea afectada",
+      "Quemadura pequeña",
+      "Quemadura química"
+    ],
+    "columna_b": [
+      "Enfriar",
+      "Lavar",
+      "Llamar al 911"
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "justificacion": "Prioridades.",
+    "tema": "Quemaduras"
+  }
+]

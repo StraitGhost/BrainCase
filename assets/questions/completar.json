@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "CIB_CO_001",
+    "oracion": "El ________ es un engaño que suplanta a una entidad de confianza para robar tus datos.",
+    "respuesta_correcta": "phishing",
+    "justificacion": "Es el nombre del fraude que busca que entregues información sensible.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_002",
+    "oracion": "El phishing que llega por mensajes de texto se llama ________.",
+    "respuesta_correcta": "smishing",
+    "justificacion": "Combina SMS y phishing.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_003",
+    "oracion": "El fraude por llamada telefónica se conoce como ________.",
+    "respuesta_correcta": "vishing",
+    "justificacion": "Usa la voz para engañar.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_004",
+    "oracion": "El phishing dirigido a una persona concreta con mensajes personalizados es el ________ phishing.",
+    "respuesta_correcta": "spear",
+    "justificacion": "Es un ataque dirigido, a diferencia del masivo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_005",
+    "oracion": "El phishing con códigos QR maliciosos se llama ________.",
+    "respuesta_correcta": "quishing",
+    "justificacion": "Proviene de 'QR' y 'phishing'.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_006",
+    "oracion": "Registrar dominios con errores tipográficos parecidos al real se llama ________.",
+    "respuesta_correcta": "typosquatting",
+    "justificacion": "Aprovecha errores al escribir la dirección.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_007",
+    "oracion": "Un mensaje que exige actuar de inmediato busca generar ________.",
+    "respuesta_correcta": "urgencia",
+    "justificacion": "La presión reduce el análisis crítico.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_008",
+    "oracion": "Antes de pulsar un enlace, pasa el ________ para ver su destino real.",
+    "respuesta_correcta": "cursor",
+    "justificacion": "Muestra la URL real sin hacer clic.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_009",
+    "oracion": "El fraude que suplanta a un directivo para pedir pagos urgentes se llama fraude del ________.",
+    "respuesta_correcta": "CEO",
+    "justificacion": "Se apoya en la autoridad del cargo.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_010",
+    "oracion": "Los correos fraudulentos suelen contener enlaces y archivos ________ que instalan malware.",
+    "respuesta_correcta": "adjuntos",
+    "justificacion": "Los adjuntos pueden ocultar ejecutables.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_011",
+    "oracion": "Un correo legítimo nunca te pedirá tu ________ por mensaje.",
+    "respuesta_correcta": "contraseña",
+    "justificacion": "Ninguna entidad seria la solicita así.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_012",
+    "oracion": "Un archivo con doble extensión como factura.pdf.exe es en realidad un ________.",
+    "respuesta_correcta": "ejecutable",
+    "justificacion": "Disfraza un programa como documento.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_013",
+    "oracion": "Si caes en un phishing, debes cambiar tu contraseña de ________.",
+    "respuesta_correcta": "inmediato",
+    "justificacion": "Actuar rápido limita el daño.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_014",
+    "oracion": "Los correos de phishing deben marcarse como ________ y eliminarse.",
+    "respuesta_correcta": "spam",
+    "justificacion": "Ayuda a bloquear nuevos envíos.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_015",
+    "oracion": "El ataque de phishing dirigido a altos ejecutivos se llama ________.",
+    "respuesta_correcta": "whaling",
+    "justificacion": "Apunta a los 'peces gordos'.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_016",
+    "oracion": "Una oferta demasiado buena para ser verdad suele ser una ________.",
+    "respuesta_correcta": "estafa",
+    "justificacion": "Los cebos económicos son típicos del fraude.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_017",
+    "oracion": "El candado HTTPS indica conexión cifrada, pero no garantiza que el sitio sea ________.",
+    "respuesta_correcta": "legítimo",
+    "justificacion": "Los sitios falsos también pueden usar HTTPS.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_018",
+    "oracion": "Para verificar un aviso del banco, usa sus canales ________.",
+    "respuesta_correcta": "oficiales",
+    "justificacion": "Evita contactar al atacante.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_019",
+    "oracion": "El remitente de un correo puede ser ________, aunque parezca legítimo.",
+    "respuesta_correcta": "suplantado",
+    "justificacion": "El atacante falsifica la apariencia del remitente.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_020",
+    "oracion": "Una buena defensa es activar la autenticación en dos ________.",
+    "respuesta_correcta": "pasos",
+    "justificacion": "Un segundo factor dificulta el acceso.",
+    "tema": "Phishing"
+  },
+  {
+    "id": "CIB_CO_021",
+    "oracion": "Una contraseña segura debe tener al menos 12 ________.",
+    "respuesta_correcta": "caracteres",
+    "justificacion": "La longitud aumenta la seguridad.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_022",
+    "oracion": "Una ________ de contraseña son varias palabras aleatorias largas y fáciles de recordar.",
+    "respuesta_correcta": "frase",
+    "justificacion": "Se conoce como passphrase.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_023",
+    "oracion": "Un gestor de ________ guarda y genera claves únicas de forma cifrada.",
+    "respuesta_correcta": "contraseñas",
+    "justificacion": "Evita memorizar todas las claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_024",
+    "oracion": "Reutilizar la misma contraseña en varias cuentas es una mala ________.",
+    "respuesta_correcta": "práctica",
+    "justificacion": "Una filtración compromete todas tus cuentas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_025",
+    "oracion": "El ataque que prueba combinaciones hasta acertar se llama fuerza ________.",
+    "respuesta_correcta": "bruta",
+    "justificacion": "Automatiza intentos masivos.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_026",
+    "oracion": "El ataque que prueba credenciales filtradas en otros sitios se llama credential ________.",
+    "respuesta_correcta": "stuffing",
+    "justificacion": "Aprovecha la reutilización de claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_027",
+    "oracion": "El ________ convierte una contraseña en una huella irreversible.",
+    "respuesta_correcta": "hash",
+    "justificacion": "Evita guardar el texto original.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_028",
+    "oracion": "Las contraseñas por defecto del ________ deben cambiarse.",
+    "respuesta_correcta": "router",
+    "justificacion": "Las claves de fábrica son conocidas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_029",
+    "oracion": "No uses datos ________ como tu nombre o fecha de nacimiento en tus claves.",
+    "respuesta_correcta": "personales",
+    "justificacion": "Son fáciles de deducir.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_030",
+    "oracion": "Si tu clave aparece en una ________, debes cambiarla ya.",
+    "respuesta_correcta": "filtración",
+    "justificacion": "Los atacantes ya la conocen.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_031",
+    "oracion": "Una contraseña como '123456' es muy ________.",
+    "respuesta_correcta": "débil",
+    "justificacion": "Es de las más comunes.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_032",
+    "oracion": "Compartir tu contraseña elimina el ________ sobre tu cuenta.",
+    "respuesta_correcta": "control",
+    "justificacion": "Ya no sabes quién accede.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_033",
+    "oracion": "Anotar la contraseña en un papel visible es ________.",
+    "respuesta_correcta": "inseguro",
+    "justificacion": "Cualquiera puede verla.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_034",
+    "oracion": "Al usar un equipo público, debes cerrar ________ al terminar.",
+    "respuesta_correcta": "sesión",
+    "justificacion": "Evita accesos posteriores.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_035",
+    "oracion": "Cada cuenta debe tener una contraseña ________.",
+    "respuesta_correcta": "única",
+    "justificacion": "Limita el daño de una filtración.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_036",
+    "oracion": "Las respuestas a preguntas de seguridad no deben ser ________ en redes sociales.",
+    "respuesta_correcta": "deducibles",
+    "justificacion": "Un atacante podría adivinarlas.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_037",
+    "oracion": "'Have I Been Pwned' te dice si tu ________ aparece en filtraciones.",
+    "respuesta_correcta": "correo",
+    "justificacion": "Ayuda a saber si debes cambiar claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_038",
+    "oracion": "Una contraseña ________ mezcla letras, números y símbolos de forma impredecible.",
+    "respuesta_correcta": "aleatoria",
+    "justificacion": "La impredecibilidad dificulta adivinarla.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_039",
+    "oracion": "Las sustituciones predecibles como P@ssw0rd son poco ________.",
+    "respuesta_correcta": "efectivas",
+    "justificacion": "Los diccionarios las incluyen.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_040",
+    "oracion": "La clave maestra de un gestor debe ser larga y ________.",
+    "respuesta_correcta": "única",
+    "justificacion": "Protege el acceso a todas tus claves.",
+    "tema": "Contraseñas"
+  },
+  {
+    "id": "CIB_CO_041",
+    "oracion": "El ________ es software malicioso diseñado para dañar, espiar o robar.",
+    "respuesta_correcta": "malware",
+    "justificacion": "Abreviatura de 'malicious software'.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_042",
+    "oracion": "El ________ cifra tus archivos y exige un rescate.",
+    "respuesta_correcta": "ransomware",
+    "justificacion": "Bloquea el acceso a los datos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_043",
+    "oracion": "Un ________ se disfraza de programa legítimo para engañar al usuario.",
+    "respuesta_correcta": "troyano",
+    "justificacion": "Como el caballo de Troya.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_044",
+    "oracion": "Un ________ se propaga solo por la red sin intervención del usuario.",
+    "respuesta_correcta": "gusano",
+    "justificacion": "Se replica automáticamente.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_045",
+    "oracion": "El ________ espía tu actividad y recopila información sin permiso.",
+    "respuesta_correcta": "spyware",
+    "justificacion": "Roba datos personales.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_046",
+    "oracion": "Un ________ registra las teclas que pulsas.",
+    "respuesta_correcta": "keylogger",
+    "justificacion": "Captura contraseñas y mensajes.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_047",
+    "oracion": "El ________ muestra publicidad no deseada.",
+    "respuesta_correcta": "adware",
+    "justificacion": "Genera anuncios invasivos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_048",
+    "oracion": "Una ________ es una red de dispositivos infectados controlados a distancia.",
+    "respuesta_correcta": "botnet",
+    "justificacion": "Se usa para spam y ataques DDoS.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_049",
+    "oracion": "Instala aplicaciones solo desde tiendas ________.",
+    "respuesta_correcta": "oficiales",
+    "justificacion": "Revisan las apps y reducen el riesgo.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_050",
+    "oracion": "Mantén el sistema ________ para cerrar vulnerabilidades.",
+    "respuesta_correcta": "actualizado",
+    "justificacion": "Los parches corrigen brechas.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_051",
+    "oracion": "Haz copias de ________ para recuperar datos tras un ransomware.",
+    "respuesta_correcta": "seguridad",
+    "justificacion": "Permiten restaurar sin pagar.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_052",
+    "oracion": "El ________ oculta la presencia del malware y da acceso privilegiado.",
+    "respuesta_correcta": "rootkit",
+    "justificacion": "Dificulta su detección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_053",
+    "oracion": "El ________ usa tu dispositivo para minar criptomonedas sin permiso.",
+    "respuesta_correcta": "cryptojacking",
+    "justificacion": "Consume tus recursos.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_054",
+    "oracion": "No conectes una memoria ________ encontrada en la calle.",
+    "respuesta_correcta": "USB",
+    "justificacion": "Puede contener malware.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_055",
+    "oracion": "Si sospechas una infección, ________ el equipo de la red.",
+    "respuesta_correcta": "desconecta",
+    "justificacion": "Evita la propagación.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_056",
+    "oracion": "El software ________ suele incluir malware.",
+    "respuesta_correcta": "pirata",
+    "justificacion": "Los cracks son vehículo de infección.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_057",
+    "oracion": "Un ________ informático se adjunta a archivos y se propaga al ejecutarlos.",
+    "respuesta_correcta": "virus",
+    "justificacion": "Necesita un archivo anfitrión.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_058",
+    "oracion": "Un programa que detecta y elimina amenazas es el ________.",
+    "respuesta_correcta": "antivirus",
+    "justificacion": "Debe mantenerse actualizado.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_059",
+    "oracion": "Pagar el ________ no garantiza recuperar tus archivos.",
+    "respuesta_correcta": "rescate",
+    "justificacion": "Puede que no entreguen la clave.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_060",
+    "oracion": "Un equipo muy ________ con ventanas emergentes puede estar infectado.",
+    "respuesta_correcta": "lento",
+    "justificacion": "Es un síntoma habitual.",
+    "tema": "Malware"
+  },
+  {
+    "id": "CIB_CO_061",
+    "oracion": "La autenticación en dos ________ combina dos factores distintos.",
+    "respuesta_correcta": "factores",
+    "justificacion": "Ej.: contraseña y código.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_062",
+    "oracion": "La contraseña es algo que ________.",
+    "respuesta_correcta": "sabes",
+    "justificacion": "Es información que solo tú conoces.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_063",
+    "oracion": "La huella dactilar es algo que ________.",
+    "respuesta_correcta": "eres",
+    "justificacion": "Es un rasgo biométrico.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_064",
+    "oracion": "Un token o tu teléfono es algo que ________.",
+    "respuesta_correcta": "tienes",
+    "justificacion": "Es un objeto que posees.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_065",
+    "oracion": "Un código ________ es de un solo uso y de corta duración.",
+    "respuesta_correcta": "OTP",
+    "justificacion": "One-Time Password.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_066",
+    "oracion": "El SIM ________ permite al atacante tomar tu número para recibir tus SMS.",
+    "respuesta_correcta": "swapping",
+    "justificacion": "Transfiere tu línea a otra SIM.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_067",
+    "oracion": "Las llaves ________ resisten mejor el phishing.",
+    "respuesta_correcta": "FIDO2",
+    "justificacion": "Se vinculan al sitio legítimo.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_068",
+    "oracion": "Una app ________ genera códigos de verificación en tu teléfono.",
+    "respuesta_correcta": "autenticadora",
+    "justificacion": "Es más segura que el SMS.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_069",
+    "oracion": "Nunca ________ tu código de verificación con nadie.",
+    "respuesta_correcta": "compartas",
+    "justificacion": "Quien lo pide intenta tomar tu cuenta.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_070",
+    "oracion": "La ________ verifica quién eres; la autorización define qué puedes hacer.",
+    "respuesta_correcta": "autenticación",
+    "justificacion": "Es el primer paso del control de acceso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_071",
+    "oracion": "El principio de mínimo ________ otorga solo los permisos necesarios.",
+    "respuesta_correcta": "privilegio",
+    "justificacion": "Reduce el daño de una cuenta comprometida.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_072",
+    "oracion": "Las ________ reemplazan la contraseña con criptografía de clave pública.",
+    "respuesta_correcta": "passkeys",
+    "justificacion": "Son resistentes al phishing.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_073",
+    "oracion": "Los códigos de ________ permiten recuperar el acceso si pierdes tu dispositivo.",
+    "respuesta_correcta": "respaldo",
+    "justificacion": "Guárdalos en lugar seguro.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_074",
+    "oracion": "El inicio de sesión ________ permite acceder a varios servicios con una identidad.",
+    "respuesta_correcta": "único",
+    "justificacion": "SSO.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_075",
+    "oracion": "La ________ de MFA es el bombardeo de solicitudes hasta que apruebes una.",
+    "respuesta_correcta": "fatiga",
+    "justificacion": "Busca que cedas por cansancio.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_076",
+    "oracion": "Si recibes una aprobación de acceso que no solicitaste, debes ________ y cambiar tu clave.",
+    "respuesta_correcta": "rechazarla",
+    "justificacion": "Alguien más tiene tu contraseña.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_077",
+    "oracion": "Activa 2FA primero en tu ________ principal.",
+    "respuesta_correcta": "correo",
+    "justificacion": "Permite restablecer otras cuentas.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_078",
+    "oracion": "La ________ no se puede cambiar si se filtra.",
+    "respuesta_correcta": "biometría",
+    "justificacion": "No puedes reemplazar tu huella.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_079",
+    "oracion": "MFA significa autenticación ________.",
+    "respuesta_correcta": "multifactor",
+    "justificacion": "Exige dos o más factores.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "CIB_CO_080",
+    "oracion": "Si ves una sesión desconocida, debes ________ esa sesión.",
+    "respuesta_correcta": "cerrar",
+    "justificacion": "Corta el acceso del intruso.",
+    "tema": "Autenticación"
+  },
+  {
+    "id": "PA_CO_001",
+    "oracion": "Las siglas RCP significan reanimación ________.",
+    "respuesta_correcta": "cardiopulmonar",
+    "justificacion": "Mantiene circulación y respiración.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_002",
+    "oracion": "Antes de atender, asegura que la ________ sea segura.",
+    "respuesta_correcta": "escena",
+    "justificacion": "Tu seguridad es prioritaria.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_003",
+    "oracion": "El número de emergencias en Ecuador es el ________.",
+    "respuesta_correcta": "911",
+    "justificacion": "Es el número unificado.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_004",
+    "oracion": "Las compresiones se hacen en el centro del ________.",
+    "respuesta_correcta": "pecho",
+    "justificacion": "Mitad inferior del esternón.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_005",
+    "oracion": "En un adulto, las compresiones deben hundir el pecho de 5 a 6 ________.",
+    "respuesta_correcta": "centímetros",
+    "justificacion": "Permite circulación eficaz.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_006",
+    "oracion": "El ritmo de las compresiones es de 100 a 120 por ________.",
+    "respuesta_correcta": "minuto",
+    "justificacion": "Mantiene un flujo adecuado.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_007",
+    "oracion": "En el adulto se alternan 30 compresiones y 2 ________.",
+    "respuesta_correcta": "ventilaciones",
+    "justificacion": "Es la relación estándar.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_008",
+    "oracion": "Entre compresiones se debe permitir que el tórax se ________ por completo.",
+    "respuesta_correcta": "expanda",
+    "justificacion": "Permite que el corazón se llene.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_009",
+    "oracion": "El ________ analiza el ritmo y da una descarga si es necesario.",
+    "respuesta_correcta": "DEA",
+    "justificacion": "Desfibrilador externo automático.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_010",
+    "oracion": "La víctima debe estar sobre una superficie ________ y plana.",
+    "respuesta_correcta": "firme",
+    "justificacion": "Una superficie blanda reduce la eficacia.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_011",
+    "oracion": "En un lactante se comprime con dos ________.",
+    "respuesta_correcta": "dedos",
+    "justificacion": "Se adapta la fuerza al tamaño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_012",
+    "oracion": "Los ________ agónicos no son una respiración normal.",
+    "respuesta_correcta": "jadeos",
+    "justificacion": "Indican paro y requieren RCP.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_013",
+    "oracion": "No se debe tardar más de 10 ________ en comprobar la respiración.",
+    "respuesta_correcta": "segundos",
+    "justificacion": "No hay que retrasar la RCP.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_014",
+    "oracion": "Los brazos deben estar ________ durante las compresiones.",
+    "respuesta_correcta": "rectos",
+    "justificacion": "Permite usar el peso del cuerpo.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_015",
+    "oracion": "Si no sabes dar ventilaciones, haz solo ________.",
+    "respuesta_correcta": "compresiones",
+    "justificacion": "Es mejor que no hacer nada.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_016",
+    "oracion": "Se continúa la RCP hasta que llegue ayuda ________.",
+    "respuesta_correcta": "profesional",
+    "justificacion": "O hasta que la víctima reaccione.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_017",
+    "oracion": "Para comprobar respuesta, toca los ________ y habla fuerte.",
+    "respuesta_correcta": "hombros",
+    "justificacion": "Evalúa la consciencia sin lesionar.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_018",
+    "oracion": "Minimiza las ________ entre compresiones.",
+    "respuesta_correcta": "pausas",
+    "justificacion": "Cada pausa reduce la circulación.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_019",
+    "oracion": "En un niño se comprime aproximadamente un ________ del tórax.",
+    "respuesta_correcta": "tercio",
+    "justificacion": "Se adapta al tamaño.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_020",
+    "oracion": "Un paro cardiorrespiratorio se sospecha si la persona no responde y no ________.",
+    "respuesta_correcta": "respira",
+    "justificacion": "Es el signo clave.",
+    "tema": "RCP Básico"
+  },
+  {
+    "id": "PA_CO_021",
+    "oracion": "La señal universal de atragantamiento es llevarse las manos al ________.",
+    "respuesta_correcta": "cuello",
+    "justificacion": "Es el gesto instintivo.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_022",
+    "oracion": "Ante una obstrucción leve, anima a la persona a ________.",
+    "respuesta_correcta": "toser",
+    "justificacion": "La tos eficaz expulsa el objeto.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_023",
+    "oracion": "En una obstrucción grave la persona no puede toser ni ________.",
+    "respuesta_correcta": "respirar",
+    "justificacion": "No pasa el aire.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_024",
+    "oracion": "La maniobra de ________ consiste en compresiones abdominales.",
+    "respuesta_correcta": "Heimlich",
+    "justificacion": "Se aplican hacia adentro y arriba.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_025",
+    "oracion": "En un adulto se alternan 5 golpes en la ________ y 5 compresiones abdominales.",
+    "respuesta_correcta": "espalda",
+    "justificacion": "Entre los omóplatos.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_026",
+    "oracion": "En lactantes no se hacen compresiones ________.",
+    "respuesta_correcta": "abdominales",
+    "justificacion": "Se usan compresiones torácicas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_027",
+    "oracion": "En embarazadas se aplican compresiones ________.",
+    "respuesta_correcta": "torácicas",
+    "justificacion": "Se evita comprimir el abdomen.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_028",
+    "oracion": "Si la víctima pierde la ________, se inicia RCP.",
+    "respuesta_correcta": "consciencia",
+    "justificacion": "Por falta de oxígeno.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_029",
+    "oracion": "No metas los ________ a ciegas en la boca.",
+    "respuesta_correcta": "dedos",
+    "justificacion": "Puedes empujar el objeto.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_030",
+    "oracion": "Un lactante se coloca boca ________ sobre tu antebrazo.",
+    "respuesta_correcta": "abajo",
+    "justificacion": "La cabeza más baja que el tronco.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_031",
+    "oracion": "Los golpes se dan con el ________ de la mano.",
+    "respuesta_correcta": "talón",
+    "justificacion": "Entre los omóplatos.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_032",
+    "oracion": "Labios ________ indican falta grave de oxígeno.",
+    "respuesta_correcta": "azulados",
+    "justificacion": "Es cianosis.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_033",
+    "oracion": "Las ________ enteras son peligrosas para niños pequeños.",
+    "respuesta_correcta": "uvas",
+    "justificacion": "Pueden obstruir la vía aérea.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_034",
+    "oracion": "Después de una maniobra exitosa, conviene una evaluación ________.",
+    "respuesta_correcta": "médica",
+    "justificacion": "Puede haber lesiones internas.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_035",
+    "oracion": "Si estás solo, comprime tu abdomen contra el respaldo de una ________.",
+    "respuesta_correcta": "silla",
+    "justificacion": "Imita la maniobra.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_036",
+    "oracion": "Hay que repetir las maniobras hasta que expulse el ________.",
+    "respuesta_correcta": "objeto",
+    "justificacion": "O pierda la consciencia.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_037",
+    "oracion": "El puño se coloca por encima del ________.",
+    "respuesta_correcta": "ombligo",
+    "justificacion": "Bajo el esternón.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_038",
+    "oracion": "Al comer, debes ________ bien los alimentos.",
+    "respuesta_correcta": "masticar",
+    "justificacion": "Previene obstrucciones.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_039",
+    "oracion": "No des ________ a una persona atragantada.",
+    "respuesta_correcta": "agua",
+    "justificacion": "Puede empeorar la obstrucción.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_040",
+    "oracion": "Una tos fuerte indica obstrucción ________.",
+    "respuesta_correcta": "parcial",
+    "justificacion": "Aún entra aire.",
+    "tema": "Atragantamiento"
+  },
+  {
+    "id": "PA_CO_041",
+    "oracion": "La primera medida ante una hemorragia externa es la presión ________.",
+    "respuesta_correcta": "directa",
+    "justificacion": "Es la más eficaz.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_042",
+    "oracion": "Si la gasa se empapa, añade más ________ sin retirar la primera.",
+    "respuesta_correcta": "capas",
+    "justificacion": "Retirarla arrastra los coágulos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_043",
+    "oracion": "Elevar la extremidad por encima del ________ reduce el sangrado.",
+    "respuesta_correcta": "corazón",
+    "justificacion": "Disminuye el flujo a la zona.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_044",
+    "oracion": "El ________ se usa como último recurso en hemorragias graves de extremidad.",
+    "respuesta_correcta": "torniquete",
+    "justificacion": "Puede salvar la vida.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_045",
+    "oracion": "Anota la ________ de colocación del torniquete.",
+    "respuesta_correcta": "hora",
+    "justificacion": "El personal médico la necesita.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_046",
+    "oracion": "En una hemorragia nasal, inclina la cabeza hacia ________.",
+    "respuesta_correcta": "adelante",
+    "justificacion": "Evita tragar sangre.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_047",
+    "oracion": "La sangre que sale a chorros suele ser ________.",
+    "respuesta_correcta": "arterial",
+    "justificacion": "Sale a presión.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_048",
+    "oracion": "Un objeto clavado no se ________ de la herida.",
+    "respuesta_correcta": "retira",
+    "justificacion": "Retirarlo aumenta el sangrado.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_049",
+    "oracion": "Piel pálida, fría y pulso rápido sugieren ________.",
+    "respuesta_correcta": "shock",
+    "justificacion": "Pérdida de volumen sanguíneo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_050",
+    "oracion": "Usa ________ u otra barrera al atender heridas.",
+    "respuesta_correcta": "guantes",
+    "justificacion": "Reduce el contagio.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_051",
+    "oracion": "Un raspón se limpia con agua y ________.",
+    "respuesta_correcta": "jabón",
+    "justificacion": "Es suave y eficaz.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_052",
+    "oracion": "La hemorragia ________ puede no verse por fuera.",
+    "respuesta_correcta": "interna",
+    "justificacion": "Hay dolor, moretones y mareo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_053",
+    "oracion": "Aplica presión continua y ________.",
+    "respuesta_correcta": "firme",
+    "justificacion": "No levantes para mirar.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_054",
+    "oracion": "El torniquete no se ________ una vez colocado.",
+    "respuesta_correcta": "afloja",
+    "justificacion": "Lo maneja personal profesional.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_055",
+    "oracion": "En evisceración, cubre los intestinos con apósito ________.",
+    "respuesta_correcta": "húmedo",
+    "justificacion": "Sin reintroducirlos.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_056",
+    "oracion": "La parte amputada se envuelve en gasa ________.",
+    "respuesta_correcta": "húmeda",
+    "justificacion": "Luego en bolsa sobre hielo.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_057",
+    "oracion": "El torniquete se coloca unos 5-7 cm por ________ de la herida.",
+    "respuesta_correcta": "encima",
+    "justificacion": "Sobre una zona de un solo hueso.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_058",
+    "oracion": "No apliques café ni ________ sobre una herida.",
+    "respuesta_correcta": "telarañas",
+    "justificacion": "Causan infecciones.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_059",
+    "oracion": "Un vendaje de compresión no debe cortar la ________.",
+    "respuesta_correcta": "circulación",
+    "justificacion": "Debe permitir el riego.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_060",
+    "oracion": "Acuesta a la persona y eleva sus ________ si hay shock.",
+    "respuesta_correcta": "piernas",
+    "justificacion": "Favorece la circulación central.",
+    "tema": "Hemorragias"
+  },
+  {
+    "id": "PA_CO_061",
+    "oracion": "Enfría una quemadura con agua ________ unos 20 minutos.",
+    "respuesta_correcta": "fresca",
+    "justificacion": "Detiene el avance del daño.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_062",
+    "oracion": "Nunca apliques ________ directamente sobre una quemadura.",
+    "respuesta_correcta": "hielo",
+    "justificacion": "Daña más el tejido.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_063",
+    "oracion": "La quemadura de ________ grado solo causa enrojecimiento y dolor.",
+    "respuesta_correcta": "primer",
+    "justificacion": "Afecta la capa superficial.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_064",
+    "oracion": "La quemadura de segundo grado presenta ________.",
+    "respuesta_correcta": "ampollas",
+    "justificacion": "Afecta capas más profundas.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_065",
+    "oracion": "La quemadura de tercer grado puede verse blanca o ________.",
+    "respuesta_correcta": "carbonizada",
+    "justificacion": "Destruye nervios y tejido.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_066",
+    "oracion": "No revientes las ________.",
+    "respuesta_correcta": "ampollas",
+    "justificacion": "Protegen de infecciones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_067",
+    "oracion": "No apliques ________ ni pasta dental en una quemadura.",
+    "respuesta_correcta": "mantequilla",
+    "justificacion": "Retiene calor e infecta.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_068",
+    "oracion": "Retira ________ y pulseras antes de que se hinche.",
+    "respuesta_correcta": "anillos",
+    "justificacion": "La inflamación puede cortar la circulación.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_069",
+    "oracion": "En quemaduras químicas, lava con abundante ________.",
+    "respuesta_correcta": "agua",
+    "justificacion": "Diluye y arrastra la sustancia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_070",
+    "oracion": "Ante una quemadura eléctrica, corta primero la ________.",
+    "respuesta_correcta": "corriente",
+    "justificacion": "Evita que también te lesiones.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_071",
+    "oracion": "Si la ropa está en llamas, detente, tírate y ________.",
+    "respuesta_correcta": "rueda",
+    "justificacion": "Rodar sofoca el fuego.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_072",
+    "oracion": "Si la ropa está pegada, no la ________.",
+    "respuesta_correcta": "despegues",
+    "justificacion": "Dañarías más la piel.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_073",
+    "oracion": "Cubre la quemadura con gasa ________.",
+    "respuesta_correcta": "estéril",
+    "justificacion": "No adherente.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_074",
+    "oracion": "Quemaduras en cara o ________ requieren atención médica.",
+    "respuesta_correcta": "manos",
+    "justificacion": "Son zonas de mayor riesgo.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_075",
+    "oracion": "La quemadura solar suele ser de primer ________.",
+    "respuesta_correcta": "grado",
+    "justificacion": "Afecta la capa superficial.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_076",
+    "oracion": "La inhalación de ________ puede comprometer la vía aérea.",
+    "respuesta_correcta": "humo",
+    "justificacion": "Es una emergencia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_077",
+    "oracion": "Las quemaduras extensas pueden causar ________.",
+    "respuesta_correcta": "shock",
+    "justificacion": "Pérdida de líquidos y riesgo de hipotermia.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_078",
+    "oracion": "Mantén los líquidos ________ fuera del alcance de los niños.",
+    "respuesta_correcta": "calientes",
+    "justificacion": "Previene escaldaduras.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_079",
+    "oracion": "Los mangos de las ollas deben apuntar hacia ________.",
+    "respuesta_correcta": "adentro",
+    "justificacion": "Evita que los niños los jalen.",
+    "tema": "Quemaduras"
+  },
+  {
+    "id": "PA_CO_080",
+    "oracion": "Tras enfriar, protege la quemadura con un apósito ________.",
+    "respuesta_correcta": "limpio",
+    "justificacion": "Previene infecciones.",
+    "tema": "Quemaduras"
+  }
+]
