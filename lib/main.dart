@@ -35,7 +35,7 @@ class BrainCaseApp extends StatelessWidget {
           valueListenable: ThemePreferences.instance.colorPalette,
           builder: (context, palette, _) {
             return MaterialApp(
-              title: 'BrainCase', // ✅ CAMBIADO: Título de la app
+              title: 'BrainCase', 
               debugShowCheckedModeBanner: false,
               theme: AppTheme.current,
               home: const SessionChecker(),
