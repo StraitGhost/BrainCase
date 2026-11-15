@@ -34,7 +34,7 @@ jobs:
         run: flutter pub get
       
       - name: Build web
-        run: flutter build web --release --base-href "/BrainCase/" --web-renderer html
+        run: flutter build web --release --base-href "/BrainCase/"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
