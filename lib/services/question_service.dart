@@ -97,11 +97,15 @@ class QuestionService {
     return palette[i % palette.length];
   }
 
+  /// ✅ Carga los 5 JSON y devuelve SOLO las preguntas que tengan 'opciones'
+  /// (útiles para un examen cronometrado de opción múltiple).
   static Future<List<Map<String, dynamic>>> getMultipleChoiceQuestions() async {
     final all = await loadAll();
     return all.where((q) => q.containsKey('opciones')).toList();
   }
 
+  /// ✅ Devuelve preguntas por una lista de IDs (las que el usuario dominó).
+  /// Mantiene el orden de los IDs recibidos y filtra solo las de opción múltiple.
   static Future<List<Map<String, dynamic>>> getQuestionsByIds(List<String> ids) async {
     final all = await loadAll();
     final byId = <String, Map<String, dynamic>>{};
