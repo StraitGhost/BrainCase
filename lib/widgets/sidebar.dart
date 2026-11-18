@@ -8,7 +8,8 @@ class AppSidebar extends StatelessWidget {
   final Function(int) onItemSelected;
   final List<String> menuItems;
   final List<IconData> menuIcons;
-  final UserProfile profile; // ✅ NUEVO: Recibir el perfil
+  final UserProfile profile;
+  final List<Map<String, dynamic>> learningModules; // ✅ DINÁMICO
 
   const AppSidebar({
     super.key,
@@ -16,27 +17,14 @@ class AppSidebar extends StatelessWidget {
     required this.onItemSelected,
     required this.menuItems,
     required this.menuIcons,
-    required this.profile, // ✅ NUEVO: Parámetro requerido
+    required this.profile,
+    required this.learningModules, // ✅ NUEVO PARÁMETRO
   });
-
-  // ✅ MEJORADO: Módulos con colores dinámicos del agente
-  final List<Map<String, dynamic>> _learningModules = const [
-    {'name': 'Conciencia', 'icon': Icons.wb_sunny_outlined},
-    {'name': 'Orientación', 'icon': Icons.explore_outlined},
-    {'name': 'Atención', 'icon': Icons.center_focus_weak_outlined},
-    {'name': 'Memoria', 'icon': Icons.memory_outlined},
-    {'name': 'Percepción', 'icon': Icons.visibility_outlined},
-    {'name': 'Pensamiento', 'icon': Icons.psychology_outlined},
-    {'name': 'Sueño', 'icon': Icons.nightlight_round},
-    {'name': 'Apetito', 'icon': Icons.restaurant_outlined},
-    {'name': 'Sexualidad', 'icon': Icons.favorite_outline},
-    {'name': 'Síndromes', 'icon': Icons.medical_services_outlined},
-  ];
 
   @override
   Widget build(BuildContext context) {
-    // ✅ Obtener la primera letra del nombre
-    final initial = profile.name.isNotEmpty ? profile.name.substring(0, 1).toUpperCase() : 'U';
+    final initial =
+        profile.name.isNotEmpty ? profile.name.substring(0, 1).toUpperCase() : 'U';
 
     return Container(
       width: 280,
@@ -69,7 +57,7 @@ class AppSidebar extends StatelessWidget {
                     ],
                   ),
                   child: Icon(
-                    Icons.psychology,
+                    Icons.psychology, // 🧠 Cerebro = BrainCase (tiene sentido literal)
                     color: AppColors.textOnPrimary,
                     size: 24,
                   ),
@@ -79,7 +67,7 @@ class AppSidebar extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'PsyCase',
+                      'BrainCase', // ✅ Cambiado de PsyCase
                       style: TextStyle(
                         color: AppColors.textPrimary,
                         fontSize: 18,
@@ -87,7 +75,7 @@ class AppSidebar extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Simulador de Psicopatología',
+                      'Simulador de Aprendizaje', // ✅ Cambiado (ya no es solo psicopatología)
                       style: TextStyle(
                         color: AppColors.textMuted,
                         fontSize: 10,
@@ -98,9 +86,9 @@ class AppSidebar extends StatelessWidget {
               ],
             ),
           ),
-          
+
           Divider(color: AppColors.border, height: 1),
-          
+
           // Menú principal
           Expanded(
             child: SingleChildScrollView(
@@ -116,7 +104,9 @@ class AppSidebar extends StatelessWidget {
                       title: Text(
                         menuItems[index],
                         style: TextStyle(
-                          color: isSelected ? AppColors.sidebarTextActive : AppColors.sidebarText,
+                          color: isSelected
+                              ? AppColors.sidebarTextActive
+                              : AppColors.sidebarText,
                           fontWeight: isSelected ? FontWeight.w600 : FontWeight.w700,
                         ),
                       ),
@@ -125,9 +115,9 @@ class AppSidebar extends StatelessWidget {
                       onTap: () => onItemSelected(index),
                     );
                   }),
-                  
+
                   const SizedBox(height: 20),
-                  
+
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
@@ -140,16 +130,18 @@ class AppSidebar extends StatelessWidget {
                       ),
                     ),
                   ),
-                  
+
                   const SizedBox(height: 10),
-                  
-                  // ✅ MEJORADO: Módulos con iconos del color del agente
-                  ...List.generate(_learningModules.length, (index) {
-                    final module = _learningModules[index];
+
+                  // ✅ LISTA DINÁMICA: se pinta con el color real de cada módulo
+                  ...List.generate(learningModules.length, (index) {
+                    final module = learningModules[index];
+                    final moduleColor =
+                        module['color'] as Color? ?? AppColors.primary;
                     return ListTile(
                       leading: Icon(
                         module['icon'] as IconData,
-                        color: AppColors.primary.withValues(alpha: 0.7),
+                        color: moduleColor.withValues(alpha: 0.8),
                         size: 20,
                       ),
                       title: Text(
@@ -166,8 +158,8 @@ class AppSidebar extends StatelessWidget {
               ),
             ),
           ),
-          
-          // ✅ Footer con información real del usuario
+
+          // Footer con información real del usuario
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -192,7 +184,7 @@ class AppSidebar extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      initial, // ✅ Usar la inicial del nombre real
+                      initial,
                       style: TextStyle(
                         color: AppColors.textOnPrimary,
                         fontSize: 14,
@@ -202,13 +194,12 @@ class AppSidebar extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        profile.name, // ✅ Mostrar nombre real
+                        profile.name,
                         style: TextStyle(
                           color: AppColors.textPrimary,
                           fontSize: 13,
@@ -217,7 +208,7 @@ class AppSidebar extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
-                        profile.career ?? 'Estudiante', // ✅ Mostrar carrera o "Estudiante"
+                        profile.career ?? 'Estudiante',
                         style: TextStyle(
                           color: AppColors.textMuted,
                           fontSize: 11,

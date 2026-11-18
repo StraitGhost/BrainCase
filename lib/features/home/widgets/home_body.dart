@@ -187,12 +187,13 @@ class _HomeBodyState extends State<HomeBody> {
           width: widget.isSidebarOpen ? 280 : 0,
           child: widget.isSidebarOpen
               ? AppSidebar(
-                  selectedIndex: 0,
-                  onItemSelected: widget.onMenuSelection,
-                  menuItems: widget.menuItems,
-                  menuIcons: widget.menuIcons,
-                  profile: widget.profile,
-                )
+  selectedIndex: 0,
+  onItemSelected: widget.onMenuSelection,
+  menuItems: widget.menuItems,
+  menuIcons: widget.menuIcons,
+  profile: widget.profile,
+  learningModules: widget.learningModules, // ✅ AGREGADO
+)
               : const SizedBox.shrink(),
         ),
         Expanded(

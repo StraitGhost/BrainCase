@@ -1,14 +1,11 @@
 // lib/features/mistakes/mistakes_screen.dart
 import 'dart:math' as math;
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../../core/theme/app_colors.dart';
 import '../../models/profile.dart';
 import '../../services/learning_progress_service.dart';
-import '../game/game_screen.dart';
 
 // ─────────────────────────────────────────────────────────────────────────
 // Nombres de campo ULTRA-FLEXIBLES (Sin tildes en los nombres de variables)
@@ -137,6 +134,7 @@ class _MistakesScreenState extends State<MistakesScreen> {
   bool? _tfSelected;
   List<int>? _order;
   bool _shaking = false;
+  bool _hintOpen = false;
 
   // Señales de corrección
   bool _clearFailed = false; // falló el borrado del error en Firestore
@@ -195,6 +193,7 @@ class _MistakesScreenState extends State<MistakesScreen> {
     _revealed = false;
     _lastCorrect = false;
     _clearFailed = false;
+    _hintOpen = false;
     _mcSelected = null;
     _tfSelected = null;
     _fillController.clear();
@@ -371,10 +370,18 @@ class _MistakesScreenState extends State<MistakesScreen> {
     });
   }
 
+  /// Pasa a la siguiente pregunta SIN contestar: el error se queda en la lista.
+  void _skip() {
+    if (_revealed) return;
+    HapticFeedback.selectionClick();
+    _lastCorrect = false;
+    _next();
+  }
+
   void _reorder(int oldIndex, int newIndex) {
     if (_revealed || _order == null) return;
     setState(() {
-      if (newIndex > oldIndex) newIndex -= 1;
+      // onReorderItem ya entrega newIndex ajustado
       _order!.insert(newIndex, _order!.removeAt(oldIndex));
     });
   }
@@ -392,22 +399,36 @@ class _MistakesScreenState extends State<MistakesScreen> {
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topCenter, 
-              end: Alignment.bottomCenter, 
-              colors: [AppColors.surface, AppColors.background]
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [AppColors.surface, AppColors.background],
             ),
           ),
-          child: SafeArea(
-            child: _loading
-                ? Center(child: CircularProgressIndicator(color: AppColors.primary))
-                : _queue.isEmpty
-                    ? (_totalAtStart == 0 ? _buildEmpty() : _buildSessionDone())
-                    : _buildQuiz(context),
+          child: Stack(
+            children: [
+              Positioned(top: -110, left: -100, child: _bgCircle(300, 0.16)),
+              Positioned(top: -140, right: -120, child: _bgCircle(340, 0.14)),
+              Positioned(bottom: -150, left: -120, child: _bgCircle(340, 0.12)),
+              Positioned(bottom: -100, right: -90, child: _bgCircle(260, 0.16)),
+              SafeArea(
+                child: _loading
+                    ? Center(child: CircularProgressIndicator(color: AppColors.primary))
+                    : _queue.isEmpty
+                        ? (_totalAtStart == 0 ? _buildEmpty() : _buildSessionDone())
+                        : _buildQuiz(context),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
+
+  Widget _bgCircle(double size, double alpha) => Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.primary.withValues(alpha: alpha)),
+      );
 
   Widget _topBar(BuildContext context) {
     return Padding(
@@ -464,49 +485,210 @@ class _MistakesScreenState extends State<MistakesScreen> {
 
   Widget _buildSessionDone() {
     final total = _corrected + _skipped;
-    return Column(
+    final pct = total == 0 ? 0 : ((_corrected / total) * 100).round();
+    final allDone = _skipped == 0;
+
+    Widget laurel({required bool flip}) {
+      final icon = Icon(Icons.eco_rounded, size: 64, color: AppColors.primary.withValues(alpha: 0.85));
+      return Transform(
+        alignment: Alignment.center,
+        transform: Matrix4.identity()
+          ..scale(flip ? -1.0 : 1.0, 1.0)
+          ..rotateZ(0.35),
+        child: icon,
+      );
+    }
+
+    Widget statBlock({
+      required Widget leading,
+      required String top,
+      required String big,
+      required String bottom,
+    }) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          leading,
+          const SizedBox(width: 14),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(top, style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
+              Text(big, style: TextStyle(color: AppColors.textPrimary, fontSize: 26, fontWeight: FontWeight.w800, height: 1.15)),
+              Text(bottom, style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
+            ],
+          ),
+        ],
+      );
+    }
+
+    return Stack(
       children: [
-        _topBar(context),
-        Expanded(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(40),
+        // Botón atrás (cuadrado redondeado)
+        Positioned(
+          top: 12,
+          left: 16,
+          child: Material(
+            color: AppColors.primary.withValues(alpha: 0.22),
+            borderRadius: BorderRadius.circular(16),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(16),
+              onTap: _close,
+              child: SizedBox(
+                width: 52,
+                height: 52,
+                child: Icon(Icons.arrow_back_rounded, color: AppColors.textPrimary, size: 28),
+              ),
+            ),
+          ),
+        ),
+        Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(24, 72, 24, 32),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 640),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Container(
-                    width: 120,
-                    height: 120,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(colors: [AppColors.primary, AppColors.secondary]),
-                      boxShadow: [BoxShadow(color: AppColors.primary.withValues(alpha: 0.45), blurRadius: 32)],
+                  // Trofeo con anillos, laureles y destellos
+                  SizedBox(
+                    width: 300,
+                    height: 190,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          width: 168,
+                          height: 168,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: AppColors.primary.withValues(alpha: 0.55), width: 2),
+                            boxShadow: [BoxShadow(color: AppColors.primary.withValues(alpha: 0.4), blurRadius: 40)],
+                          ),
+                        ),
+                        Container(
+                          width: 140,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            gradient: LinearGradient(
+                              colors: [AppColors.primary, AppColors.secondary],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            boxShadow: [BoxShadow(color: AppColors.primary.withValues(alpha: 0.5), blurRadius: 28)],
+                          ),
+                          child: Icon(Icons.emoji_events_rounded, size: 76, color: AppColors.textOnPrimary),
+                        ),
+                        Positioned(left: 40, bottom: 38, child: laurel(flip: false)),
+                        Positioned(right: 40, bottom: 38, child: laurel(flip: true)),
+                        Positioned(left: 14, top: 62, child: Icon(Icons.auto_awesome_rounded, size: 28, color: AppColors.primary)),
+                        Positioned(left: 64, top: 10, child: Icon(Icons.auto_awesome_rounded, size: 16, color: AppColors.primary)),
+                        Positioned(right: 64, top: 10, child: Icon(Icons.auto_awesome_rounded, size: 16, color: AppColors.primary)),
+                      ],
                     ),
-                    child: Icon(Icons.emoji_events_rounded, size: 64, color: AppColors.textOnPrimary),
                   ),
-                  const SizedBox(height: 32),
-                  Text('¡Sesión terminada!', style: TextStyle(color: AppColors.textPrimary, fontSize: 32, fontWeight: FontWeight.w800)),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Corregiste $_corrected de $total ${total == 1 ? "error" : "errores"}.',
+                  const SizedBox(height: 10),
+                  Text.rich(
+                    TextSpan(
+                      style: TextStyle(color: AppColors.textPrimary, fontSize: 40, fontWeight: FontWeight.w800),
+                      children: [
+                        const TextSpan(text: '¡Sesión '),
+                        TextSpan(text: 'terminada', style: TextStyle(color: AppColors.primary)),
+                        const TextSpan(text: '!'),
+                      ],
+                    ),
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: AppColors.textSecondary, fontSize: 18),
                   ),
-                  if (_skipped > 0) ...[
-                    const SizedBox(height: 8),
-                    Text(
-                      'Los $_skipped que aún fallaste te esperan la próxima vez.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: AppColors.textMuted, fontSize: 16),
+                  const SizedBox(height: 22),
+
+                  // Tarjeta de estadísticas
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceCard.withValues(alpha: 0.85),
+                      borderRadius: BorderRadius.circular(28),
+                      border: Border.all(color: AppColors.primary.withValues(alpha: 0.3)),
                     ),
-                  ],
-                  const SizedBox(height: 40),
+                    child: IntrinsicHeight(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Center(
+                              child: statBlock(
+                                leading: Container(
+                                  width: 54,
+                                  height: 54,
+                                  decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.success),
+                                  child: Icon(Icons.check_rounded, color: AppColors.textOnPrimary, size: 32),
+                                ),
+                                top: 'Corrigiste',
+                                big: '$_corrected de $total',
+                                bottom: total == 1 ? 'error' : 'errores',
+                              ),
+                            ),
+                          ),
+                          VerticalDivider(color: AppColors.border, width: 24, thickness: 1.5),
+                          Expanded(
+                            child: Center(
+                              child: statBlock(
+                                leading: Icon(Icons.schedule_rounded, color: AppColors.primary, size: 54),
+                                top: 'Tu progreso',
+                                big: '$pct%',
+                                bottom: 'de mejora',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 22),
+                  Text(
+                    allDone
+                        ? '¡Corregiste todos tus errores!'
+                        : 'Los $_skipped restantes te esperan en la próxima vez.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: AppColors.textSecondary, fontSize: 17),
+                  ),
+                  const SizedBox(height: 12),
+                  Container(
+                    width: 70,
+                    height: 4,
+                    decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(4),
+                      boxShadow: [BoxShadow(color: AppColors.primary.withValues(alpha: 0.6), blurRadius: 10)],
+                    ),
+                  ),
+                  const SizedBox(height: 28),
                   SizedBox(
                     width: double.infinity,
-                    child: _GradientButton(
-                      label: 'Volver al inicio',
-                      icon: Icons.check_rounded,
-                      onPressed: _close,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: _close,
+                        borderRadius: BorderRadius.circular(40),
+                        child: Ink(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [AppColors.primary, AppColors.secondary]),
+                            borderRadius: BorderRadius.circular(40),
+                            boxShadow: [BoxShadow(color: AppColors.primary.withValues(alpha: 0.5), blurRadius: 28)],
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.check_rounded, color: AppColors.textOnPrimary, size: 26),
+                              const SizedBox(width: 12),
+                              Text('Volver al Inicio',
+                                  style: TextStyle(color: AppColors.textOnPrimary, fontSize: 19, fontWeight: FontWeight.w800)),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -521,85 +703,159 @@ class _MistakesScreenState extends State<MistakesScreen> {
   Widget _buildQuiz(BuildContext context) {
     final total = _totalAtStart;
     final position = total - _queue.length + 1;
+    final showBrain = MediaQuery.of(context).size.width >= 600;
 
     return Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 700),
+        constraints: const BoxConstraints(maxWidth: 760),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 32),
+          padding: const EdgeInsets.fromLTRB(20, 14, 20, 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // ── Barra superior: "Dejar de repasar" + progreso ──
               Row(
                 children: [
-                  IconButton(
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints(),
-                    icon: Icon(Icons.arrow_back_rounded, color: AppColors.textPrimary, size: 32),
-                    onPressed: _close,
-                  ),
+                  _StopButton(onPressed: _close),
                   const SizedBox(width: 16),
                   Expanded(child: _ProgressBar(current: _corrected, total: total)),
                 ],
               ),
-              const SizedBox(height: 32),
-              Text(
-                '¡Vamos a mejorar!',
-                style: TextStyle(color: AppColors.info, fontSize: 16, fontWeight: FontWeight.w700),
+              const SizedBox(height: 26),
+
+              // ── Encabezado ──
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: AppColors.primary.withValues(alpha: 0.2),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: AppColors.primary.withValues(alpha: 0.5)),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.bar_chart_rounded, size: 20, color: AppColors.primary),
+                              const SizedBox(width: 8),
+                              Text('¡Vamos a mejorar!',
+                                  style: TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.w700)),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        Text.rich(
+                          TextSpan(
+                            style: TextStyle(color: AppColors.textPrimary, fontSize: 38, fontWeight: FontWeight.w800, height: 1.1),
+                            children: [
+                              const TextSpan(text: 'Corrige tus '),
+                              TextSpan(text: 'errores', style: TextStyle(color: AppColors.primary)),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          'Revisa cada pregunta, corrige el error y avanza.\nCada acierto te acerca a dominar el tema.',
+                          style: TextStyle(color: AppColors.textMuted, fontSize: 15, height: 1.45),
+                        ),
+                      ],
+                    ),
+                  ),
+                  if (showBrain)
+                    SizedBox(
+                      width: 150,
+                      height: 130,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Icon(Icons.psychology_rounded, size: 110, color: AppColors.primary.withValues(alpha: 0.55)),
+                          Positioned(left: 6, bottom: 22, child: Icon(Icons.auto_awesome_rounded, size: 22, color: AppColors.primary)),
+                          Positioned(right: 4, top: 4, child: Icon(Icons.auto_awesome_rounded, size: 18, color: AppColors.primary)),
+                        ],
+                      ),
+                    ),
+                ],
               ),
-              const SizedBox(height: 8),
-              Text(
-                'Corrige tus errores',
-                style: TextStyle(color: AppColors.textPrimary, fontSize: 36, fontWeight: FontWeight.w800),
-              ),
-              const SizedBox(height: 12),
-              Text(
-                'Revisa cada pregunta, corrige el error y avanza.\nCada acierto te acerca a dominar el tema.',
-                style: TextStyle(color: AppColors.textMuted, fontSize: 16, height: 1.4),
-              ),
-              const SizedBox(height: 32),
+              const SizedBox(height: 26),
+
+              // ── Tarjeta de la pregunta ──
               _ShakeWrap(
                 active: _shaking,
                 child: Container(
-                  padding: const EdgeInsets.all(32),
+                  padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
-                    color: AppColors.surfaceCard,
+                    color: AppColors.surfaceCard.withValues(alpha: 0.92),
                     borderRadius: BorderRadius.circular(28),
-                    border: Border.all(color: AppColors.border, width: 1.5),
-                    boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.35), blurRadius: 32, offset: const Offset(0, 16))],
+                    border: Border.all(color: AppColors.primary.withValues(alpha: 0.55), width: 1.6),
+                    boxShadow: [
+                      BoxShadow(color: AppColors.primary.withValues(alpha: 0.2), blurRadius: 36),
+                      BoxShadow(color: Colors.black.withValues(alpha: 0.3), blurRadius: 28, offset: const Offset(0, 14)),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Wrap(
+                        alignment: WrapAlignment.spaceBetween,
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        spacing: 12,
+                        runSpacing: 10,
                         children: [
-                          _Chip(icon: Icons.auto_awesome_rounded, label: _tema),
+                          _Chip(icon: Icons.shield_rounded, label: _tema),
                           _Pill(text: 'Pregunta $position / $total'),
                         ],
                       ),
-                      const SizedBox(height: 8),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: _Pill(text: 'Fallaste $_attempts ${_attempts == 1 ? "vez" : "veces"}', muted: true),
+                      const SizedBox(height: 12),
+                      _FailPill(attempts: _attempts),
+                      const SizedBox(height: 18),
+                      Divider(color: AppColors.border, height: 1),
+                      const SizedBox(height: 22),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.primary),
+                            child: Icon(Icons.priority_high_rounded, color: AppColors.textOnPrimary, size: 24),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 6),
+                              child: Text(
+                                _getQuestionText(),
+                                style: TextStyle(
+                                  color: AppColors.textPrimary,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.4,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 28),
-                      Text(
-                        _getQuestionText(),
-                        style: TextStyle(
-                          color: AppColors.textPrimary,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          height: 1.4,
-                        ),
-                      ),
-                      const SizedBox(height: 28),
+                      const SizedBox(height: 22),
                       KeyedSubtree(
                         key: ValueKey(_mistake['questionId']),
                         child: _buildBody(),
                       ),
+                      if (!_revealed) ...[
+                        const SizedBox(height: 22),
+                        _HintTile(
+                          open: _hintOpen,
+                          explanation: _explanation(_q),
+                          onTap: () => setState(() => _hintOpen = !_hintOpen),
+                        ),
+                      ],
                       if (_revealed) ...[
-                        const SizedBox(height: 28),
+                        const SizedBox(height: 24),
                         _FeedbackPanel(
                           isCorrect: _lastCorrect,
                           explanation: _explanation(_q),
@@ -610,8 +866,8 @@ class _MistakesScreenState extends State<MistakesScreen> {
                               : _wrongDetail(),
                         ),
                       ],
-                      const SizedBox(height: 32),
-                      SizedBox(width: double.infinity, child: _buildActionButton()),
+                      const SizedBox(height: 26),
+                      _buildActions(),
                     ],
                   ),
                 ),
@@ -664,7 +920,7 @@ class _MistakesScreenState extends State<MistakesScreen> {
     return Column(
       children: [
         for (var i = 0; i < options.length; i++) ...[
-          if (i > 0) const SizedBox(height: 16),
+          if (i > 0) const SizedBox(height: 14),
           _OptionRow(
             letter: String.fromCharCode(65 + i),
             text: options[i],
@@ -697,7 +953,7 @@ class _MistakesScreenState extends State<MistakesScreen> {
       );
     }
 
-    return Column(children: [row(true, 'Verdadero'), const SizedBox(height: 16), row(false, 'Falso')]);
+    return Column(children: [row(true, 'Verdadero'), const SizedBox(height: 14), row(false, 'Falso')]);
   }
 
   Widget _buildFillBlank() {
@@ -729,11 +985,14 @@ class _MistakesScreenState extends State<MistakesScreen> {
             ],
           ),
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 22),
         TextField(
           controller: _fillController,
           enabled: !_revealed,
           onChanged: (_) => setState(() {}),
+          onSubmitted: (_) {
+            if (_fillController.text.trim().isNotEmpty) _verifyFillBlank();
+          },
           style: TextStyle(color: AppColors.textPrimary, fontSize: 18),
           cursorColor: AppColors.info,
           decoration: InputDecoration(
@@ -760,9 +1019,7 @@ class _MistakesScreenState extends State<MistakesScreen> {
       physics: const NeverScrollableScrollPhysics(),
       buildDefaultDragHandles: false,
       itemCount: order.length,
-      onReorder: (int oldIndex, int newIndex) {
-        _reorder(oldIndex, newIndex);
-      },
+      onReorderItem: _reorder,
       proxyDecorator: (child, index, animation) => Material(color: Colors.transparent, child: child),
       itemBuilder: (context, position) {
         final itemIndex = order[position];
@@ -785,9 +1042,8 @@ class _MistakesScreenState extends State<MistakesScreen> {
                 height: 36,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle, 
-                  gradient: LinearGradient(colors: [AppColors.primary, AppColors.secondary])
-                ),
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(colors: [AppColors.primary, AppColors.secondary])),
                 child: Text('${position + 1}', style: TextStyle(color: AppColors.textOnPrimary, fontSize: 16, fontWeight: FontWeight.w700)),
               ),
               const SizedBox(width: 16),
@@ -821,25 +1077,227 @@ class _MistakesScreenState extends State<MistakesScreen> {
     );
   }
 
-  Widget _buildActionButton() {
+  // ───────────── Botones de acción: Verificar + Saltar pregunta ─────────────
+  Widget _buildActions() {
     if (_revealed) {
-      return _GradientButton(label: 'Siguiente', icon: Icons.arrow_forward_rounded, onPressed: _next);
+      return SizedBox(
+        width: double.infinity,
+        child: _GradientButton(label: 'Siguiente', icon: Icons.arrow_forward_rounded, onPressed: _next),
+      );
     }
+
+    final skip = _SkipButton(onPressed: _skip);
+
+    Widget? primary;
     switch (_type) {
       case _MType.fillBlank:
-        return _GradientButton(label: 'Verificar', icon: Icons.check_rounded, onPressed: _fillController.text.trim().isEmpty ? null : _verifyFillBlank);
+        primary = _GradientButton(
+          label: 'Verificar',
+          icon: Icons.check_rounded,
+          onPressed: _fillController.text.trim().isEmpty ? null : _verifyFillBlank,
+        );
+        break;
       case _MType.ordering:
-        return _GradientButton(label: 'Verificar', icon: Icons.check_rounded, onPressed: _verifyOrdering);
+        primary = _GradientButton(label: 'Verificar', icon: Icons.check_rounded, onPressed: _verifyOrdering);
+        break;
       case _MType.unsupported:
-        return _GradientButton(label: 'Marcar como corregido', icon: Icons.check_rounded, onPressed: () => _answer(true));
+        primary = _GradientButton(label: 'Marcar como corregido', icon: Icons.check_rounded, onPressed: () => _answer(true));
+        break;
       case _MType.multipleChoice:
       case _MType.trueFalse:
-        return const _GradientButton(label: 'Siguiente', icon: Icons.arrow_forward_rounded, onPressed: null);
+        primary = null; // se responde tocando la opción
+        break;
     }
+
+    // Opción múltiple / V-F: solo "Saltar pregunta"
+    if (primary == null) {
+      return SizedBox(width: double.infinity, child: skip);
+    }
+    final Widget verify = primary;
+
+    return LayoutBuilder(
+      builder: (context, c) {
+        if (c.maxWidth < 420) {
+          return Column(
+            children: [
+              SizedBox(width: double.infinity, child: verify),
+              const SizedBox(height: 12),
+              SizedBox(width: double.infinity, child: skip),
+            ],
+          );
+        }
+        return Row(
+          children: [
+            Expanded(flex: 3, child: verify),
+            const SizedBox(width: 14),
+            Expanded(flex: 2, child: skip),
+          ],
+        );
+      },
+    );
   }
 }
 
 // ─────────────────────────── Widgets de apoyo ──────────────────────────
+
+class _StopButton extends StatelessWidget {
+  const _StopButton({required this.onPressed});
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(30),
+        child: Ink(
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [AppColors.primary, AppColors.secondary]),
+            borderRadius: BorderRadius.circular(30),
+            boxShadow: [BoxShadow(color: AppColors.primary.withValues(alpha: 0.4), blurRadius: 18)],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.block_rounded, color: AppColors.textOnPrimary, size: 22),
+              const SizedBox(width: 8),
+              Text('Dejar de repasar',
+                  style: TextStyle(color: AppColors.textOnPrimary, fontSize: 15, fontWeight: FontWeight.w800)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _SkipButton extends StatelessWidget {
+  const _SkipButton({required this.onPressed});
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: AppColors.primary.withValues(alpha: 0.7), width: 1.6),
+            color: AppColors.surface.withValues(alpha: 0.6),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.skip_next_rounded, color: AppColors.primary, size: 24),
+              const SizedBox(width: 8),
+              Flexible(
+                child: Text('Saltar pregunta',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: AppColors.textPrimary, fontSize: 16, fontWeight: FontWeight.w700)),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _HintTile extends StatelessWidget {
+  const _HintTile({required this.open, required this.explanation, required this.onTap});
+  final bool open;
+  final String explanation;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: AppColors.surface.withValues(alpha: 0.6),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          InkWell(
+            onTap: onTap,
+            borderRadius: BorderRadius.circular(18),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+              child: Row(
+                children: [
+                  Icon(Icons.lightbulb_outline_rounded, color: AppColors.textSecondary, size: 24),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Text('Revisa la explicación para entender el error.',
+                        style: TextStyle(color: AppColors.textMuted, fontSize: 15)),
+                  ),
+                  AnimatedRotation(
+                    turns: open ? 0.5 : 0,
+                    duration: const Duration(milliseconds: 200),
+                    child: Icon(Icons.keyboard_arrow_down_rounded, color: AppColors.textPrimary, size: 28),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          AnimatedSize(
+            duration: const Duration(milliseconds: 220),
+            curve: Curves.easeInOut,
+            alignment: Alignment.topCenter,
+            child: open
+                ? Padding(
+                    padding: const EdgeInsets.fromLTRB(18, 0, 18, 16),
+                    child: Text(explanation, style: TextStyle(color: AppColors.textSecondary, fontSize: 15, height: 1.45)),
+                  )
+                : const SizedBox(width: double.infinity),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _FailPill extends StatelessWidget {
+  const _FailPill({required this.attempts});
+  final int attempts;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(8, 8, 18, 8),
+      decoration: BoxDecoration(
+        color: AppColors.error.withValues(alpha: 0.18),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: AppColors.error.withValues(alpha: 0.5)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 30,
+            height: 30,
+            decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.error),
+            child: Icon(Icons.close_rounded, size: 18, color: AppColors.textOnPrimary),
+          ),
+          const SizedBox(width: 10),
+          Text(
+            'Fallaste $attempts ${attempts == 1 ? "vez" : "veces"}',
+            style: TextStyle(color: AppColors.textPrimary, fontSize: 15, fontWeight: FontWeight.w700),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class _ProgressBar extends StatelessWidget {
   const _ProgressBar({required this.current, required this.total});
@@ -891,9 +1349,9 @@ class _Chip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 18, color: AppColors.primary),
+          Icon(icon, size: 20, color: AppColors.primary),
           const SizedBox(width: 8),
-          Text(label, style: TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.w600)),
+          Flexible(child: Text(label, overflow: TextOverflow.ellipsis, style: TextStyle(color: AppColors.textPrimary, fontSize: 15, fontWeight: FontWeight.w700))),
         ],
       ),
     );
@@ -901,18 +1359,21 @@ class _Chip extends StatelessWidget {
 }
 
 class _Pill extends StatelessWidget {
-  const _Pill({required this.text, this.muted = false});
+  const _Pill({required this.text});
   final String text;
-  final bool muted;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-      decoration: BoxDecoration(color: AppColors.surface, borderRadius: BorderRadius.circular(24)),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+      decoration: BoxDecoration(
+        color: AppColors.surface,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: AppColors.border),
+      ),
       child: Text(
         text,
-        style: TextStyle(color: muted ? AppColors.warning : AppColors.textSecondary, fontSize: 14, fontWeight: FontWeight.w600),
+        style: TextStyle(color: AppColors.textPrimary, fontSize: 15, fontWeight: FontWeight.w700),
       ),
     );
   }
@@ -948,7 +1409,7 @@ class _OptionRow extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
         decoration: BoxDecoration(
           color: AppColors.surface,
           borderRadius: BorderRadius.circular(18),
@@ -998,7 +1459,7 @@ class _FeedbackPanel extends StatelessWidget {
       curve: Curves.easeOutBack,
       builder: (context, v, child) => Opacity(opacity: v.clamp(0.0, 1.0).toDouble(), child: Transform.translate(offset: Offset(0, 10 * (1 - v)), child: child)),
       child: Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(22),
         decoration: BoxDecoration(color: color.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(20), border: Border.all(color: color, width: 2)),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -1062,7 +1523,7 @@ class _GradientButton extends StatelessWidget {
               children: [
                 Icon(icon, color: AppColors.textOnPrimary, size: 24),
                 const SizedBox(width: 12),
-                Text(label, style: TextStyle(color: AppColors.textOnPrimary, fontSize: 18, fontWeight: FontWeight.w700)),
+                Flexible(child: Text(label, overflow: TextOverflow.ellipsis, style: TextStyle(color: AppColors.textOnPrimary, fontSize: 18, fontWeight: FontWeight.w700))),
               ],
             ),
           ),

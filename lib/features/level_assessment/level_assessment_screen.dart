@@ -21,27 +21,28 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
     'Experto', 'Experto Avanzado', 'Maestro',
   ];
 
-  // ✅ Cantidad de preguntas del examen según el nivel actual
-  static const _questionsByLevel = [8, 10, 12, 14, 16, 20];
+  // ✅ Preguntas del examen por nivel: 25, 35, 45, 55, 65, 75
+  static const _questionsByLevel = [25, 35, 45, 55, 65, 75];
 
-  // ✅ Segundos por pregunta según el nivel (más difícil = más tiempo)
+  // Segundos disponibles POR PREGUNTA (el cronómetro del encabezado es el total)
   static const _secondsByLevel = [20, 25, 30, 35, 40, 45];
+
+  static const _pointsPerCorrect = 10;
 
   List<Map<String, dynamic>> _questions = [];
   int _currentLevel = 0;
   int _index = 0;
   int _correct = 0;
   int? _selected;
-  bool _answered = false;
+  int _committedIndex = -1; // última pregunta ya contabilizada
 
   bool _loading = true;
   bool _finished = false;
-  bool _noQuestions = false; // si el usuario aún no domina nada
+  bool _finishing = false;
+  bool _noQuestions = false;
 
-  // ⏱️ Timer por pregunta
   Timer? _timer;
-  int _remaining = 0;
-  int _timePerQuestion = 20;
+  int _totalRemaining = 0;
 
   @override
   void initState() {
@@ -58,13 +59,17 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
   int _asInt(dynamic v) =>
       v is num ? v.toInt() : int.tryParse('${v ?? ''}') ?? 0;
 
-  /// Extrae los IDs de preguntas que el usuario ACERTÓ o CORRIGIÓ.
-  /// Busca en varios campos posibles por compatibilidad con tu schema.
+  // ✅ El nivel sale del campo `experienceLevel` (texto) del documento
+  int _levelFrom(Map<String, dynamic> data) {
+    final i = _levelNames.indexOf('${data['experienceLevel'] ?? ''}'.trim());
+    return i < 0 ? 0 : i;
+  }
+
   List<String> _extractMasteredIds(Map<String, dynamic> data) {
     final ids = <String>{};
-
-    // 1) Lista directa de correctas (nombres posibles)
-    for (final key in ['correctQuestionIds', 'masteredQuestions', 'answeredCorrectly']) {
+    for (final key in [
+      'correctQuestionIds', 'masteredQuestions', 'answeredCorrectly'
+    ]) {
       final raw = data[key];
       if (raw is List) {
         for (final e in raw) {
@@ -73,8 +78,6 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
         }
       }
     }
-
-    // 2) De los errores, los que fueron corregidos
     final mistakes = data['mistakes'];
     if (mistakes is List) {
       for (final m in mistakes) {
@@ -84,7 +87,6 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
         }
       }
     }
-
     return ids.toList();
   }
 
@@ -96,15 +98,13 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
       if (doc.exists) profileData = doc.data() ?? {};
     }
 
-    final level = _asInt(profileData['level']).clamp(0, 5);
+    final level = _levelFrom(profileData);
     final needed = _questionsByLevel[level];
     final masteredIds = _extractMasteredIds(profileData);
 
-    // 1) Preguntas dominadas (acertadas o corregidas)
-    List<Map<String, dynamic>> pool = await QuestionService.getQuestionsByIds(masteredIds);
+    List<Map<String, dynamic>> pool =
+        await QuestionService.getQuestionsByIds(masteredIds);
 
-    // 2) Si faltan para completar el examen, rellenar con opción múltiple
-    //    de los temas que ya practicó (topicMastery > 0) o de todo el banco.
     if (pool.length < needed) {
       final allMc = await QuestionService.getMultipleChoiceQuestions();
       final practicedTopics = <String>{};
@@ -121,12 +121,11 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
         if (id == null || existingIds.contains(id)) return false;
         final tema = q['tema']?.toString() ?? '';
         return practicedTopics.isEmpty || practicedTopics.contains(tema);
-      }).toList()..shuffle();
-
+      }).toList()
+        ..shuffle();
       pool.addAll(fillers);
     }
 
-    // 3) Tomar exactamente 'needed' y mezclar
     pool.shuffle();
     final exam = pool.length >= needed ? pool.sublist(0, needed) : pool;
 
@@ -134,52 +133,55 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
     setState(() {
       _currentLevel = level;
       _questions = exam;
-      _timePerQuestion = _secondsByLevel[level];
-      _remaining = _timePerQuestion;
+      _totalRemaining = exam.length * _secondsByLevel[level];
       _noQuestions = exam.isEmpty;
       _loading = false;
     });
-
     if (exam.isNotEmpty) _startTimer();
   }
 
+  // ───────────── Cronómetro global ─────────────
   void _startTimer() {
     _timer?.cancel();
-    setState(() => _remaining = _timePerQuestion);
     _timer = Timer.periodic(const Duration(seconds: 1), (t) {
-      if (_answered) return;
-      if (_remaining <= 1) {
+      if (!mounted) return;
+      if (_totalRemaining <= 1) {
         t.cancel();
-        _onTimeout();
+        setState(() => _totalRemaining = 0);
+        _commitCurrent(); // cuenta la selección pendiente, si la hay
+        _finish();
       } else {
-        setState(() => _remaining--);
+        setState(() => _totalRemaining--);
       }
     });
   }
 
-  void _onTimeout() {
-    // Se acaba el tiempo: cuenta como incorrecta
-    setState(() {
-      _answered = true;
-      _selected = null;
-    });
-    Future.delayed(const Duration(milliseconds: 900), _next);
+  String _fmt(int seconds) {
+    final h = seconds ~/ 3600;
+    final m = (seconds % 3600) ~/ 60;
+    final s = seconds % 60;
+    String two(int n) => n.toString().padLeft(2, '0');
+    return '${two(h)}:${two(m)}:${two(s)}';
   }
 
-  void _answer(int i) {
-    if (_answered) return;
-    _timer?.cancel();
-    final q = _questions[_index];
-    final correctIdx = _asInt(q['respuesta_correcta']);
-    setState(() {
-      _selected = i;
-      _answered = true;
-      if (i == correctIdx) _correct++;
-    });
-    Future.delayed(const Duration(milliseconds: 700), _next);
+  // ───────────── Flujo de preguntas ─────────────
+  void _select(int i) {
+    if (_finishing) return;
+    setState(() => _selected = i);
   }
 
-  void _next() {
+  /// Contabiliza la respuesta de la pregunta actual (una sola vez).
+  void _commitCurrent() {
+    if (_committedIndex == _index || _selected == null) return;
+    _committedIndex = _index;
+    final correctIdx = _asInt(_questions[_index]['respuesta_correcta']);
+    if (_selected == correctIdx) _correct++;
+  }
+
+  void _onNext() {
+    if (_selected == null || _finishing) return;
+    setState(_commitCurrent);
+
     if (_index + 1 >= _questions.length) {
       _finish();
       return;
@@ -187,13 +189,9 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
     setState(() {
       _index++;
       _selected = null;
-      _answered = false;
     });
-    _startTimer();
   }
 
-  /// ✅ Reglas: ≥80% sube, 50–79% mantiene, <50% baja.
-  /// En nivel 0 no puede bajar más. En nivel 5 (Maestro) puede BAJAR si falla.
   int _applyRules(double score) {
     if (score >= 0.80) return (_currentLevel + 1).clamp(0, 5);
     if (score >= 0.50) return _currentLevel;
@@ -201,174 +199,329 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
   }
 
   Future<void> _finish() async {
+    if (_finishing || _finished) return;
+    _finishing = true;
     _timer?.cancel();
+
     final score = _questions.isEmpty ? 0.0 : _correct / _questions.length;
     final newLevel = _applyRules(score);
 
-    final ref = ProfileDataService.refFor(widget.userProfile.id);
-    if (ref != null) {
-      await ref.set({'level': newLevel}, SetOptions(merge: true));
+    try {
+      final ref = ProfileDataService.refFor(widget.userProfile.id);
+      if (ref != null) {
+        // ✅ Suba, se quede o baje: el progreso vuelve a 0.
+        // La línea base se iguala a los aciertos totales ACTUALES.
+        await FirebaseFirestore.instance.runTransaction((tx) async {
+          final snap = await tx.get(ref);
+          final data = snap.data() ?? <String, dynamic>{};
+          final totalNow = _asInt(data['correctAnswers']);
+          tx.set(
+            ref,
+            {
+              'level': newLevel,
+              'experienceLevel': _levelNames[newLevel], // ✅ nivel en texto
+              'correctAnswersAtLastExam': totalNow,
+            },
+            SetOptions(merge: true),
+          );
+        });
+      }
+    } catch (e) {
+      debugPrint('❌ Error guardando resultado del examen: $e');
     }
 
     if (!mounted) return;
     setState(() => _finished = true);
   }
 
+  Future<void> _confirmExit() async {
+    final leave = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.surfaceCard,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: BorderSide(color: AppColors.border),
+        ),
+        title: Text('¿Salir del examen?',
+            style: TextStyle(
+                color: AppColors.textPrimary, fontWeight: FontWeight.w800)),
+        content: Text('Perderás tu avance en este examen.',
+            style: TextStyle(color: AppColors.textMuted)),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: Text('Continuar', style: TextStyle(color: AppColors.textMuted)),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text('Salir',
+                style: TextStyle(
+                    color: AppColors.error, fontWeight: FontWeight.w800)),
+          ),
+        ],
+      ),
+    );
+    if (leave == true && mounted) Navigator.of(context).pop();
+  }
+
+  // ───────────── UI ─────────────
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
+    final inExam = !_loading && !_noQuestions && !_finished;
+
+    return PopScope(
+      canPop: !inExam,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) _confirmExit();
+      },
+      child: Scaffold(
         backgroundColor: AppColors.background,
-        elevation: 0,
-        title: Text(
-          _finished ? 'Resultado' : 'Examen de Nivelación',
-          style: TextStyle(color: AppColors.textPrimary, fontSize: 18),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [AppColors.background, AppColors.surface],
+            ),
+          ),
+          child: SafeArea(
+            child: _loading
+                ? Center(
+                    child: CircularProgressIndicator(color: AppColors.primary))
+                : _noQuestions
+                    ? _buildEmpty()
+                    : _finished
+                        ? _buildResult()
+                        : _buildExam(),
+          ),
         ),
-        iconTheme: IconThemeData(color: AppColors.textPrimary),
       ),
-      body: _loading
-          ? Center(child: CircularProgressIndicator(color: AppColors.primary))
-          : _noQuestions
-              ? _buildEmpty()
-              : _finished
-                  ? _buildResult()
-                  : _buildQuestion(),
     );
   }
 
-  Widget _buildEmpty() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.hourglass_empty_rounded,
-                color: AppColors.textMuted, size: 64),
-            const SizedBox(height: 16),
-            Text(
-              'Aún no tienes preguntas dominadas',
-              textAlign: TextAlign.center,
+  Widget _buildHeader({required String title, bool showTimer = true}) {
+    final low = _totalRemaining <= 60;
+    final timerColor = low ? AppColors.error : AppColors.primary;
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            AppColors.surface,
+            AppColors.primary.withValues(alpha: 0.28),
+          ],
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+        ),
+        border: Border(bottom: BorderSide(color: AppColors.border)),
+      ),
+      child: Row(
+        children: [
+          InkWell(
+            customBorder: const CircleBorder(),
+            onTap: () => Navigator.of(context).maybePop(),
+            child: Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.surfaceCard,
+              ),
+              child: Icon(Icons.arrow_back_rounded,
+                  color: AppColors.textPrimary, size: 24),
+            ),
+          ),
+          const SizedBox(width: 14),
+          Container(width: 1, height: 30, color: AppColors.border),
+          const SizedBox(width: 14),
+          Icon(Icons.psychology_rounded, color: AppColors.primary, size: 36),
+          const SizedBox(width: 12),
+          Container(width: 1, height: 30, color: AppColors.border),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Text(
+              title,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                   color: AppColors.textPrimary,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700),
+                  fontSize: 22,
+                  fontWeight: FontWeight.w800),
             ),
-            const SizedBox(height: 8),
-            Text(
-              'Responde preguntas en los módulos y corrige tus errores '
-              'en "Mis Errores" para desbloquear tu examen.',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: AppColors.textMuted, fontSize: 13),
+          ),
+          if (showTimer)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: AppColors.background.withValues(alpha: 0.6),
+                border: Border.all(color: timerColor, width: 2),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.timer_outlined, color: timerColor, size: 24),
+                  const SizedBox(width: 10),
+                  Text(
+                    _fmt(_totalRemaining),
+                    style: TextStyle(
+                        color: AppColors.textPrimary,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                        fontFeatures: const [FontFeature.tabularFigures()]),
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary),
-              child: Text('Volver',
-                  style: TextStyle(color: Colors.white)),
-            ),
-          ],
-        ),
+        ],
       ),
     );
   }
 
-  Widget _buildQuestion() {
+  Widget _buildExam() {
     final q = _questions[_index];
     final options = List<String>.from(q['opciones'] ?? []);
-    final correctIdx = _asInt(q['respuesta_correcta']);
     final progress = (_index + 1) / _questions.length;
-    final timeFraction = _remaining / _timePerQuestion;
-    final timeColor = _remaining <= 5 ? AppColors.error : AppColors.primary;
+    final isLast = _index + 1 >= _questions.length;
+    final hasSelection = _selected != null;
 
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Progreso del examen
-            ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: LinearProgressIndicator(
-                value: progress,
-                minHeight: 6,
-                backgroundColor: AppColors.border,
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
-              ),
-            ),
-            const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Pregunta ${_index + 1} de ${_questions.length}',
-                  style: TextStyle(color: AppColors.textMuted, fontSize: 13),
-                ),
-                Text(
-                  _levelNames[_currentLevel],
-                  style: TextStyle(
-                      color: AppColors.primary,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700),
-                ),
-              ],
-            ),
-
-            // ⏱️ Timer
-            const SizedBox(height: 14),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: TweenAnimationBuilder<double>(
-                tween: Tween(begin: 1.0, end: timeFraction),
-                duration: const Duration(milliseconds: 250),
-                builder: (_, v, __) => LinearProgressIndicator(
-                  value: _answered ? 0.0 : v,
-                  minHeight: 6,
-                  backgroundColor: AppColors.border,
-                  valueColor: AlwaysStoppedAnimation<Color>(timeColor),
-                ),
-              ),
-            ),
-            const SizedBox(height: 6),
-            Row(
-              children: [
-                Icon(Icons.timer_rounded, color: timeColor, size: 16),
-                const SizedBox(width: 6),
-                Text(
-                  _answered ? 'Tiempo detenido' : '$_remaining s',
-                  style: TextStyle(
-                      color: timeColor,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 18),
-            Expanded(
-              child: SingleChildScrollView(
+    return Column(
+      children: [
+        _buildHeader(title: 'Examen de Nivelación'),
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 1100),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      q['pregunta']?.toString() ?? 'Pregunta sin texto',
-                      style: TextStyle(
-                        color: AppColors.textPrimary,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        height: 1.4,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Pregunta ${_index + 1} de ${_questions.length}',
+                          style: TextStyle(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: AppColors.primary.withValues(alpha: 0.18),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            _levelNames[_currentLevel],
+                            style: TextStyle(
+                                color: AppColors.primary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w800),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: TweenAnimationBuilder<double>(
+                        tween: Tween(begin: 0, end: progress),
+                        duration: const Duration(milliseconds: 350),
+                        curve: Curves.easeOut,
+                        builder: (_, v, __) => LinearProgressIndicator(
+                          value: v,
+                          minHeight: 9,
+                          backgroundColor: AppColors.border,
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(AppColors.primary),
+                        ),
                       ),
                     ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Icon(Icons.star_rounded,
+                            color: AppColors.primary, size: 22),
+                        const SizedBox(width: 6),
+                        Text(
+                          '${_correct * _pointsPerCorrect} p',
+                          style: TextStyle(
+                              color: AppColors.primary,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w800),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 18),
+                    _questionCard(q['pregunta']?.toString() ?? 'Pregunta sin texto'),
                     const SizedBox(height: 18),
                     for (int i = 0; i < options.length; i++)
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        child: _option(i, options[i], correctIdx),
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: _option(i, options[i]),
                       ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        _buildFooter(isLast: isLast, enabled: hasSelection),
+      ],
+    );
+  }
+
+  Widget _questionCard(String text) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: AppColors.surfaceCard,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              width: 5,
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+                borderRadius: const BorderRadius.horizontal(
+                    left: Radius.circular(14)),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 46,
+                      height: 46,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.primary,
+                      ),
+                      child: Icon(Icons.question_mark_rounded,
+                          color: AppColors.textOnPrimary, size: 26),
+                    ),
+                    const SizedBox(width: 18),
+                    Expanded(
+                      child: Text(
+                        text,
+                        style: TextStyle(
+                          color: AppColors.textPrimary,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          height: 1.35,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -379,61 +532,197 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
     );
   }
 
-  Widget _option(int i, String text, int correctIdx) {
-    Color bg = AppColors.surfaceCard;
-    Color border = AppColors.border;
-    Color textColor = AppColors.textPrimary;
-
-    if (_answered) {
-      if (i == correctIdx) {
-        bg = AppColors.success.withValues(alpha: 0.15);
-        border = AppColors.success;
-        textColor = AppColors.success;
-      } else if (i == _selected) {
-        bg = AppColors.error.withValues(alpha: 0.15);
-        border = AppColors.error;
-        textColor = AppColors.error;
-      } else {
-        textColor = AppColors.textMuted;
-      }
-    }
+  Widget _option(int i, String text) {
+    final selected = _selected == i;
+    final c = AppColors.primary;
 
     return GestureDetector(
-      onTap: _answered ? null : () => _answer(i),
-      child: Container(
-        padding: const EdgeInsets.all(14),
+      onTap: () => _select(i),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
         decoration: BoxDecoration(
-          color: bg,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: border, width: 2),
+          color: selected ? c.withValues(alpha: 0.18) : AppColors.surfaceCard,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: selected ? c : AppColors.border,
+            width: selected ? 2 : 1.2,
+          ),
+          boxShadow: selected
+              ? [BoxShadow(color: c.withValues(alpha: 0.25), blurRadius: 16)]
+              : null,
         ),
         child: Row(
           children: [
             Container(
-              width: 28,
-              height: 28,
+              width: 40,
+              height: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: border.withValues(alpha: 0.2),
+                color: selected ? c : c.withValues(alpha: 0.25),
               ),
               child: Center(
-                child: Text(String.fromCharCode(65 + i),
-                    style: TextStyle(
-                        color: textColor, fontWeight: FontWeight.w800)),
+                child: Text(
+                  String.fromCharCode(65 + i),
+                  style: TextStyle(
+                    color: selected ? AppColors.textOnPrimary : AppColors.textPrimary,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 17,
+                  ),
+                ),
               ),
             ),
-            const SizedBox(width: 12),
+            const SizedBox(width: 18),
             Expanded(
-                child: Text(text,
-                    style: TextStyle(color: textColor, fontSize: 15))),
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: AppColors.textPrimary,
+                  fontSize: 17,
+                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 
+  Widget _buildFooter({required bool isLast, required bool enabled}) {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(20, 14, 20, 14),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            AppColors.surface,
+            AppColors.primary.withValues(alpha: 0.2),
+          ],
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+        ),
+        border: Border(top: BorderSide(color: AppColors.border)),
+      ),
+      child: Row(
+        children: [
+          Flexible(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                color: AppColors.surfaceCard.withValues(alpha: 0.7),
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: AppColors.border),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.primary.withValues(alpha: 0.4),
+                    ),
+                    child: Icon(Icons.info_rounded,
+                        color: AppColors.textPrimary, size: 18),
+                  ),
+                  const SizedBox(width: 12),
+                  Flexible(
+                    child: Text(
+                      'Selecciona la respuesta correcta y continúa.',
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          color: AppColors.textSecondary, fontSize: 14),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(width: 16),
+          Material(
+            color: enabled ? AppColors.primary : AppColors.surfaceCard,
+            shape: const StadiumBorder(),
+            child: InkWell(
+              customBorder: const StadiumBorder(),
+              onTap: enabled ? _onNext : null,
+              child: Container(
+                constraints: const BoxConstraints(minHeight: 52),
+                padding: const EdgeInsets.symmetric(horizontal: 28),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      isLast ? Icons.check_rounded : Icons.arrow_forward_rounded,
+                      color: enabled ? AppColors.textOnPrimary : AppColors.textMuted,
+                    ),
+                    const SizedBox(width: 10),
+                    Text(
+                      isLast ? 'Finalizar' : 'Siguiente',
+                      style: TextStyle(
+                        color: enabled ? AppColors.textOnPrimary : AppColors.textMuted,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildEmpty() {
+    return Column(
+      children: [
+        _buildHeader(title: 'Examen de Nivelación', showTimer: false),
+        Expanded(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(32),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.hourglass_empty_rounded,
+                      color: AppColors.textMuted, size: 64),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Aún no tienes preguntas dominadas',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: AppColors.textPrimary,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Responde preguntas en los módulos y corrige tus errores '
+                    'en "Mis Errores" para desbloquear tu examen.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: AppColors.textMuted, fontSize: 13),
+                  ),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () => Navigator.pop(context),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.primary),
+                    child: Text('Volver',
+                        style: TextStyle(color: AppColors.textOnPrimary)),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildResult() {
-    final score = _correct / _questions.length;
+    final score = _questions.isEmpty ? 0.0 : _correct / _questions.length;
     final pct = (score * 100).round();
     final newLevel = _applyRules(score);
     final wentUp = newLevel > _currentLevel;
@@ -444,6 +733,12 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
         : wentDown
             ? AppColors.error
             : AppColors.info;
+
+    final IconData resultIcon = wentUp
+        ? Icons.check_rounded
+        : wentDown
+            ? Icons.priority_high_rounded
+            : Icons.info_rounded;
 
     final String resultText = wentUp
         ? '¡Subiste de nivel!'
@@ -459,81 +754,269 @@ class _LevelAssessmentScreenState extends State<LevelAssessmentScreen> {
             ? 'Superaste el 80%. Ahora eres ${_levelNames[newLevel]}.'
             : wentDown
                 ? 'No llegaste al 50%. Bajas a ${_levelNames[newLevel]} para reforzar.'
-                : 'Entre 50% y 79%. Sigues siendo ${_levelNames[newLevel]}. ¡Sigue así!';
+                : 'Entre 50% y 79%. Sigues siendo ${_levelNames[newLevel]}.';
 
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 130,
-              height: 130,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: resultColor.withValues(alpha: 0.15),
-                border: Border.all(color: resultColor, width: 3),
-              ),
-              child: Center(
-                child: Text('$pct%',
-                    style: TextStyle(
-                        color: resultColor,
-                        fontSize: 34,
-                        fontWeight: FontWeight.w800)),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Text(resultText,
-                style: TextStyle(
-                    color: AppColors.textPrimary,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800)),
-            const SizedBox(height: 8),
-            Text(
-              'Aciertos: $_correct de ${_questions.length}',
-              style: TextStyle(color: AppColors.textSecondary, fontSize: 14),
-            ),
-            const SizedBox(height: 16),
-            Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-              decoration: BoxDecoration(
-                color: resultColor.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: resultColor.withValues(alpha: 0.4)),
-              ),
-              child: Text(
-                message,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: resultColor,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    height: 1.4),
-              ),
-            ),
-            const SizedBox(height: 24),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () => Navigator.pop(context),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                ),
-                child: Text('Volver al inicio',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ],
+    final String detail = wentUp
+        ? '¡Excelente trabajo! Tu esfuerzo está dando frutos.'
+        : wentDown
+            ? 'Tu progreso indica que necesitas repasar los conceptos.'
+            : '¡Sigue practicando para subir de nivel!';
+
+    return Stack(
+      children: [
+        // Decoración de fondo
+        Positioned(
+          top: -90,
+          left: -90,
+          child: _bgCircle(260, AppColors.primary.withValues(alpha: 0.18)),
         ),
-      ),
+        Positioned(
+          top: -120,
+          right: -100,
+          child: _bgCircle(300, AppColors.primary.withValues(alpha: 0.14)),
+        ),
+        Positioned(
+          bottom: -130,
+          left: -110,
+          child: _bgCircle(320, AppColors.primary.withValues(alpha: 0.12)),
+        ),
+        Positioned(
+          bottom: -90,
+          right: -80,
+          child: _bgCircle(240, AppColors.primary.withValues(alpha: 0.16)),
+        ),
+        Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(20),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 640),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Cerebro con líneas
+                  Row(
+                    children: [
+                      Expanded(child: _fadeLine(true)),
+                      const SizedBox(width: 14),
+                      Icon(Icons.psychology_rounded,
+                          color: AppColors.primary, size: 56),
+                      const SizedBox(width: 14),
+                      Expanded(child: _fadeLine(false)),
+                    ],
+                  ),
+                  const SizedBox(height: 18),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.fromLTRB(22, 26, 22, 22),
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceCard.withValues(alpha: 0.85),
+                      borderRadius: BorderRadius.circular(28),
+                      border: Border.all(
+                          color: AppColors.primary.withValues(alpha: 0.4)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.primary.withValues(alpha: 0.18),
+                          blurRadius: 40,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        // Anillo de porcentaje + trofeo
+                        SizedBox(
+                          width: 190,
+                          height: 190,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              TweenAnimationBuilder<double>(
+                                tween: Tween(begin: 0, end: score.clamp(0.0, 1.0)),
+                                duration: const Duration(milliseconds: 1100),
+                                curve: Curves.easeOutCubic,
+                                builder: (_, v, __) => SizedBox(
+                                  width: 170,
+                                  height: 170,
+                                  child: CircularProgressIndicator(
+                                    value: v,
+                                    strokeWidth: 12,
+                                    strokeCap: StrokeCap.round,
+                                    backgroundColor:
+                                        AppColors.primary.withValues(alpha: 0.2),
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                        AppColors.primary),
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                '$pct%',
+                                style: TextStyle(
+                                  color: AppColors.textPrimary,
+                                  fontSize: 46,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              Positioned(
+                                right: 10,
+                                bottom: 22,
+                                child: Container(
+                                  width: 52,
+                                  height: 52,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: AppColors.warning.withValues(alpha: 0.18),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.warning
+                                            .withValues(alpha: 0.35),
+                                        blurRadius: 18,
+                                      ),
+                                    ],
+                                  ),
+                                  child: const Text('🏆',
+                                      style: TextStyle(fontSize: 30)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        Text(
+                          resultText,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: AppColors.textPrimary,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        Text(
+                          'Acertaste: $_correct de ${_questions.length}',
+                          style: TextStyle(
+                              color: AppColors.textSecondary, fontSize: 16),
+                        ),
+                        const SizedBox(height: 18),
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 18, vertical: 16),
+                          decoration: BoxDecoration(
+                            color: resultColor.withValues(alpha: 0.14),
+                            borderRadius: BorderRadius.circular(18),
+                            border: Border.all(
+                                color: resultColor.withValues(alpha: 0.7)),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 44,
+                                height: 44,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: resultColor,
+                                ),
+                                child: Icon(resultIcon,
+                                    color: AppColors.textOnPrimary, size: 26),
+                              ),
+                              const SizedBox(width: 14),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      message,
+                                      style: TextStyle(
+                                        color: resultColor,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w800,
+                                        height: 1.3,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      detail,
+                                      style: TextStyle(
+                                        color: AppColors.textSecondary,
+                                        fontSize: 12.5,
+                                        height: 1.3,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          'Tu progreso volvió a 0. Completa nuevas lecciones para el próximo examen.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: AppColors.textMuted, fontSize: 12),
+                        ),
+                        const SizedBox(height: 18),
+                        Material(
+                          color: AppColors.primary,
+                          shape: const StadiumBorder(),
+                          child: InkWell(
+                            customBorder: const StadiumBorder(),
+                            onTap: () => Navigator.pop(context),
+                            child: Container(
+                              width: double.infinity,
+                              constraints:
+                                  const BoxConstraints(minHeight: 58),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 22),
+                              child: Row(
+                                children: [
+                                  const SizedBox(width: 24),
+                                  const Spacer(),
+                                  Icon(Icons.home_outlined,
+                                      color: AppColors.textOnPrimary, size: 26),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    'Volver al Inicio',
+                                    style: TextStyle(
+                                      color: AppColors.textOnPrimary,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  Icon(Icons.chevron_right_rounded,
+                                      color: AppColors.textOnPrimary, size: 28),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
+
+  Widget _bgCircle(double size, Color color) => Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(shape: BoxShape.circle, color: color),
+      );
+
+  Widget _fadeLine(bool fadeToRight) => Container(
+        height: 1.5,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: fadeToRight
+                ? [Colors.transparent, AppColors.primary.withValues(alpha: 0.6)]
+                : [AppColors.primary.withValues(alpha: 0.6), Colors.transparent],
+          ),
+        ),
+      );
 }

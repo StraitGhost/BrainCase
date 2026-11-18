@@ -7,8 +7,23 @@ import '../services/profile_data_service.dart';
 import '../features/level_assessment/level_assessment_screen.dart';
 
 class LevelPanel extends StatefulWidget {
-  final UserProfile userProfile; // ✅ Ahora solo necesita el perfil
+  final UserProfile userProfile;
   const LevelPanel({super.key, required this.userProfile});
+
+  /// ✅ LLAMAR AL TERMINAR EL EXAMEN (suba, se quede o baje de nivel).
+  /// Deja el progreso en 0: iguala la línea base a los aciertos actuales,
+  /// así el usuario debe volver a hacer lecciones para el siguiente examen.
+  static Future<void> resetProgressAfterExam(String profileId) async {
+    final ref = ProfileDataService.refFor(profileId);
+    if (ref == null) return;
+    await FirebaseFirestore.instance.runTransaction((tx) async {
+      final snap = await tx.get(ref);
+      final data = snap.data() ?? <String, dynamic>{};
+      final current = data['correctAnswers'];
+      final value = current is num ? current.toInt() : int.tryParse('${current ?? ''}') ?? 0;
+      tx.set(ref, {'correctAnswersAtLastExam': value}, SetOptions(merge: true));
+    });
+  }
 
   @override
   State<LevelPanel> createState() => _LevelPanelState();
@@ -22,8 +37,8 @@ class _LevelPanelState extends State<LevelPanel> {
     'Experto', 'Experto Avanzado', 'Maestro',
   ];
 
-  // ✅ Debe coincidir EXACTAMENTE con _questionsByLevel del examen
-  static const _questionsByLevel = [8, 10, 12, 14, 16, 20];
+  // ✅ Principiante 100, y +50 por cada nivel
+  static const _questionsByLevel = [100, 150, 200, 250, 300, 350];
 
   @override
   void initState() {
@@ -34,31 +49,17 @@ class _LevelPanelState extends State<LevelPanel> {
   int _asInt(dynamic v) =>
       v is num ? v.toInt() : int.tryParse('${v ?? ''}') ?? 0;
 
-  /// Mismo extractor que usa el examen, para que barra y examen estén sincronizados.
+  // ✅ El nivel sale del campo `experienceLevel` (texto) del documento
+  int _levelFrom(Map<String, dynamic> data) {
+    final i = _levelNames.indexOf('${data['experienceLevel'] ?? ''}'.trim());
+    return i < 0 ? 0 : i;
+  }
+
   int _countMastered(Map<String, dynamic> data) {
-    final ids = <String>{};
-
-    for (final key in ['correctQuestionIds', 'masteredQuestions', 'answeredCorrectly']) {
-      final raw = data[key];
-      if (raw is List) {
-        for (final e in raw) {
-          final s = e?.toString();
-          if (s != null && s.isNotEmpty) ids.add(s);
-        }
-      }
-    }
-
-    final mistakes = data['mistakes'];
-    if (mistakes is List) {
-      for (final m in mistakes) {
-        if (m is Map && m['corrected'] == true) {
-          final qid = m['questionId']?.toString() ?? m['id']?.toString();
-          if (qid != null && qid.isNotEmpty) ids.add(qid);
-        }
-      }
-    }
-
-    return ids.length;
+    final current = _asInt(data['correctAnswers']);
+    final baseline = _asInt(data['correctAnswersAtLastExam']); // 0 si nunca examinó
+    final mastered = current - baseline;
+    return mastered < 0 ? 0 : mastered;
   }
 
   @override
@@ -71,7 +72,7 @@ class _LevelPanelState extends State<LevelPanel> {
 
         if (snap.hasData && snap.data!.exists) {
           final data = snap.data!.data() ?? <String, dynamic>{};
-          level = _asInt(data['level']).clamp(0, 5);
+          level = _levelFrom(data);
           mastered = _countMastered(data);
         }
 
@@ -156,7 +157,6 @@ class _LevelPanelState extends State<LevelPanel> {
               ),
               const SizedBox(height: 20),
 
-              // ✅ Barra de PREPARACIÓN (dominadas / necesarias)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -203,7 +203,7 @@ class _LevelPanelState extends State<LevelPanel> {
                         ? (level >= 5
                             ? '¡Listo! Puedes repetir el examen (⚠️ si no sacas 80% o más, bajarás de nivel).'
                             : '¡Listo! Ya dominas lo suficiente para examinarte.')
-                        : 'Domina $missing pregunta(s) más (acierta o corrige en "Mis Errores") para desbloquear el examen.',
+                        : 'Consigue $missing aciertos NUEVOS (desde tu último examen) para desbloquearlo.',
                     style: TextStyle(
                       color: ready ? AppColors.success : AppColors.textMuted,
                       fontSize: 11,
@@ -216,7 +216,6 @@ class _LevelPanelState extends State<LevelPanel> {
 
               const SizedBox(height: 20),
 
-              // ✅ Botón habilitado SOLO con la barra al 100%
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
@@ -231,7 +230,7 @@ class _LevelPanelState extends State<LevelPanel> {
                             ),
                           );
                         }
-                      : null, // gris/bloqueado hasta llegar a 100%
+                      : null,
                   icon: const Icon(Icons.fact_check_outlined, size: 18),
                   label: Text(
                     ready

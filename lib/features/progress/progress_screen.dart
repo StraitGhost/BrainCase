@@ -6,8 +6,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/theme_preferences.dart';
 import '../../models/profile.dart';
+import '../../services/achievement_service.dart';
 import '../../services/profile_data_service.dart';
 import '../../services/streak_service.dart';
+
+// ✅ Tarjeta de nivel/experiencia de Logros (diseño y carga del primer código)
+import '../achievements/widgets/profile_card.dart';
 
 class _Achievement {
   static const orange = Color(0xFFFF6B35);
@@ -24,18 +28,6 @@ class _Topic {
   const _Topic(this.name, this.icon, this.color);
 }
 
-// Nombres de niveles (el índice = valor de 'level' en el perfil)
-const _levelNames = [
-  'Principiante',
-  'Intermedio',
-  'Avanzado',
-  'Experto',
-  'Experto Avanzado',
-  'Maestro',
-];
-
-// Cada cuántos XP se llena la barra de experiencia (solo visual, NO sube nivel)
-const int _xpPerTier = 1000;
 const _dailyGoal = 10;
 
 int _asInt(dynamic v) =>
@@ -50,18 +42,15 @@ Map<String, double> _parseMastery(dynamic raw) {
 }
 
 class _Data {
-  final int correct, wrong, xp, streak, bestStreak;
-  final int level; // ✅ Nivel del PERFIL (no calculado por precisión)
+  final int correct, wrong, streak, bestStreak;
   final Map<String, double> mastery;
   final Map<String, int> daily;
 
   const _Data({
     required this.correct,
     required this.wrong,
-    required this.xp,
     required this.streak,
     required this.bestStreak,
-    required this.level,
     required this.mastery,
     required this.daily,
   });
@@ -78,10 +67,8 @@ class _Data {
     return _Data(
       correct: _asInt(m['correctAnswers']),
       wrong: _asInt(m['wrongAnswers']),
-      xp: _asInt(m['xp']),
       streak: streak,
       bestStreak: math.max(_asInt(m['bestStreak']), streak),
-      level: _asInt(m['level']).clamp(0, _levelNames.length - 1), // ✅ lee del perfil
       mastery: _parseMastery(m['topicMastery']),
       daily: daily,
     );
@@ -89,10 +76,6 @@ class _Data {
 
   int get total => correct + wrong;
   double get accuracy => total > 0 ? correct / total : 0.0;
-
-  // ✅ Barra de EXPERIENCIA (tiempo dedicado), no de nivel.
-  double get xpProgress => (xp % _xpPerTier) / _xpPerTier;
-  int get xpTier => (xp ~/ _xpPerTier) + 1;
 }
 
 class ProgressScreen extends StatelessWidget {
@@ -250,20 +233,30 @@ class ProgressScreen extends StatelessWidget {
     final Widget content = wide
         ? Column(
             children: [
-              _buildHero(d, wide: true),
-              gap,
-              _buildStats(d, wide: true),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Tarjeta de nivel/experiencia (la misma de Logros)
+                  const SizedBox(width: 340, child: _AchievementProfile(compact: false)),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        _buildStats(d, wide: true),
+                        gap,
+                        _buildInsights(d, topics),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
               gap,
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     flex: 5,
-                    child: Column(children: [
-                      _buildInsights(d, topics),
-                      gap,
-                      _buildWeekly(d),
-                    ]),
+                    child: _buildWeekly(d),
                   ),
                   const SizedBox(width: 16),
                   Expanded(
@@ -282,7 +275,7 @@ class ProgressScreen extends StatelessWidget {
           )
         : Column(
             children: [
-              _buildHero(d, wide: false),
+              const _AchievementProfile(compact: true),
               gap,
               _buildStats(d, wide: false),
               gap,
@@ -310,201 +303,6 @@ class ProgressScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildHero(_Data d, {required bool wide}) {
-    final level = d.level; // ✅ nivel del perfil
-
-    final left = Row(
-      children: [
-        SizedBox(
-          width: wide ? 160 : 120,
-          height: wide ? 160 : 120,
-          child: TweenAnimationBuilder<double>(
-            tween: Tween(begin: 0, end: d.accuracy),
-            duration: const Duration(milliseconds: 1200),
-            curve: Curves.easeOutCubic,
-            builder: (_, v, __) => CustomPaint(
-              painter: _RingPainter(
-                progress: v,
-                colors: [AppColors.primary, AppColors.secondary],
-                track: AppColors.border.withValues(alpha: 0.7),
-                stroke: wide ? 14 : 11,
-              ),
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text('${(v * 100).round()}%',
-                        style: _t(wide ? 34 : 28, FontWeight.w800,
-                            AppColors.textPrimary)),
-                    Text('de acierto',
-                        style:
-                            _t(12, FontWeight.w400, AppColors.textSecondary)),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-        SizedBox(width: wide ? 24 : 16),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(
-                  color: AppColors.info.withValues(alpha: 0.16),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.trending_up_rounded,
-                        color: AppColors.info, size: 14),
-                    const SizedBox(width: 4),
-                    Text('Nivel $level',
-                        style: _t(12, FontWeight.w700, AppColors.info)),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(_levelNames[level],
-                  style: _t(wide ? 26 : 22, FontWeight.w800,
-                      AppColors.textPrimary)),
-              const SizedBox(height: 8),
-              Wrap(
-                spacing: 18,
-                runSpacing: 6,
-                children: [
-                  _LegendDot('Correctas', d.correct, AppColors.primary),
-                  _LegendDot('Incorrectas', d.wrong, AppColors.error),
-                ],
-              ),
-              const SizedBox(height: 12),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(6),
-                child: SizedBox(
-                  height: 8,
-                  child: d.total == 0
-                      ? Container(color: AppColors.border)
-                      : Row(children: [
-                          if (d.correct > 0)
-                            Expanded(
-                                flex: d.correct,
-                                child: Container(color: AppColors.primary)),
-                          if (d.wrong > 0)
-                            Expanded(
-                                flex: d.wrong,
-                                child: Container(color: AppColors.error)),
-                        ]),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-
-    final right = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Tu nivel de experiencia',
-            style: _t(15, FontWeight.w700, AppColors.textPrimary)),
-        const SizedBox(height: 14),
-        _LevelTrack(current: level),
-        const SizedBox(height: 16),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Nivel actual',
-                    style: _t(12, FontWeight.w400, AppColors.textSecondary)),
-                Text(_levelNames[level],
-                    style: _t(18, FontWeight.w800, AppColors.textPrimary)),
-              ],
-            ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text.rich(TextSpan(children: [
-                      TextSpan(
-                          text: '${d.xp} XP ',
-                          style: _t(12, FontWeight.w800, AppColors.primary)),
-                      TextSpan(
-                          text: '· Rango ${d.xpTier}',
-                          style:
-                              _t(12, FontWeight.w400, AppColors.textPrimary)),
-                    ])),
-                  ),
-                  const SizedBox(height: 6),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(6),
-                    child: TweenAnimationBuilder<double>(
-                      tween: Tween(begin: 0, end: d.xpProgress),
-                      duration: const Duration(milliseconds: 1000),
-                      curve: Curves.easeOutCubic,
-                      builder: (_, v, __) => LinearProgressIndicator(
-                        value: v,
-                        minHeight: 7,
-                        backgroundColor: AppColors.border,
-                        valueColor:
-                            AlwaysStoppedAnimation<Color>(AppColors.primary),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 6),
-                  Text(
-                    'Tu nivel solo cambia con el Examen de Nivelación. '
-                    'La XP refleja tu tiempo de estudio.',
-                    style: _t(11, FontWeight.w400, AppColors.textMuted,
-                        height: 1.3),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-
-    return _Card(
-      glow: AppColors.primary,
-      padding: EdgeInsets.all(wide ? 24 : 18),
-      child: wide
-          ? IntrinsicHeight(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Expanded(flex: 5, child: left),
-                  Container(
-                    width: 1,
-                    margin: const EdgeInsets.symmetric(horizontal: 24),
-                    color: AppColors.border,
-                  ),
-                  Expanded(flex: 6, child: right),
-                ],
-              ),
-            )
-          : Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                left,
-                const SizedBox(height: 18),
-                Container(height: 1, color: AppColors.border),
-                const SizedBox(height: 18),
-                right,
-              ],
-            ),
-    );
-  }
-
   Widget _buildStats(_Data d, {required bool wide}) {
     final tiles = [
       _StatTile(
@@ -522,11 +320,6 @@ class ProgressScreen extends StatelessWidget {
           value: d.streak,
           label: d.streak == 1 ? 'Día de racha' : 'Días de racha',
           color: _Achievement.orange),
-      _StatTile(
-          icon: Icons.star_rounded,
-          value: d.xp,
-          label: 'XP total',
-          color: _Achievement.gold),
     ];
 
     if (wide) {
@@ -544,11 +337,7 @@ class ProgressScreen extends StatelessWidget {
         Expanded(child: tiles[1]),
       ]),
       const SizedBox(height: 12),
-      Row(children: [
-        Expanded(child: tiles[2]),
-        const SizedBox(width: 12),
-        Expanded(child: tiles[3]),
-      ]),
+      tiles[2],
     ]);
   }
 
@@ -591,7 +380,7 @@ class ProgressScreen extends StatelessWidget {
         Icons.rocket_launch_rounded,
         AppColors.primary,
         '¡Gran precisión!',
-        'Estás por encima del 80%. Haz el Examen de Nivelación para subir tu nivel.',
+        'Estás por encima del 80%. Sigue así para mantener tu nivel.',
       ));
     } else if (d.wrong > 0) {
       items.add(_Insight(
@@ -927,6 +716,36 @@ class ProgressScreen extends StatelessWidget {
 }
 
 // ─────────────────────────────────────────────────────────────
+// Tarjeta de nivel/experiencia de Logros (ProfileCard + AchievementService)
+// ─────────────────────────────────────────────────────────────
+class _AchievementProfile extends StatefulWidget {
+  final bool compact;
+  const _AchievementProfile({required this.compact});
+
+  @override
+  State<_AchievementProfile> createState() => _AchievementProfileState();
+}
+
+class _AchievementProfileState extends State<_AchievementProfile> {
+  final _service = AchievementService.instance;
+
+  @override
+  void initState() {
+    super.initState();
+    _service.load();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: _service,
+      builder: (context, _) =>
+          ProfileCard(service: _service, compact: widget.compact),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // Widgets reutilizables
 // ─────────────────────────────────────────────────────────────
 class _Card extends StatelessWidget {
@@ -1001,31 +820,6 @@ class _CardHeader extends StatelessWidget {
             ],
           ),
         ),
-      ],
-    );
-  }
-}
-
-class _LegendDot extends StatelessWidget {
-  final String label;
-  final int value;
-  final Color color;
-  const _LegendDot(this.label, this.value, this.color);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
-        ),
-        const SizedBox(width: 6),
-        Text(label, style: _t(13, FontWeight.w400, AppColors.textPrimary)),
-        const SizedBox(width: 8),
-        Text('$value', style: _t(14, FontWeight.w800, color)),
       ],
     );
   }
@@ -1268,132 +1062,9 @@ class _StreakCard extends StatelessWidget {
   }
 }
 
-class _LevelTrack extends StatelessWidget {
-  final int current;
-  const _LevelTrack({required this.current});
-
-  @override
-  Widget build(BuildContext context) {
-    final count = _levelNames.length;
-    return Row(
-      children: [
-        for (var i = 0; i < count; i++) ...[
-          _node(i),
-          if (i < count - 1)
-            Expanded(
-              child: Container(
-                height: 2,
-                color: i < current ? AppColors.primary : AppColors.border,
-              ),
-            ),
-        ],
-      ],
-    );
-  }
-
-  Widget _node(int i) {
-    final isCurrent = i == current;
-    final done = i < current;
-    return Container(
-      width: isCurrent ? 40 : 34,
-      height: isCurrent ? 40 : 34,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: done
-            ? AppColors.primary
-            : isCurrent
-                ? AppColors.primary.withValues(alpha: 0.15)
-                : Colors.transparent,
-        border: Border.all(
-          color: done || isCurrent ? AppColors.primary : AppColors.border,
-          width: isCurrent ? 3 : 2,
-        ),
-        boxShadow: isCurrent
-            ? [
-                BoxShadow(
-                  color: AppColors.primary.withValues(alpha: 0.45),
-                  blurRadius: 14,
-                ),
-              ]
-            : null,
-      ),
-      child: Center(
-        child: done
-            ? Icon(Icons.check_rounded, size: 18, color: AppColors.surface)
-            : Text(
-                '$i',
-                style: _t(
-                  isCurrent ? 16 : 14,
-                  FontWeight.w700,
-                  isCurrent ? AppColors.textPrimary : AppColors.textSecondary,
-                ),
-              ),
-      ),
-    );
-  }
-}
-
 // ─────────────────────────────────────────────────────────────
 // Pintores
 // ─────────────────────────────────────────────────────────────
-class _RingPainter extends CustomPainter {
-  final double progress;
-  final List<Color> colors;
-  final Color track;
-  final double stroke;
-
-  _RingPainter({
-    required this.progress,
-    required this.colors,
-    required this.track,
-    required this.stroke,
-  });
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final center = size.center(Offset.zero);
-    final radius = (math.min(size.width, size.height) - stroke) / 2;
-    final rect = Rect.fromCircle(center: center, radius: radius);
-
-    canvas.drawCircle(
-      center,
-      radius,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = stroke
-        ..color = track,
-    );
-
-    if (progress <= 0) return;
-
-    final sweep = 2 * math.pi * progress.clamp(0.0, 1.0);
-    canvas.drawArc(
-      rect,
-      -math.pi / 2,
-      sweep,
-      false,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = stroke
-        ..strokeCap = StrokeCap.round
-        ..shader = SweepGradient(
-          startAngle: 0,
-          endAngle: math.max(sweep, 0.01),
-          colors: colors,
-          transform: const GradientRotation(-math.pi / 2),
-        ).createShader(rect),
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant _RingPainter old) =>
-      old.progress != progress ||
-      old.track != track ||
-      old.colors.length != colors.length ||
-      old.colors.first != colors.first ||
-      old.colors.last != colors.last;
-}
-
 class _GridPainter extends CustomPainter {
   final Color color;
   _GridPainter({required this.color});
