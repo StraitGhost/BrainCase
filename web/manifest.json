@@ -1,6 +1,6 @@
 {
-    "name": "psy",
-    "short_name": "psy",
+    "name": "BrainCase",
+    "short_name": "BrainCase",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
