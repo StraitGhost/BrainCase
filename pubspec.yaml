@@ -100,8 +100,8 @@ flutter_launcher_icons:
   ios: true
   # Ruta a tu imagen de ícono (debe ser PNG, idealmente 1024x1024 px)
   # Como ya tienes declarada la carpeta assets/images/, puedes usarla:
-  image_path: "assets/images/icono_psy.png" 
+  image_path: "assets/images.png" 
   
   # Opcional: Para íconos adaptativos en Android (recomendado para Android 8.0+)
   adaptive_icon_background: "#FFFFFF" # Color de fondo o ruta a una imagen
-  # adaptive_icon_foreground: "assets/images/icono_psy_foreground.png"
+  # adaptive_icon_foreground: "assets/images/icono_foreground.png"
