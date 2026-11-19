@@ -7,7 +7,13 @@ class ThemePreferences {
   ThemePreferences._();
   static final ThemePreferences instance = ThemePreferences._();
 
-  static const Color defaultColor = Color(0xFF6366F1);
+  // 1. CAMBIADO: Verde azulado (Teal). Transmite calma, equilibrio y profesionalismo clínico para BrainCase.
+  static const Color defaultColor = Color(0xFF0D9488);
+
+  // 2. AGREGADO: Fondos neutros para evitar el "azul marino oscuro" no deseado. 
+  // 0xFF0A0A0A es un negro suave y elegante (estilo moderno), 0xFF121212 es el estándar Material Design.
+  static const Color darkBackgroundColor = Color(0xFF0A0A0A);
+  static const Color lightBackgroundColor = Color(0xFFFAFAFA);
 
   static const List<(String, String, Color)> colorThemes = [
     ('default', 'Predeterminado', defaultColor),
