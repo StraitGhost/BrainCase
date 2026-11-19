@@ -103,8 +103,13 @@ extension RarityPerksX on Rarity {
 // `d` es el Map del documento usuarios/{uid}.
 // ─────────────────────────────────────────────────────────────
 class PetPerks {
-  /// Los poderes solo funcionan si la mascota está bien cuidada.
-  static bool isActive(PetState p) => p.hunger >= 25 && p.average >= 50;
+  /// Mínimo que debe tener CADA barra (hambre, felicidad y energía)
+  /// para que la mascota dé sus beneficios. Debe ser MAYOR a este valor.
+  static const double minStat = 30;
+
+  /// Los poderes solo funcionan si las tres barras están por encima del 30 %.
+  static bool isActive(PetState p) =>
+      p.hunger > minStat && p.happiness > minStat && p.energy > minStat;
 
   static String todayKey() {
     final n = DateTime.now();

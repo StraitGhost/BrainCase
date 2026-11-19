@@ -495,7 +495,7 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
         final species = speciesById(id)!;
         if (!PetPerks.isActive(pet)) {
           throw _PetException(
-              '${pet.name} está descuidado. Aliméntalo y juega con él primero.');
+              '${pet.name} está descuidado. Aliméntalo, juega con él o déjalo dormir primero.');
         }
         final perks = speciesPerks[id] ?? const <Perk>[];
         final now = DateTime.now();
@@ -589,7 +589,7 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
               _infoLine('📈', 'Suben de nivel',
                   'Con cada nivel su poder y su regalo crecen (hasta el nivel 20) y ganas +10 💎.'),
               _infoLine('❤️', 'Hay que cuidarlas',
-                  'Si tienen mucha hambre o están tristes, pierden sus poderes hasta que las cuides.'),
+                  'Si el hambre, la felicidad o la energía bajan del 30%, pierden sus poderes hasta que las cuides.'),
               const SizedBox(height: 18),
               Text('Rangos',
                   style: _t(18, FontWeight.w800, AppColors.primary)),
@@ -757,7 +757,7 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             Padding(
               padding: const EdgeInsets.only(bottom: 10),
               child: Text(
-                'Está descuidado: dale de comer y juega con él para recuperar sus poderes.',
+                'Alguna barra está en 30% o menos: aliméntalo, juega con él o déjalo dormir para recuperar sus poderes.',
                 style: _t(12.5, FontWeight.w600, AppColors.error, height: 1.35),
               ),
             ),
